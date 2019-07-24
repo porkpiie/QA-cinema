@@ -1,19 +1,34 @@
 import React from 'react';
+import { BrowserRouter as Router, Route } from "react-router-dom";
+
 import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
-import Carousel1 from './Components/Carousel.component'
+// import { BrowserRouter as Router, Route } from "react-router-dom";
+import Navigation from './Components/Navbar.component';
+import Home from './Pages/Home';
+import Listings from './Pages/Listings';
+import NewReleases from './Pages/NewReleases';
+
 
 function App() {
   return (
-    <div className="App">
+    <div className="App">      
       <header className="App-header">
-        <img src="http://www.apprenticeshipguide.co.uk/wp-content/uploads/2018/01/QA-logo-2019-3-300x300.jpg" className="App-logo" alt="logo" />
-        <p>
-          QA CINEMA BOIII
-        </p>
+      <Navigation/>
       </header>
-      <Carousel1/> 
-    </div>
+      <div>
+      <Router>
+        <div>
+          <Route path="/home" component={Home}/>
+          <Route path="/WhatsOn" component={Listings}/>
+          <Route path="/ComingUp" component={NewReleases}/>
+        </div>
+      </Router>
+      </div>
+      </div>
+      
+      
+    
       
     
   );
