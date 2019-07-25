@@ -1,33 +1,31 @@
+html {
+  background-color: black;
+}
+
+h1 {
+  background-color: black;
+  color: white;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 3s linear;
-  height: 40vmin;
-  pointer-events: none;
+::content {
+  height: 800px;
+  width: 500px;
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color:black !important;
   min-height: 15vh;
   display: flex;
   flex-direction: column;
   align-items: left;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: calc(8px + 2vmin);
+  
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.bg-company-black {
+  background-color: black !important;
 }

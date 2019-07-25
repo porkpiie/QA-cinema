@@ -1,101 +1,27 @@
 import React, { Component } from 'react';
-import {
-  Carousel,
-  CarouselItem,
-  CarouselControl,
-  CarouselIndicators,
-  CarouselCaption
-} from 'reactstrap';
+import { Carousel } from "react-responsive-carousel";
 
-const items = [
-  {
-    src: 'https://image.tmdb.org/t/p/w1280/2qAgGeYdLjelOEqjW9FYvPHpplC.jpg',
-    altText: 'BraveHeart',
-    caption: "Enraged at the slaughter of Murron, his new bride and childhood love, Scottish warrior William Wallace slays a platoon of the local English lord's soldiers. This leads the village to revolt and, eventually, the entire country to rise up against English rule."
-  },
-  {
-    src: '',
-    altText: '',
-    caption: ''
-  },
-  {
-    src: '',
-    altText: '',
-    caption: ''
-  },
-  {
-    src: '',
-    altText: '',
-    caption: ''
-  }
-];
-
-class Carousel1 extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { activeIndex: 0 };
-    this.next = this.next.bind(this);
-    this.previous = this.previous.bind(this);
-    this.goToIndex = this.goToIndex.bind(this);
-    this.onExiting = this.onExiting.bind(this);
-    this.onExited = this.onExited.bind(this);
-  }
-
-  onExiting() {
-    this.animating = true;
-  }
-
-  onExited() {
-    this.animating = false;
-  }
-
-  next() {
-    if (this.animating) return;
-    const nextIndex = this.state.activeIndex === items.length - 1 ? 0 : this.state.activeIndex + 1;
-    this.setState({ activeIndex: nextIndex });
-  }
-
-  previous() {
-    if (this.animating) return;
-    const nextIndex = this.state.activeIndex === 0 ? items.length - 1 : this.state.activeIndex - 1;
-    this.setState({ activeIndex: nextIndex });
-  }
-
-  goToIndex(newIndex) {
-    if (this.animating) return;
-    this.setState({ activeIndex: newIndex });
-  }
-
-  render() {
-    const { activeIndex } = this.state;
-
-    const slides = items.map((item) => {
-      return (
-        <CarouselItem
-          onExiting={this.onExiting}
-          onExited={this.onExited}
-          key={item.src}
-        >
-          <img src={item.src} alt={item.altText} />
-          <CarouselCaption captionText={item.caption} captionHeader={item.altText} />
-        </CarouselItem>
-      );
-    });
-
-    return (
-      <Carousel
-        activeIndex={activeIndex}
-        next={this.next}
-        previous={this.previous}
-      >
-        <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
-        {slides}
-        <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
-        <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
-      </Carousel>
-    );
+export default class Carousel1 extends Component{
+  render(){
+  return(
+  <Carousel autoPlay>
+    <div>
+      <img src="http://lorempixel.com/output/cats-q-c-640-480-1.jpg" alt="caro" />
+      <p className="legend">Legend 1</p>
+    </div>
+    <div>
+      <img src="http://lorempixel.com/output/cats-q-c-640-480-2.jpg" alt="caro"/>
+      <p className="legend">Legend 2</p>
+    </div>
+    <div>
+      <img src="http://lorempixel.com/output/cats-q-c-640-480-3.jpg" alt="caro"/>
+      <p className="legend">Legend 3</p>
+    </div>
+    <div>
+      <img src="http://lorempixel.com/output/cats-q-c-640-480-4.jpg" alt="caro"/>
+      <p className="legend">Legend 4</p>
+    </div>
+    </Carousel>
+);
   }
 }
-
-
-export default Carousel1;
