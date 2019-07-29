@@ -40,8 +40,8 @@ h1 {
 .nav .nav-item.active .nav-link,
 .nav-item:hover .nav-link {
   color: red;
-  transition: 1.5s;
-  margin-top: 15px;
+  transition: 1s;
+  margin-top: 8px;
 }
 
 .nav-item {
@@ -53,4 +53,23 @@ h1 {
   align-content: center;
   justify-content: left;
   color: white;
+}
+
+.linkAbout {
+  color: white;
+  display: inline;
+  
+}
+
+.linkAbout:hover {
+  color: white;
+}
+
+.places1 {
+  color: white;
+  background-color: rgba(0,0,0,0.4);
+  display: inline;
+  padding: 5px;
+  border-radius: 25px
+  
 }
