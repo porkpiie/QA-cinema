@@ -23,9 +23,9 @@ export default class Navigation extends Component {
   render() {
     return (
       <div>
-        <Nav className="fixed-top navbar-dark bg-company-black">
+        <Nav className="fixed-top navbar-dark expand-xl bg-company-black">
         <a className="navbar-brand" href="/home" target="">
-              <img src={logo} width="100" height="75" alt="whalepic" />
+              <img src={logo} width="200" height="150" alt="whalepic" />
             </a>
           <NavItem>
             <NavLink href="/home">Home</NavLink>
@@ -50,6 +50,7 @@ export default class Navigation extends Component {
               <DropdownItem href="/OpeningTimes" style={{color: 'red', textDecoration: 'none'}}>Opening Times </DropdownItem>
               <DropdownItem href="/AboutUs" style={{color: 'red', textDecoration: 'none'}}>About Us</DropdownItem>
               <DropdownItem href="/Classifications" style={{color: 'red', textDecoration: 'none'}}>Classifications</DropdownItem>
+              <DropdownItem href ="/ContactUs" style={{color: 'red', textDecoration: 'none'}}>Contact Us</DropdownItem>
               <DropdownItem divider />
               <DropdownItem header>What's Nearby?</DropdownItem>
               <DropdownItem href="/GettingHere" style={{color: 'red', textDecoration: 'none'}}>Getting Here</DropdownItem>

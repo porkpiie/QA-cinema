@@ -15,6 +15,8 @@ import Classifications from './Pages/Classifications';
 import Getting from './Pages/GettingThere';
 import PlacesToGo from './Pages/PlacesToGo';
 import OpeningTimes from './Pages/OpeningTimes';
+import ContactUs from './Pages/ContactPage';
+
 
 
 function App() {
@@ -37,6 +39,7 @@ function App() {
           <Route path="/GettingHere" component={Getting}/>
           <Route path="/ThingsToDo" component={PlacesToGo}/>
           <Route path="/OpeningTImes" component={OpeningTimes}/>
+          <Route path="/Contact Us" component={ContactUs}/>
         </div>
       </Router>
       </div>
