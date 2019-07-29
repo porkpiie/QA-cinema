@@ -20,21 +20,28 @@ h1 {
   align-items: center;
   justify-content: center;
   font-size: calc(8px + 2vmin);
-  
-  
-}
+  }
 .bg-company-black {
-  background-color: black !important;
+  background-color:black !important;
   align-content: center;
-  
- 
+  justify-content: left;
 }
+
+.nav {
+  align-content: center;
+  justify-content: center;
+}
+
 .nav .nav-item .nav-link {
   color:white;
+  margin-top: 5px
 }
+
 .nav .nav-item.active .nav-link,
 .nav-item:hover .nav-link {
   color: red;
-  transition: 1s;
+  transition: 1.5s;
+  margin-top: 15px;
+  
 
 }

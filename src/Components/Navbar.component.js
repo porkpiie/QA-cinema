@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Button, Nav, NavItem, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, Form, NavLink } from 'reactstrap';
 import { FormControl} from 'react-bootstrap';
+import logo from '../logo.png';
 
 
 export default class Navigation extends Component {
@@ -21,10 +22,10 @@ export default class Navigation extends Component {
 
   render() {
     return (
-      <div  >
+      <div>
         <Nav className="fixed-top navbar-dark bg-company-black">
-        <a className="navbar-brand" href="https://www.qa.com" target="">
-              <img src="http://www.apprenticeshipguide.co.uk/wp-content/uploads/2018/01/QA-logo-2019-3-300x300.jpg" width="50" height="50" alt="qa.com" />
+        <a className="navbar-brand" href="/home" target="">
+              <img src={logo} width="100" height="75" alt="whalepic" />
             </a>
           <NavItem>
             <NavLink href="/home">Home</NavLink>
@@ -46,6 +47,7 @@ export default class Navigation extends Component {
             <DropdownMenu style={{backgroundColor : 'black'}}>
               <DropdownItem header>About The Cinema</DropdownItem>
               <DropdownItem href="/Screens" style={{color: 'red', textDecoration: 'none'}}>Our Screens </DropdownItem>
+              <DropdownItem href="/OpeningTimes" style={{color: 'red', textDecoration: 'none'}}>Opening Times </DropdownItem>
               <DropdownItem href="/AboutUs" style={{color: 'red', textDecoration: 'none'}}>About Us</DropdownItem>
               <DropdownItem href="/Classifications" style={{color: 'red', textDecoration: 'none'}}>Classifications</DropdownItem>
               <DropdownItem divider />

@@ -14,6 +14,8 @@ import AppFooter from './Components/Footer.component';
 import Classifications from './Pages/Classifications';
 import Getting from './Pages/GettingThere';
 import PlacesToGo from './Pages/PlacesToGo';
+import OpeningTimes from './Pages/OpeningTimes';
+
 
 function App() {
   return (
@@ -34,6 +36,7 @@ function App() {
           <Route path="/Classifications" component={Classifications}/>
           <Route path="/GettingHere" component={Getting}/>
           <Route path="/ThingsToDo" component={PlacesToGo}/>
+          <Route path="/OpeningTImes" component={OpeningTimes}/>
         </div>
       </Router>
       </div>
