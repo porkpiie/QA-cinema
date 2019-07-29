@@ -1,89 +1,49 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
 import image1 from './fid19112.jpg';
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-import { MDBMask, MDBView, MDBContainer, MDBRow, MDBCol } from "mdbreact";
+import { MDBMask, MDBView, MDBContainer, MDBRow, MDBCol } from 'mdbreact';
 
+export default class Tiles extends React.Component {
 
+    constructor() {
+        super();
+        this.state = {
+            movies: [
+                { title: 'The Lion King', image: image1 },
+                { title: 'The Lion King', image: image1 },
+                { title: 'The Lion King', image: image1 },
+                { title: 'The Lion King', image: image1 }
+                
+            ]
+        }
+    }
 
-
-export default class Tiles extends React.Component{
-
-render(){
-    return(
-        <div>
-            
-            <MDBContainer>
-            <MDBRow>
-            <MDBCol>
-            <MDBView hover>
-
-                <Card bg="dark" text="white" style={{ width: '10rem' }}>        
-                    <Card.Img variant="top" src={image1} />
-                    <Card.Body className="p-2 pt-4">
-                    <Card.Title style={{textAlign:"left", fontSize:10}}>THE LION KING</Card.Title>
-                    </Card.Body>
-                </Card>
-            <MDBMask style={{ width: '10rem', height:'15rem', fontSize:15}} overlay="black-strong">
-            <p className="white-text p-2 pt-10">DIRECTOR:<br/>CAST:<br/>RUNTIME:</p>
-            </MDBMask>
-            </MDBView>
-
-            
-            </MDBCol>
-
-            <MDBCol>
-            <MDBView hover>
-
-                <Card bg="dark" text="white" style={{ width: '10rem' }}> 
-                    <Card.Img variant="top" src={image1} />
-                    <Card.Body className="p-2 pt-4">
-                    <Card.Title style={{textAlign:"left", fontSize:10}}>THE LION KING</Card.Title>
-                    </Card.Body>
-                    </Card>
-                    <MDBMask style={{ width: '10rem', height:'15rem', fontSize:15}} overlay="black-strong">
-            <p className="white-text p-2 pt-10">DIRECTOR:<br/>CAST:<br/>RUNTIME:</p>
-            </MDBMask>
-            </MDBView>
-            </MDBCol>
-
-            <MDBCol>
-            <MDBView hover>
-
-                <Card bg="dark" text="white" style={{ width: '10rem' }}> 
-                    <Card.Img variant="top" src={image1} />
-                    <Card.Body className="p-2 pt-4">
-                    <Card.Title style={{textAlign:"left", fontSize:10}}>THE LION KING</Card.Title>
-                    </Card.Body>
-                    </Card>
-                    <MDBMask style={{ width: '10rem', height:'15rem', fontSize:15}} overlay="black-strong">
-            <p className="white-text p-2 pt-10">DIRECTOR:<br/>CAST:<br/>RUNTIME:</p>
-            </MDBMask>
-            </MDBView>
-            </MDBCol>
-
-            <MDBCol>
-            <MDBView hover>
-
-                <Card bg="dark" text="white" style={{ width: '10rem' }}> 
-                    <Card.Img variant="top" src={image1} />
-                    <Card.Body className="p-2 pt-4">
-                    <Card.Title style={{textAlign:"left", fontSize:10}}>THE LION KING</Card.Title>
-                    </Card.Body>
-                    </Card>
-                    <MDBMask style={{ width: '10rem', height:'15rem', fontSize:15}} overlay="black-strong">
-            <p className="white-text p-2 pt-10">DIRECTOR:<br/>CAST:<br/>RUNTIME:</p>
-            </MDBMask>
-            </MDBView>
-            </MDBCol>
-            </MDBRow>
-            </MDBContainer>
-
-</div>
-    );
-}
+    render() {
+        return (
+            <div>
+                <MDBContainer>
+                    <MDBRow>
+                        {this.state.movies.map(movie => (
+                            <MDBCol>
+                                <MDBView hover>
+                                    <Card bg="dark" text="white" style={{ width: '10rem' }}>
+                                        <Card.Img variant="top" src={movie.image} />
+                                        <Card.Body className="p-2 pt-4">
+                                            <Card.Title style={{ textAlign: "left", fontSize: 10 }}>
+                                                {movie.title.toLocaleUpperCase()}
+                                            </Card.Title>
+                                        </Card.Body>
+                                    </Card>
+                                    <MDBMask style={{ width: '10rem', height: '15rem', fontSize: 15 }} overlay="black-strong">
+                                        <p className="white-text p-2 pt-10">DIRECTOR:<br />CAST:<br />RUNTIME:</p>
+                                    </MDBMask>
+                                </MDBView>
+                            </MDBCol>
+                        ))}
+                    </MDBRow>
+                </MDBContainer>
+            </div>
+        )
+    }
 }
 
