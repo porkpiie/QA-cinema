@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Card from 'react-bootstrap/Card';
-import image1 from './fid19112.jpg';
+import image1 from '../fid19112.jpg';
 import { MDBMask, MDBView, MDBContainer, MDBRow, MDBCol } from 'mdbreact';
 
-export default class Tiles extends React.Component {
+export default class Tiles extends Component {
 
     constructor() {
         super();
@@ -20,8 +20,8 @@ export default class Tiles extends React.Component {
 
     render() {
         return (
-            <div>
-                <MDBContainer>
+            <div className="tiles">
+                <MDBContainer >
                     <MDBRow>
                         {this.state.movies.map(movie => (
                             <MDBCol>

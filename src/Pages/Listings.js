@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
+import Tiles from '../Components/Tiles.components';
 
 export default class Listings extends Component{
     render(){
         return(
-            <h1>Testing Testing 0293402834</h1>
+            <div>
+            <h1>Now Showing</h1>
+            <Tiles/>
+            </div>
         )
     }
 }
