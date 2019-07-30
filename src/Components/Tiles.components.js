@@ -6,7 +6,7 @@ import TBDimage from '../.././src/Images/TBC.png';
 import Uimage from '../.././src/Images/U.png';
 import PGimage from '../.././src/Images/PG.png';
 import TWELVEimage from '../.././src/Images/12.png';
-import TWELVEAimage from '../.././src/Images/12a.png';
+import TWELVEAimage from '../.././src/Images/12A.png';
 import FIFTEENimage from '../.././src/Images/15.png';
 import EIGHTEENimage from '../.././src/Images/18.png';
 
@@ -19,7 +19,7 @@ export default class Tiles extends Component {
         super();
         this.state = {
             movies: [],
-            update:[]
+            update: []
         }
     }
 
@@ -39,22 +39,23 @@ export default class Tiles extends Component {
                                     movie.certification = result.release_dates[0].certification;
                                 }
                             }
-                            if (certFound == false) { 
+                            if (certFound == false) {
                                 movie.certification = "TBD";
                             }
-                            switch(movie.certification){
-                                case("TBD"): movie.certimg = TBDimage; break;
-                                case("U"): movie.certimg = Uimage; break;
-                                case("PG"): movie.certimg = PGimage; break;
-                                case("12"): movie.certimg = TWELVEimage; break;
-                                case("12A"): movie.certimg = TWELVEAimage; break;
-                                case("15"): movie.certimg = FIFTEENimage; break;
-                                case("18"): movie.certimg = EIGHTEENimage; break;
-                                default: movie.certimg = TBDimage; 
+                            switch (movie.certification) {
+                                case ("TBD"): movie.certimg = TBDimage; break;
+                                case ("U"): movie.certimg = Uimage; break;
+                                case ("PG"): movie.certimg = PGimage; break;
+                                case ("12"): movie.certimg = TWELVEimage; break;
+                                case ("12A"): movie.certimg = TWELVEAimage; break;
+                                case ("15"): movie.certimg = FIFTEENimage; break;
+                                case ("18"): movie.certimg = EIGHTEENimage; break;
+                                default: movie.certimg = TBDimage;
                             }
-                            this.setState({update: "true"});
+
+                            this.setState({ update: "true" });
                         })
-                        .catch();       
+                        .catch();
                 }
             });
     }
@@ -67,13 +68,13 @@ export default class Tiles extends Component {
                         {this.state.movies.map(movie => (
                             <MDBCol key={movie.id}>
                                 <MDBView hover>
-                                    <Card bg="dark" text="white" style={{ width: '10rem', minHeight:'21.5rem' }}>
+                                    <Card bg="dark" text="white" style={{ width: '10rem', minHeight: '21.5rem' }}>
                                         <Card.Img variant="top" src={"https://image.tmdb.org/t/p/w500" + movie.poster_path} />
                                         <Card.Body className="p-2 pt-4">
                                             <Card.Title style={{ textAlign: "left", fontSize: 10 }}>
                                                 {movie.title.toLocaleUpperCase()}
                                             </Card.Title>
-                                            <Card.Img style={{ width: '2rem'}} variant="top" src={movie.certimg} />
+                                            <Card.Img style={{ width: '2rem' }} variant="top" src={movie.certimg} />
                                         </Card.Body>
                                     </Card>
                                 </MDBView>
