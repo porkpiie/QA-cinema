@@ -37,7 +37,7 @@ export default class AppFooter extends Component {
             <MDBCol md="5" lg="3">
               <h5 className="text-uppercase mb-4 font-weight-bold">Address</h5>
               <p>
-                <i className="fa fa-home mr-3" />Alexandra House, Wroughton, Swindon SN4
+                <i className="fa fa-home mr-3" />Alexandra House, Wroughton, Swindon SN4 0QJ
               </p>
               <p>
                 <i className="fa fa-phone mr-3" /> +44 1234 567890

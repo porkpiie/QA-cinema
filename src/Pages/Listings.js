@@ -7,7 +7,9 @@ export default class Listings extends Component{
         return(
             <div>
                 <img src={Whale} width="100%" height="5%" alt="whaleban" />
-            <h1>Now Showing</h1>
+            <h1 className="Listingh1">NOW SHOWING</h1>
+            <hr/>
+            
             <Tiles/>
             </div>
         )
