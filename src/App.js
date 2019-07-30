@@ -28,7 +28,7 @@ function App() {
       <div>
       <Router>
         <div>
-          <Route path="/home" component={Home}/>
+          <Route path={["/", "/home"]} exact component={Home}/>
           <Route path="/WhatsOn" component={Listings}/>
           <Route path="/ComingUp" component={NewReleases}/>
           <Route path="/Booking" component={TicketBooking}/>
