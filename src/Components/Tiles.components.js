@@ -20,20 +20,20 @@ export default class Tiles extends Component {
 
     render() {
         return (
-            <div className="tiles">
+            <div className="tiles pt-10">
                 <MDBContainer >
                     <MDBRow>
                         {this.state.movies.map(movie => (
                             <MDBCol>
                                 <MDBView hover>
-                                    <Card bg="dark" text="white" style={{ width: '10rem' }}>
+                                    {/* <Card className="card1" bg="inverse" text="white" style={{ width: '10rem' }}> */}
                                         <Card.Img variant="top" src={movie.image} />
                                         <Card.Body className="p-2 pt-4">
                                             <Card.Title style={{ textAlign: "left", fontSize: 10 }}>
                                                 {movie.title.toLocaleUpperCase()}
                                             </Card.Title>
                                         </Card.Body>
-                                    </Card>
+                                    {/* </Card> */}
                                     <MDBMask style={{ width: '10rem', height: '15rem', fontSize: 15 }} overlay="black-strong">
                                         <p className="white-text p-2 pt-10">DIRECTOR:<br />CAST:<br />RUNTIME:</p>
                                     </MDBMask>
