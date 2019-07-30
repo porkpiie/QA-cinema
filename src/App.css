@@ -12,6 +12,7 @@ h1 {
 
 .App {
   text-align: center;
+  background-color: black;
 }
 
 .App-header {
@@ -43,7 +44,7 @@ h1 {
 
 .nav .nav-item.active .nav-link,
 .nav-item:hover .nav-link {
-  color: red;
+  color: fuchsia;
 }
 
 .nav-item {
@@ -73,15 +74,6 @@ h1 {
   background-color: black;
   color: white;
   padding-top: 5%;
-}
-
-.bg-company-footer {
-  background-color:rgb(34, 34, 34);
-  color:white;
-  padding-bottom: 25px;
-  align-content: center;
-  justify-content: center;
-  font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
 }
 
 .p-2 {

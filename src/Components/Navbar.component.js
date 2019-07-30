@@ -59,7 +59,7 @@ export default class Navigation extends Component {
           </Dropdown>
           <Form inline className="ml-auto mr-3">
             <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-            <Button variant="outline-success">SEARCH</Button>
+            <Button variant="outline-danger">SEARCH</Button>
           </Form>
         </Nav>
       </div>
