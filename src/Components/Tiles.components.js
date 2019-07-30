@@ -61,7 +61,7 @@ export default class Tiles extends Component {
 
     render() {
         return (
-            <div className="tiles">
+            <div className="tiles pt-10">
                 <MDBContainer >
                     <MDBRow>
                         {this.state.movies.map(movie => (

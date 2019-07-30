@@ -1,5 +1,4 @@
 import React from "react";
-import { render } from "react-dom";
 import { Parallax } from "react-parallax";
 import Goddard from '../Images/Goddard.jpg';
 import Karting from '../Images/Karting.jpg';
@@ -54,7 +53,7 @@ const PlacesToGo = () => (
     </Parallax>
 
     <Parallax bgImage={Karting} strength={500}>
-    <div style={{ height: 600 }}>
+    <div style={{ height: 650 }}>
         <div className="places1" style={insideStyles}>
             <a className="linkAbout" style={{fontSize : "50px"}} href="https://swindonkarting.co.uk/" alt="karting" rel="noopener noreferrer" target="_blank">Swindon Karting Arena</a>
             <p style={{fontSize : "18px"}}>Covered kart track plus rodeo bull, laser shooting, mini-quad and digger course draws group visits</p>
@@ -70,7 +69,5 @@ const PlacesToGo = () => (
     </Parallax>
   </div>
 );
-
-render(<PlacesToGo />, document.getElementById("root"));
 
 export default PlacesToGo;

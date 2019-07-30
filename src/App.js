@@ -21,7 +21,7 @@ import ContactUs from './Pages/ContactPage';
 
 function App() {
   return (
-    <div className="App"> 
+    <div className="App">
       <header className="App-header">
       <Navigation/>
       </header>

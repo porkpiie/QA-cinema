@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Nav, NavItem, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, Form, NavLink } from 'reactstrap';
-import { FormControl} from 'react-bootstrap';
+import { FormControl } from 'react-bootstrap';
 import logo from '../logo.png';
 
 
@@ -23,47 +23,44 @@ export default class Navigation extends Component {
   render() {
     return (
       <div>
-        <Nav className="fixed-top navbar-dark expand-xl bg-company-black">
-        <a className="navbar-brand" href="/home" target="">
-              <img src={logo} width="150" height="100" alt="whalepic" />
-            </a>
+        <Nav className="fixed-top navbar-expand-xl navbar-dark bg-company-black">
+          <a className="navbar-brand" href="/home" target="">
+            <img src={logo} width="150" height="100" alt="whalepic" />
+          </a>
           <NavItem>
-            <NavLink href="/home">Home</NavLink>
+            <NavLink href="/home">HOME</NavLink>
           </NavItem>
-          
+
           <NavItem>
-            <NavLink href="/WhatsOn">What's On?</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink href="/ComingUp">What's Coming Up?</NavLink>
+            <NavLink href="/WhatsOn">WHAT'S ON</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="/Booking">Book Now!</NavLink>
+            <NavLink href="/ComingUp">WHAT'S COMING UP</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="/Booking">BOOK NOW</NavLink>
           </NavItem>
           <Dropdown nav isOpen={this.state.dropdownOpen} toggle={this.toggle}>
             <DropdownToggle nav caret>
-              More
+              MORE
             </DropdownToggle>
-            <DropdownMenu style={{backgroundColor : 'black'}}>
-              <DropdownItem header>About The Cinema</DropdownItem>
-              <DropdownItem href="/Screens" style={{color: 'red', textDecoration: 'none'}}>Our Screens </DropdownItem>
-              <DropdownItem href="/OpeningTimes" style={{color: 'red', textDecoration: 'none'}}>Opening Times </DropdownItem>
-              <DropdownItem href="/AboutUs" style={{color: 'red', textDecoration: 'none'}}>About Us</DropdownItem>
-              <DropdownItem href="/Classifications" style={{color: 'red', textDecoration: 'none'}}>Classifications</DropdownItem>
-              <DropdownItem href ="/ContactUs" style={{color: 'red', textDecoration: 'none'}}>Contact Us</DropdownItem>
+            <DropdownMenu style={{ backgroundColor: 'black' }}>
+              <DropdownItem header>ABOUT THE CINEMA</DropdownItem>
+              <DropdownItem href="/Screens" style={{ color: '#28CDE9', textDecoration: 'none' }}>OUR SCREENS</DropdownItem>
+              <DropdownItem href="/OpeningTimes" style={{ color: '#28CDE9', textDecoration: 'none' }}>OPENING TIMES</DropdownItem>
+              <DropdownItem href="/AboutUs" style={{ color: '#28CDE9', textDecoration: 'none' }}>ABOUT US</DropdownItem>
+              <DropdownItem href="/Classifications" style={{ color: '#28CDE9', textDecoration: 'none' }}>CLASSIFICATIONS</DropdownItem>
+              <DropdownItem href="/ContactUs" style={{ color: '#28CDE9', textDecoration: 'none' }}>CONTACT US</DropdownItem>
               <DropdownItem divider />
-              <DropdownItem header>What's Nearby?</DropdownItem>
-              <DropdownItem href="/GettingHere" style={{color: 'red', textDecoration: 'none'}}>Getting Here</DropdownItem>
-              <DropdownItem href="/ThingsToDo" style={{color: 'red', textDecoration: 'none'}}>Things To Do</DropdownItem>
+              <DropdownItem header>WHAT'S NEARBY?</DropdownItem>
+              <DropdownItem href="/GettingHere" style={{ color: '#28CDE9', textDecoration: 'none' }}>GETTING HERE</DropdownItem>
+              <DropdownItem href="/ThingsToDo" style={{ color: '#28CDE9', textDecoration: 'none' }}>THINGS TO DO</DropdownItem>
             </DropdownMenu>
           </Dropdown>
-          <NavItem>
-            <NavLink disabled href="#">Watch this space</NavLink>
-          </NavItem>
-          <Form inline>
-      <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-      <Button variant="outline-success">Search</Button>
-    </Form>
+          <Form inline className="ml-auto mr-3">
+            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+            <Button type="button" color="info">SEARCH</Button>
+          </Form>
         </Nav>
       </div>
     );
