@@ -22,10 +22,9 @@ import ContactUs from './Pages/ContactPage';
 function App() {
   return (
     <div className="App">
-      <head className="App-header">
-      <script src="https://kit.fontawesome.com/c2b25765db.js"></script>
+      <header className="App-header">
       <Navigation/>
-      </head>
+      </header>
       <div>
       <Router>
         <div>

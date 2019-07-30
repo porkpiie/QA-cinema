@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Nav, NavItem, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, Form, NavLink } from 'reactstrap';
-import { FormControl} from 'react-bootstrap';
+import { FormControl } from 'react-bootstrap';
 import logo from '../logo.png';
 
 
@@ -24,13 +24,13 @@ export default class Navigation extends Component {
     return (
       <div>
         <Nav className="fixed-top navbar-expand-xl navbar-dark bg-company-black">
-        <a className="navbar-brand" href="/home" target="">
-              <img src={logo} width="150" height="100" alt="whalepic" />
-            </a>
+          <a className="navbar-brand" href="/home" target="">
+            <img src={logo} width="150" height="100" alt="whalepic" />
+          </a>
           <NavItem>
             <NavLink href="/home">HOME</NavLink>
           </NavItem>
-          
+
           <NavItem>
             <NavLink href="/WhatsOn">WHAT'S ON</NavLink>
           </NavItem>
@@ -44,23 +44,23 @@ export default class Navigation extends Component {
             <DropdownToggle nav caret>
               MORE
             </DropdownToggle>
-            <DropdownMenu style={{backgroundColor : 'black'}}>
+            <DropdownMenu style={{ backgroundColor: 'black' }}>
               <DropdownItem header>ABOUT THE CINEMA</DropdownItem>
-              <DropdownItem href="/Screens" style={{color: 'red', textDecoration: 'none'}}>OUR SCREENS</DropdownItem>
-              <DropdownItem href="/OpeningTimes" style={{color: 'red', textDecoration: 'none'}}>OPENING TIMES</DropdownItem>
-              <DropdownItem href="/AboutUs" style={{color: 'red', textDecoration: 'none'}}>ABOUT US</DropdownItem>
-              <DropdownItem href="/Classifications" style={{color: 'red', textDecoration: 'none'}}>CLASSIFICATIONS</DropdownItem>
-              <DropdownItem href ="/ContactUs" style={{color: 'red', textDecoration: 'none'}}>CONTACT US</DropdownItem>
+              <DropdownItem href="/Screens" style={{ color: 'red', textDecoration: 'none' }}>OUR SCREENS</DropdownItem>
+              <DropdownItem href="/OpeningTimes" style={{ color: 'red', textDecoration: 'none' }}>OPENING TIMES</DropdownItem>
+              <DropdownItem href="/AboutUs" style={{ color: 'red', textDecoration: 'none' }}>ABOUT US</DropdownItem>
+              <DropdownItem href="/Classifications" style={{ color: 'red', textDecoration: 'none' }}>CLASSIFICATIONS</DropdownItem>
+              <DropdownItem href="/ContactUs" style={{ color: 'red', textDecoration: 'none' }}>CONTACT US</DropdownItem>
               <DropdownItem divider />
               <DropdownItem header>WHAT'S NEARBY?</DropdownItem>
-              <DropdownItem href="/GettingHere" style={{color: 'red', textDecoration: 'none'}}>GETTING HERE</DropdownItem>
-              <DropdownItem href="/ThingsToDo" style={{color: 'red', textDecoration: 'none'}}>THINGS TO DO</DropdownItem>
+              <DropdownItem href="/GettingHere" style={{ color: 'red', textDecoration: 'none' }}>GETTING HERE</DropdownItem>
+              <DropdownItem href="/ThingsToDo" style={{ color: 'red', textDecoration: 'none' }}>THINGS TO DO</DropdownItem>
             </DropdownMenu>
           </Dropdown>
-          <Form inline>
-      <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-      <Button variant="outline-success">SEARCH</Button>
-    </Form>
+          <Form inline className="ml-auto mr-3">
+            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+            <Button variant="outline-success">SEARCH</Button>
+          </Form>
         </Nav>
       </div>
     );
