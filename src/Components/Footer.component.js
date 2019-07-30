@@ -4,7 +4,7 @@ import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 export default class AppFooter extends Component {
   render(){
     return (
-      <MDBFooter color="black">
+      <MDBFooter color="blue-gradient pt-4 mt-4">
         <MDBContainer className="text-center text-md-left">
           <MDBRow className="my-4">
             <MDBCol md="4" lg="4">
@@ -52,7 +52,7 @@ export default class AppFooter extends Component {
                 <a className="btn btn-link" href="#!">
                   <i className="fab fa-facebook-f text-white" />
                 </a>
-                <a type="button" className="btn btn-link" href="https://twitter.com/filmsqa">
+                <a className="btn btn-link" href="https://twitter.com/filmsqa" target="__blank">
                   <i className="fab fa-twitter text-white" />
                 </a>
               </div>

@@ -46,20 +46,20 @@ export default class Navigation extends Component {
             </DropdownToggle>
             <DropdownMenu style={{ backgroundColor: 'black' }}>
               <DropdownItem header>ABOUT THE CINEMA</DropdownItem>
-              <DropdownItem href="/Screens" style={{ color: 'red', textDecoration: 'none' }}>OUR SCREENS</DropdownItem>
-              <DropdownItem href="/OpeningTimes" style={{ color: 'red', textDecoration: 'none' }}>OPENING TIMES</DropdownItem>
-              <DropdownItem href="/AboutUs" style={{ color: 'red', textDecoration: 'none' }}>ABOUT US</DropdownItem>
-              <DropdownItem href="/Classifications" style={{ color: 'red', textDecoration: 'none' }}>CLASSIFICATIONS</DropdownItem>
-              <DropdownItem href="/ContactUs" style={{ color: 'red', textDecoration: 'none' }}>CONTACT US</DropdownItem>
+              <DropdownItem href="/Screens" style={{ color: '#28CDE9', textDecoration: 'none' }}>OUR SCREENS</DropdownItem>
+              <DropdownItem href="/OpeningTimes" style={{ color: '#28CDE9', textDecoration: 'none' }}>OPENING TIMES</DropdownItem>
+              <DropdownItem href="/AboutUs" style={{ color: '#28CDE9', textDecoration: 'none' }}>ABOUT US</DropdownItem>
+              <DropdownItem href="/Classifications" style={{ color: '#28CDE9', textDecoration: 'none' }}>CLASSIFICATIONS</DropdownItem>
+              <DropdownItem href="/ContactUs" style={{ color: '#28CDE9', textDecoration: 'none' }}>CONTACT US</DropdownItem>
               <DropdownItem divider />
               <DropdownItem header>WHAT'S NEARBY?</DropdownItem>
-              <DropdownItem href="/GettingHere" style={{ color: 'red', textDecoration: 'none' }}>GETTING HERE</DropdownItem>
-              <DropdownItem href="/ThingsToDo" style={{ color: 'red', textDecoration: 'none' }}>THINGS TO DO</DropdownItem>
+              <DropdownItem href="/GettingHere" style={{ color: '#28CDE9', textDecoration: 'none' }}>GETTING HERE</DropdownItem>
+              <DropdownItem href="/ThingsToDo" style={{ color: '#28CDE9', textDecoration: 'none' }}>THINGS TO DO</DropdownItem>
             </DropdownMenu>
           </Dropdown>
           <Form inline className="ml-auto mr-3">
             <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-            <Button variant="outline-danger">SEARCH</Button>
+            <Button type="button" color="info">SEARCH</Button>
           </Form>
         </Nav>
       </div>

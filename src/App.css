@@ -1,6 +1,7 @@
 
 body {
   background-color: black;
+  
 }
 
 h1 {
@@ -44,7 +45,7 @@ h1 {
 
 .nav .nav-item.active .nav-link,
 .nav-item:hover .nav-link {
-  color: fuchsia;
+  color: 	#28CDE9;
 }
 
 .nav-item {
@@ -76,6 +77,3 @@ h1 {
   padding-top: 5%;
 }
 
-.p-2 {
-  background-color: black
-}
