@@ -25,7 +25,7 @@ export default class Navigation extends Component {
       <div>
         <Nav className="fixed-top navbar-dark expand-xl bg-company-black">
         <a className="navbar-brand" href="/home" target="">
-              <img src={logo} width="200" height="150" alt="whalepic" />
+              <img src={logo} width="150" height="100" alt="whalepic" />
             </a>
           <NavItem>
             <NavLink href="/home">Home</NavLink>

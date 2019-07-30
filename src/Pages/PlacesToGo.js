@@ -39,7 +39,7 @@ const PlacesToGo = () => (
     </Parallax>
   
     <Parallax bgImage={HandW} strength={500}>
-    <div style={{ height: 500 }}>
+    <div style={{ height: 600 }}>
         <div className="places1" style={insideStyles}>
             <a className="linkAbout" style={{fontSize : "50px"}} href="https://www.hall-woodhousewichelstowe.co.uk/" alt="hallandwoodhouse" rel="noopener noreferrer" target="_blank">Hall & Woodhouse</a>
             <p style={{fontSize : "18px"}}>Hall & Woodhosue in Wichelstowe is a brand new pub from Dorset Brewers of the same name</p>
@@ -54,8 +54,18 @@ const PlacesToGo = () => (
     </Parallax>
 
     <Parallax bgImage={Karting} strength={500}>
-      <div style={{ height: 500 }}>
-        <div style={insideStyles}>Reverse direction</div>
+    <div style={{ height: 600 }}>
+        <div className="places1" style={insideStyles}>
+            <a className="linkAbout" style={{fontSize : "50px"}} href="https://swindonkarting.co.uk/" alt="karting" rel="noopener noreferrer" target="_blank">Swindon Karting Arena</a>
+            <p style={{fontSize : "18px"}}>Covered kart track plus rodeo bull, laser shooting, mini-quad and digger course draws group visits</p>
+            
+            <p style={{fontSize : "35px"}}>Venue Info</p>
+            <p>01793 814340</p>
+            <p>Hangar C2</p>
+            <p>Wroughton Airfield</p>
+            <p>Swindon</p>
+            <p>SN4 0QJ</p>
+            </div>
       </div>
     </Parallax>
   </div>

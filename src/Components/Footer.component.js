@@ -5,7 +5,7 @@ import { Nav } from 'react-bootstrap';
 export default class AppFooter extends Component{
     render() {
         return(
-            <div id="footer" className="navbar-dark bg-company-footer">  
+            <div className="navbar-dark bg-company-footer">  
                 <Navbar>
                     <Nav>
                         <NavbarBrand> &copy; QA Cinemas 2019</NavbarBrand>
