@@ -38,6 +38,7 @@
     ]
   },
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^5.10.0"
+    "@fortawesome/fontawesome-free": "^5.10.0",
+    "react-test-renderer": "^16.8.6"
   }
 }
