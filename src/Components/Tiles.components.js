@@ -88,7 +88,7 @@ export default class Tiles extends Component {
                             else {
                                 let runtimeComp = "";
                                 let runHours = Math.floor(runtime / 60);
-                                if (runHours === 1){
+                                if (runHours === 1) {
                                     runtimeComp += "1 Hour "
                                 }
                                 else if (runHours !== 0) {
@@ -122,18 +122,20 @@ export default class Tiles extends Component {
                         {this.state.movies.map(movie => (
                             <MDBCol key={movie.id}>
                                 <MDBView hover>
-                                    <Card bg="dark" text="white" style={{ width: '30vh', maxHeight: '100rem' }}>
-                                        <Card.Img variant="top" src={"https://image.tmdb.org/t/p/w500" + movie.poster_path} />
-                                        <Card.Body className="p-2 pt-4">
-                                            <Card.Title style={{ textAlign: "left", fontSize: 10 }}>
-                                                {movie.title.toLocaleUpperCase()}
-                                            </Card.Title>
-                                            <Card.Img style={{ width: '2rem', maxHeight: '30px' }} variant="top" src={movie.certimg} />
-                                        </Card.Body>
-                                    </Card>
-                                    <MDBMask style={{ width: '30vh', height: '45vh', fontSize: 15 }} overlay="black-strong">
-                                        <p className="white-text p-2 pt-10">DIRECTOR: {movie.director}<br />CAST{movie.cast}<br />RUNTIME: {movie.runtime}</p>
-                                    </MDBMask>
+                                    <a href={"./Film/" + movie.id}>
+                                        <Card bg="dark" text="white" style={{ width: '30vh', maxHeight: '100rem' }}>
+                                            <Card.Img variant="top" src={"https://image.tmdb.org/t/p/w500" + movie.poster_path} />
+                                            <Card.Body className="p-2 pt-4">
+                                                <Card.Title style={{ textAlign: "left", fontSize: 10 }}>
+                                                    {movie.title.toLocaleUpperCase()}
+                                                </Card.Title>
+                                                <Card.Img style={{ width: '2rem', maxHeight: '30px' }} variant="top" src={movie.certimg} />
+                                            </Card.Body>
+                                        </Card>
+                                        <MDBMask style={{ width: '30vh', height: '45vh', fontSize: 15 }} overlay="black-strong">
+                                            <p className="white-text p-2 pt-10">DIRECTOR: {movie.director}<br />CAST{movie.cast}<br />RUNTIME: {movie.runtime}</p>
+                                        </MDBMask>
+                                    </a>
                                 </MDBView>
                             </MDBCol>
                         ))}
