@@ -73,6 +73,10 @@ export default class CarouselHome extends React.Component {
                 </div>
             </div>
 
+            
+
+            
+
         );
     }
 }

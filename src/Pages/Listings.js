@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import Tiles from '../Components/Tiles.components';
-import Whale from '../Images/whalebanner.png';
+import Banner from '../Components/Banner.component';
 
 export default class Listings extends Component{
     render(){
         return(
             <div>
-                <img src={Whale} width="100%" height="5%" alt="whaleban" />
+                <Banner />
             <h1 className="Listingh1">NOW SHOWING</h1>
             <hr/>
             

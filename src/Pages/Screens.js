@@ -1,22 +1,23 @@
 import React, { Component } from 'react';
-import standard from '../Images/screenStandard.jpg'
+import Banner from '../Components/Banner.component';
+import CarouselScreen from '../Components/Carousel.screens.component';
+import CarouselScreen2 from '../Components/Carousel.screens2.component';
 
 export default class Screens extends Component {
     render() {
         return (
             <div>
+                <Banner/>
                 <div>
                     <h1 className="Listingh1">OUR SCREENS</h1>
                     <hr />
                 </div>
-                <div className="container">
-                    <div className="row">
-                        <div className="col-2">
-                            <img className="standard" src={standard} alt="standardscreen" />
-                        <div className="col-2">SOMETHING HERE?
+                <div>
+                    <CarouselScreen/>
                 </div>
-                        </div>
-                    </div>
+                <br/>
+                <div>
+                    <CarouselScreen2/>
                 </div>
             </div>
 

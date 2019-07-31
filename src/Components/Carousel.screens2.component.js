@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import Carousel from "react-bootstrap/Carousel";
 import screenDeluxe from "../Images/screenDeluxe.jpg";
-import deluxeSeating from "../Images/deluxeSeating.png"
+import screenStandard from "../Images/screenStandard.jpg"
 
-export default class CarouselScreen extends Component {
+export default class CarouselScreen2 extends Component {
 
     render() {
 
@@ -16,18 +16,18 @@ export default class CarouselScreen extends Component {
                     <Carousel>
                         <Carousel.Item>
                             <div className="carousel-img-wrapper">
-                                <div className="imggradient" />
+                                <div className="imgbold" />
                                 <img
                                     className="d-block w-100"
-                                    src={screenDeluxe}
+                                    src={screenStandard}
                                     alt="First slide"
                                 />
                             </div>
 
                             <Carousel.Caption>
-                                <h1 id="Carouselh1" style={{textAlign:"left", fontSize:40}}>Deluxe</h1><br/>
-                                <p id="Carouselp1">Enjoy your film in style with our luxury screen</p>
-                                <p id="Carouselp1">A comfortable night out for all</p>
+                                <h1 id="Carouselh1" style={{textAlign:"left", fontSize:40}}>Our Standard Screen</h1><br/>
+                                <p id="Carouselp1">No Fuss.. No Frills.. Just great movie fun for all</p>
+                                <p id="Carouselp1">What are you waiting for?</p>
                                 
                             </Carousel.Caption>
                             
@@ -35,18 +35,18 @@ export default class CarouselScreen extends Component {
 
                         <Carousel.Item>
                             <div className="carousel-img-wrapper">
-                                <div className="imgbold" />
+                                <div className="imggradient" />
                                 <img
                                     className="d-block w-100"
-                                    src={deluxeSeating}
+                                    src={screenDeluxe}
                                     alt="Third slide"
                                 />
                             </div>
 
-                            {/* <Carousel.Caption>
+                            <Carousel.Caption>
                             <h1 id="Carouselh1"style={{textAlign:"left", fontSize:40}}>Deluxe Seating Plan</h1><br/>
                            
-                            </Carousel.Caption> */}
+                            </Carousel.Caption>
                         </Carousel.Item>
                        
                     </Carousel>
