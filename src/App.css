@@ -57,7 +57,7 @@ h1 {
 }
 
 .nav .nav-item.active .nav-link,
-.nav-item:hover .nav-link {
+.nav-item:hover .nav-link .button{
   color: 	#28CDE9;
 }
 
@@ -100,3 +100,53 @@ hr {
   background-color:white;
   opacity: 0.5;
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .alert-infoo{
+
+    color: #0c5460;
+    background-color: #28CDE9;
+    border-color: #28CDE9;
+  }
+
+  .bg-company-blue{
+
+    color: #0c5460;
+    background-color: #28CDE9;
+    border-color: #28CDE9;
+  }
+
