@@ -66,12 +66,12 @@ export default class Tiles extends Component {
     render() {
         return (
             <div className="tiles pt-10">
-                <MDBContainer >
+                <MDBContainer style={{  marginLeft : "10vh", marginRight : "10vh"}} >
                     <MDBRow>
                         {this.state.movies.map(movie => (
                             <MDBCol key={movie.id}>
                                 <MDBView hover>
-                                    <Card bg="dark" text="white" style={{ width: '30vh', maxHeight: '100rem' }}>
+                                    <Card bg="dark" text="white" style={{ minHeight: '65vh'}}>
                                         <Card.Img variant="top" src={"https://image.tmdb.org/t/p/w500" + movie.poster_path} />
                                         <Card.Body className="p-2 pt-4">
                                             <Card.Title style={{ textAlign: "left", fontSize: 10 }}>
@@ -80,7 +80,7 @@ export default class Tiles extends Component {
                                             <Card.Img style={{ width: '2rem', maxHeight: '30px' }} variant="top" src={movie.certimg} />
                                         </Card.Body>
                                     </Card>
-                                    <MDBMask style={{ width: '30vh', height: '45vh', fontSize: 15 }} overlay="black-strong">
+                                    <MDBMask style={{ width: '35vh', height: '50vh', fontSize: 15 }} overlay="black-strong">
                                         <p className="white-text p-2 pt-10">DIRECTOR: <br />CAST:<br />RUNTIME:</p>
                                     </MDBMask>
                                 </MDBView>
