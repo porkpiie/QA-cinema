@@ -80,7 +80,7 @@ export default class Tiles extends Component {
                                             <Card.Img style={{ width: '2rem', maxHeight: '30px' }} variant="top" src={movie.certimg} />
                                         </Card.Body>
                                     </Card>
-                                    <MDBMask style={{ width: '10rem', height: '15rem', fontSize: 15 }} overlay="black-strong">
+                                    <MDBMask style={{ width: '30vh', height: '45vh', fontSize: 15 }} overlay="black-strong">
                                         <p className="white-text p-2 pt-10">DIRECTOR: <br />CAST:<br />RUNTIME:</p>
                                     </MDBMask>
                                 </MDBView>
