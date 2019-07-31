@@ -34,7 +34,7 @@ class Film extends React.Component {
 			<div className="tiles pt-10">
 				<MDBContainer >
 					<MDBRow>
-						<img width="100%" height="250px" src={"https://image.tmdb.org/t/p/w500" + this.state.movie.backdrop_path} />
+						<img width="100%" height="350px" src={"https://image.tmdb.org/t/p/w1280" + this.state.movie.backdrop_path} />
 						<h1 className="Listingh1">{this.state.movie.title}</h1>
 						<h2>{this.state.movie.id}</h2>
 					</MDBRow>
