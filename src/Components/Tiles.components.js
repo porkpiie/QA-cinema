@@ -29,7 +29,7 @@ export default class Tiles extends Component {
                 this.setState({
                     movies: response.data.results.slice(0, 4),
                 })
-         
+
                 for (let movie in this.state.movies) {
                     let certFound = false;
                     movie = this.state.movies[movie];
@@ -55,10 +55,61 @@ export default class Tiles extends Component {
                                 case ("18"): movie.certimg = EIGHTEENimage; break;
                                 default: movie.certimg = TBDimage;
                             }
-
-                            this.setState({ update: "true" });
                         })
                         .catch();
+                    axios.get("https://api.themoviedb.org/3/movie/" + movie.id + "/credits?api_key=" + APIkey)
+                        .then(response => {
+                            let castRaw = response.data.cast.slice(0, 3);
+                            let cast = [];
+                            for (let castMem in castRaw) {
+                                castMem = castRaw[castMem];
+                                cast.push(" " + castMem.name + " as " + castMem.character);
+                                movie.cast = ": " + cast;
+                                this.setState({ update: "true" });
+                                this.setState({ update: "false" });
+                            }
+
+                            let directors = []
+                            for (let crewMem in response.data.crew) {
+                                crewMem = response.data.crew[crewMem];
+                                if (crewMem.job === "Director") {
+                                    directors.push(crewMem.name + " ");
+                                }
+                            }
+                            movie.director = directors;
+                        })
+                        .catch();
+                    axios.get("https://api.themoviedb.org/3/movie/" + movie.id + "?api_key=" + APIkey + "&language=en-US")
+                        .then(response => {
+                            let runtime = response.data.runtime;
+                            if (runtime === null) {
+                                movie.runtime = "-";
+                            }
+                            else {
+                                let runtimeComp = "";
+                                let runHours = Math.floor(runtime / 60);
+                                if (runHours === 1){
+                                    runtimeComp += "1 Hour "
+                                }
+                                else if (runHours !== 0) {
+                                    runtimeComp += runHours + " Hours "
+                                }
+                                let runMinutes = Math.floor(runtime % 60);
+                                if (runMinutes === 1) {
+                                    runtimeComp += "1 Minute"
+                                }
+                                else if (runMinutes !== 0) {
+                                    runtimeComp += runMinutes + " Minutes "
+                                }
+                                movie.runtime = runtimeComp;
+                            }
+                            this.setState({ update: "true" });
+                            this.setState({ update: "false" });
+                        })
+                        .catch(() => {
+                            this.setState({ update: "true" });
+                            this.setState({ update: "false" });
+                        });
                 }
             });
     }
@@ -81,7 +132,7 @@ export default class Tiles extends Component {
                                         </Card.Body>
                                     </Card>
                                     <MDBMask style={{ width: '30vh', height: '45vh', fontSize: 15 }} overlay="black-strong">
-                                        <p className="white-text p-2 pt-10">DIRECTOR: <br />CAST:<br />RUNTIME:</p>
+                                        <p className="white-text p-2 pt-10">DIRECTOR: {movie.director}<br />CAST{movie.cast}<br />RUNTIME: {movie.runtime}</p>
                                     </MDBMask>
                                 </MDBView>
                             </MDBCol>
