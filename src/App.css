@@ -8,17 +8,20 @@ h1 {
   background-color: black;
   color: white;
   padding-bottom: 5px;
-  text-align: left;
-  margin: 0 !important;
-  font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
-}
-
-.Listingh1 {
   padding-top: 10vh;
   padding-left: 10vh;
   font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
   font-weight: 400;
+  text-align: left;
+  margin: 0 !important;
 }
+
+/* .Listingh1 {
+  padding-top: 10vh;
+  padding-left: 10vh;
+  font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 400;
+} */
 
 .App {
   text-align: center;
