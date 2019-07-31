@@ -5,12 +5,14 @@ body {
 }
 
 h1 {
-  background-color: black;
+  background-color: transparent;
   color: white;
   padding-bottom: 5px;
+  padding-top: 10vh;
+  font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 400;
   text-align: left;
   margin: 0 !important;
-  font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
 }
 
 .Listingh1 {
@@ -18,6 +20,7 @@ h1 {
   padding-left: 10vh;
   font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
   font-weight: 400;
+  font-size: 30px;
 }
 
 .App {
@@ -45,6 +48,7 @@ h1 {
 .nav {
   align-content: center;
   justify-content: center;
+  padding-left: 10vh;
   
 }
 
@@ -60,7 +64,7 @@ h1 {
 
 .nav-item {
   margin-top: 25px !important;
-  padding-left: 3%
+  padding-left: 2%
 }
 
 .linkAbout {
@@ -97,3 +101,24 @@ hr {
   background-color:white;
   opacity: 0.5;
   }
+
+.classificationP1 {
+  color: white;
+  padding-top: 3vh;
+  padding-left: 10vh;
+  padding-right: 10vh;
+  font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 400;
+  text-align: left;
+}
+
+.bbfcban {
+  max-height: 45vh;
+  width: 100%;
+
+}
+
+.col-4 {
+  color: white;
+  padding-left: 100px;
+}

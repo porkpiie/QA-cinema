@@ -25,7 +25,7 @@ export default class Navigation extends Component {
       <div>
         <Nav className="fixed-top navbar-expand-xl navbar-dark bg-company-black">
           <a className="navbar-brand" href="/home" target="">
-            <img src={logo} width="150" height="100" alt="whalepic" />
+            <img style={{ paddingLeft : "10vh", }} src={logo}  height="100" alt="whalepic" />
           </a>
           <NavItem>
             <NavLink href="/home">HOME</NavLink>
@@ -51,6 +51,7 @@ export default class Navigation extends Component {
               <DropdownItem href="/AboutUs" style={{ color: '#28CDE9', textDecoration: 'none' }}>ABOUT US</DropdownItem>
               <DropdownItem href="/Classifications" style={{ color: '#28CDE9', textDecoration: 'none' }}>CLASSIFICATIONS</DropdownItem>
               <DropdownItem href="/ContactUs" style={{ color: '#28CDE9', textDecoration: 'none' }}>CONTACT US</DropdownItem>
+              <DropdownItem href="/DiscussionBoard" style={{ color: '#28CDE9', textDecoration: 'none' }}>DISCUSSION BOARD</DropdownItem>
               <DropdownItem divider />
               <DropdownItem header>WHAT'S NEARBY?</DropdownItem>
               <DropdownItem href="/GettingHere" style={{ color: '#28CDE9', textDecoration: 'none' }}>GETTING HERE</DropdownItem>
