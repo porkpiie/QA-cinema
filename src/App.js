@@ -17,6 +17,7 @@ import PlacesToGo from './Pages/PlacesToGo';
 import OpeningTimes from './Pages/OpeningTimes';
 import ContactUs from './Pages/ContactPage';
 import DiscussionBoard from './Pages/DiscussionBoard';
+import Film from './Pages/Film';
 
 
 
@@ -41,6 +42,7 @@ function App() {
           <Route path="/OpeningTImes" component={OpeningTimes}/>
           <Route path="/Contact Us" component={ContactUs}/>
           <Route path="/DiscussionBoard" component={DiscussionBoard}/>
+          <Route path="/Film/:id" component={Film}/>
         </div>
       </Router>
       </div>
