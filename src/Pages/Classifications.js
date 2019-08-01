@@ -63,7 +63,7 @@ export default class Classifications extends Component{
               <p>SUITABLE ONLY FOR 15 YEARS AND OVER</p>
               </div>
               <div className="col-4">
-              <a className="btn" href="https://bbfc.co.uk/what-classification/18</a>" target="__blank">
+              <a className="btn" href="https://bbfc.co.uk/what-classification/18" target="__blank">
               <img src={Eighteen} alt="12A" style={{ paddingBottom : "20px"}} /></a>
                 <p>SUITABLE ONLY FOR ADULTS</p>
               </div>           
