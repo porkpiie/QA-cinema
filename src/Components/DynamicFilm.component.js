@@ -137,7 +137,7 @@ class Film extends React.Component {
 							<h5><b>Director </b>: {this.state.movie.director}</h5>
 							<br></br>
 							<br></br>
-							<button style={{color:"#FFFFFF"}} className="btn" onClick={() => {window.location.replace('./../WhatsOn')}}>Back To Film Listing</button>
+							<button style={{color:"#FFFFFF"}} className="btn" onClick={() => {window.location.replace('./../../' + this.props.match.params.origin)}}>Back To Film Listing</button>
 						</MDBCol>
 						<MDBCol>
 							<img src={"https://image.tmdb.org/t/p/w342" + this.state.movie.poster_path} />

@@ -40,7 +40,7 @@ function App() {
           <Route path="/ThingsToDo" component={PlacesToGo}/>
           <Route path="/OpeningTImes" component={OpeningTimes}/>
           <Route path="/Contact Us" component={ContactUs}/>
-          <Route path="/Film/:id" component={Film}/>
+          <Route path="/Film/:origin/:id" component={Film}/>
         </div>
       </Router>
       </div>

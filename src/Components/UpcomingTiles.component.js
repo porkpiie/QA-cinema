@@ -24,10 +24,10 @@ export default class Tiles extends Component {
     }
 
     componentDidMount() {
-        axios.get("https://api.themoviedb.org/3/movie/now_playing?page=1&language=en-US&api_key=" + APIkey)
+        axios.get("https://api.themoviedb.org/3/movie/upcoming?page=1&language=en-US&api_key=" + APIkey)
             .then(response => {
                 this.setState({
-                    movies: response.data.results.slice(0, 4),
+                    movies: response.data.results.slice(1, 5),
                 })
 
                 for (let movie in this.state.movies) {
@@ -122,7 +122,7 @@ export default class Tiles extends Component {
                         {this.state.movies.map(movie => (
                             <MDBCol key={movie.id}>
                                 <MDBView hover>
-                                    <a href={"./Film/WhatsOn/" + movie.id}>
+                                    <a href={"./Film/ComingUp/" + movie.id}>
                                         <Card bg="dark" text="white" style={{ width: '30vh', maxHeight: '100rem' }}>
                                             <Card.Img variant="top" src={"https://image.tmdb.org/t/p/w500" + movie.poster_path} />
                                             <Card.Body className="p-2 pt-4">
