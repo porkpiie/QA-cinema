@@ -40,7 +40,7 @@ function App() {
           <Route path="/Classifications" component={Classifications}/>
           <Route path="/GettingHere" component={Getting}/>
           <Route path="/ThingsToDo" component={PlacesToGo}/>
-          <Route path="/OpeningTImes" component={OpeningTimes}/>
+          <Route path="/OpeningTimes" component={OpeningTimes}/>
           <Route path="/ContactUs" component={ContactUs}/>
           <Route path="/DiscussionBoard" component={DiscussionBoard}/>
           <Route path="/Film/:id" component={Film}/>
