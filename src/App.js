@@ -16,6 +16,7 @@ import Getting from './Pages/GettingThere';
 import PlacesToGo from './Pages/PlacesToGo';
 import OpeningTimes from './Pages/OpeningTimes';
 import ContactUs from './Pages/ContactPage';
+import DiscussionBoard from './Pages/DiscussionBoard';
 import Film from './Pages/Film';
 
 
@@ -40,6 +41,7 @@ function App() {
           <Route path="/ThingsToDo" component={PlacesToGo}/>
           <Route path="/OpeningTImes" component={OpeningTimes}/>
           <Route path="/Contact Us" component={ContactUs}/>
+          <Route path="/DiscussionBoard" component={DiscussionBoard}/>
           <Route path="/Film/:id" component={Film}/>
         </div>
       </Router>
