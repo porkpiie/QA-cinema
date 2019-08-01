@@ -41,9 +41,9 @@ function App() {
           <Route path="/GettingHere" component={Getting}/>
           <Route path="/ThingsToDo" component={PlacesToGo}/>
           <Route path="/OpeningTimes" component={OpeningTimes}/>
+          <Route path="/Film/:origin/:id" component={Film}/>
           <Route path="/ContactUs" component={ContactUs}/>
           <Route path="/DiscussionBoard" component={DiscussionBoard}/>
-          <Route path="/Film/:id" component={Film}/>
         </div>
       </Router>
       </div>
