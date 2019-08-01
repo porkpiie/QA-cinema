@@ -59,7 +59,7 @@ h1 {
 }
 
 .nav .nav-item.active .nav-link,
-.nav-item:hover .nav-link {
+.nav-item:hover .nav-link .button{
   color: 	#28CDE9;
 }
 
@@ -103,6 +103,20 @@ hr {
   opacity: 0.5;
   }
 
+  .alert-infoo{
+
+    color: #0c5460;
+    background-color: #28CDE9;
+    border-color: #28CDE9;
+  }
+
+  .bg-company-blue{
+
+    color: #0c5460;
+    background-color: #28CDE9;
+    border-color: #28CDE9;
+  }
+
 .classificationP1 {
   color: white;
   padding-top: 3vh;
@@ -123,6 +137,3 @@ hr {
   color: white;
   padding-left: 100px;
 }
-
-
-
