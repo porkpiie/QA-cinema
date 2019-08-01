@@ -7,7 +7,7 @@ import TBDimage from '../Images/TBC.png';
 import Uimage from '../Images/U.png';
 import PGimage from '../Images/PG.png';
 import TWELVEimage from '../Images/12.png';
-import TWELVEAimage from '../Images/12A.png';
+import TWELVEAimage from '../Images/12a.png';
 import FIFTEENimage from '../Images/15.png';
 import EIGHTEENimage from '../Images/18.png';
 

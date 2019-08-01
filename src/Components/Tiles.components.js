@@ -129,7 +129,7 @@ class Tiles extends Component {
     render() {
         return (
             <div className="tiles pt-10">
-                <MDBContainer >
+                <MDBContainer style={{  marginLeft : "10vh", marginRight : "10vh"}} >
                     <MDBRow>
                         {this.state.movies.map(movie => (
                             <MDBCol key={movie.id}>
