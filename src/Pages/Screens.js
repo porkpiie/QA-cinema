@@ -7,20 +7,19 @@ export default class Screens extends Component {
     render() {
         return (
             <div>
-                <Banner/>
+                <Banner />
                 <div>
                     <h1 className="Listingh1">OUR SCREENS</h1>
                     <hr />
                 </div>
                 <div>
-                    <CarouselScreen/>
+                    <CarouselScreen />
                 </div>
-                <br/>
+                <br />
                 <div>
-                    <CarouselScreen2/>
+                    <CarouselScreen2 />
                 </div>
             </div>
-
         )
     }
 }

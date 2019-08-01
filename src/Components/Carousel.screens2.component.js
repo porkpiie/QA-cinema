@@ -44,7 +44,7 @@ export default class CarouselScreen2 extends Component {
                             </div>
 
                             <Carousel.Caption>
-                            <h1 id="Carouselh1"style={{textAlign:"left", fontSize:40}}>Deluxe Seating Plan</h1><br/>
+                            <h1 id="Carouselh1"style={{textAlign:"left", fontSize:40}}>Standard Seating Plan</h1><br/>
                            
                             </Carousel.Caption>
                         </Carousel.Item>
