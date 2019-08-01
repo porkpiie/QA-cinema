@@ -32,7 +32,7 @@ class Tiles extends Component {
         else if(this.props.match.url === "/ComingUp"){
             requestMovies = "upcoming"
         }
-        else { //This should never happen
+        else { 
             requestMovies = "now_showing"
         }
 
