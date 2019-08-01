@@ -10,12 +10,13 @@ import NewReleases from './Pages/NewReleases';
 import TicketBooking from './Pages/TicketBooking';
 import Screens from './Pages/Screens';
 import AboutUs from './Pages/AboutUs';
-import AppFooter from './Components/Footer.component';
+
 import Classifications from './Pages/Classifications';
 import Getting from './Pages/GettingThere';
 import PlacesToGo from './Pages/PlacesToGo';
 import OpeningTimes from './Pages/OpeningTimes';
 import ContactUs from './Pages/ContactPage';
+import AppFooter from './Components/Footer.component';
 import DiscussionBoard from './Pages/DiscussionBoard';
 import Film from './Pages/Film';
 
@@ -40,7 +41,7 @@ function App() {
           <Route path="/GettingHere" component={Getting}/>
           <Route path="/ThingsToDo" component={PlacesToGo}/>
           <Route path="/OpeningTImes" component={OpeningTimes}/>
-          <Route path="/Contact Us" component={ContactUs}/>
+          <Route path="/ContactUs" component={ContactUs}/>
           <Route path="/DiscussionBoard" component={DiscussionBoard}/>
           <Route path="/Film/:id" component={Film}/>
         </div>
