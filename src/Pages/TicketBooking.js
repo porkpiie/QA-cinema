@@ -3,7 +3,10 @@ import React, { Component } from 'react';
 export default class TicketBooking extends Component{
     render(){
         return(
-            <h1>Testing Ticket Booking</h1>
+            <div>
+            <h1 className="Listingh1">READY... SET... GO!</h1>
+            <hr/>
+            </div>
         )
     }
 }

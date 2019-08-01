@@ -1,7 +1,6 @@
 
 body {
   background-color: black;
-  
 }
 
 h1 {
@@ -21,7 +20,6 @@ h1 {
   font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
   font-weight: 400;
   font-size: 30px;
-
 }
 
 .App {
@@ -60,7 +58,7 @@ h1 {
 
 .nav .nav-item.active .nav-link,
 .nav-item:hover .nav-link .button{
-  color: 	#28CDE9;
+  color: #28CDE9;
 }
 
 .nav-item {
