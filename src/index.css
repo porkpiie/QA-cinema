@@ -13,9 +13,9 @@ code {
 }
 
 .carousel-img-wrapper {
-  padding-top: 5px;
+  padding-top: 10px;
   margin-bottom: 100px;
-  height: 700px;
+  height: 600px;
 }
 .carousel-img-wrapper img {
   width: 100%;
