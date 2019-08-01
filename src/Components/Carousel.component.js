@@ -4,10 +4,10 @@ import Carousel from "react-bootstrap/Carousel";
 // import Carousel from 'react-bootstrap/Carousel'
 import imagea from "../Images/CarouselIMG.jpeg";
 import imageb from "../Images/toy-story-4.jpg";
-import imagec from "../Images/SpiderMan.jpg"
-import pg from "../Images/PG.png"
-import u from "../Images/U.png"
-import twelvea from "../Images/12a.png"
+import imagec from "../Images/SpiderMan.jpg";
+import pg from "../Images/PG.png";
+import u from "../Images/U.png";
+import twelvea from "../Images/12a.png";
 
 export default class CarouselHome extends React.Component {
 
@@ -72,6 +72,10 @@ export default class CarouselHome extends React.Component {
                     </Carousel>
                 </div>
             </div>
+
+            
+
+            
 
         );
     }
