@@ -71,7 +71,7 @@ export default class Tiles extends Component {
                         {this.state.movies.map(movie => (
                             <MDBCol key={movie.id}>
                                 <MDBView hover>
-                                    <Card bg="dark" text="white" style={{ Width : '15vem', height: '40vh'}}>
+                                    <Card bg="dark" text="white" style={{ Width : '15vem', minHeight: '60vh'}}>
                                         <Card.Img variant="top" src={"https://image.tmdb.org/t/p/w500" + movie.poster_path} />
                                         <Card.Body className="p-2 pt-4">
                                             <Card.Title style={{ textAlign: "left", fontSize: 10 }}>
