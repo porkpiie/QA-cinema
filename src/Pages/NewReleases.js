@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import UpcomingTiles from '../Components/UpcomingTiles.component';
+import Tiles from '../Components/Tiles.components';
 import Whale from '../Images/whalebanner.png';
 
 export default class Listings extends Component{
@@ -10,7 +10,7 @@ export default class Listings extends Component{
             <h1 className="Listingh1">COMING SOON</h1>
             <hr/>
             
-            <UpcomingTiles/>
+            <Tiles/>
             </div>
         )
     }
