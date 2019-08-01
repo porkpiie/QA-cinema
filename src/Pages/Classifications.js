@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import bbfc from '../Images/bbfcimg.jpg';
 import U from '../Images/U.png';
 import PG from '../Images/PG.png';
-import TwelveA from '../Images/12a.png';
+import TwelveA from '../Images/12A.png';
 import Twelve from '../Images/12.png';
 import Fifteen from '../Images/15.png';
 import Eighteen from '../Images/18.png';

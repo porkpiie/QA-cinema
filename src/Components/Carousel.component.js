@@ -7,7 +7,7 @@ import imageb from "../Images/toy-story-4.jpg";
 import imagec from "../Images/SpiderMan.jpg"
 import pg from "../Images/PG.png"
 import u from "../Images/U.png"
-import twelvea from "../Images/12a.png"
+import twelvea from "../Images/12A.png"
 
 export default class CarouselHome extends React.Component {
 
