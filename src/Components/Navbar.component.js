@@ -20,6 +20,11 @@ export default class Navigation extends Component {
     });
   }
 
+  searchClicked() {
+    console.log("Clicked!");
+    window.location = './Search';
+  }
+
   render() {
     return (
       <div>
@@ -59,8 +64,8 @@ export default class Navigation extends Component {
             </DropdownMenu>
           </Dropdown>
           <Form inline className="ml-auto mr-3">
-            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-            <Button type="button" color="info">SEARCH</Button>
+            <FormControl type="text" placeholder="Search Term" className="mr-sm-2" id="searchBox" />
+            <Button onclick="searchClicked()" type="button" color="info">SEARCH</Button>
           </Form>
         </Nav>
       </div>

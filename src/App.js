@@ -19,6 +19,7 @@ import ContactUs from './Pages/ContactPage';
 import AppFooter from './Components/Footer.component';
 import DiscussionBoard from './Pages/DiscussionBoard';
 import Film from './Pages/Film';
+import Search from './Pages/Search';
 
 
 
@@ -44,6 +45,7 @@ function App() {
           <Route path="/Film/:origin/:id" component={Film}/>
           <Route path="/ContactUs" component={ContactUs}/>
           <Route path="/DiscussionBoard" component={DiscussionBoard}/>
+          <Route path="/Search" component={Search}/>
         </div>
       </Router>
       </div>
