@@ -58,6 +58,7 @@ h1 {
 
 .nav .nav-item.active .nav-link,
 .nav-item:hover .nav-link .button{
+  transition: 1.5s;
   color: #28CDE9;
 }
 
@@ -101,19 +102,19 @@ hr {
   opacity: 0.5;
   }
 
-  .alert-infoo{
+.alert-infoo{
 
-    color: #0c5460;
-    background-color: #28CDE9;
-    border-color: #28CDE9;
-  }
+  color: #0c5460;
+  background-color: #28CDE9;
+  border-color: #28CDE9;
+}
 
-  .bg-company-blue{
+.bg-company-blue{
 
-    color: #0c5460;
-    background-color: #28CDE9;
-    border-color: #28CDE9;
-  }
+  color: #0c5460;
+  background-color: #28CDE9;
+  border-color: #28CDE9;
+}
 
 .classificationP1 {
   color: white;
