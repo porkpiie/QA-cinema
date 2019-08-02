@@ -1,4 +1,10 @@
 import React, { Component } from 'react';
+import Button from '../Components/Button.component';
+import CheckBox from '../Components/CheckBox.component';
+import Input from '../Components/Input.component';
+
+
+
 
 class FormContainer extends Component{
     constructor(props){
@@ -18,8 +24,9 @@ class FormContainer extends Component{
             filmOptions: ["PUT STUFF HERE"],
             timeOptions: ["12:15", "15:00", "17:45", "19:30", "21:00"]
         };
-        this.handleTextArea = this.handleTextArea.bind(this);
-        this.handleAge = this.handleAge.bind(this);
+        this.handleAdult = this.handleAdult.bind(this);
+        this.handleChild = this.handleChild.bind(this);
+        this.handleConcession = this.handleConcession.bind(this);
         this.handleFullName = this.handleFullName.bind(this);
         this.handleFormSubmit = this.handleFormSubmit.bind(this);
         this.handleClearForm = this.handleClearForm.bind(this);
@@ -39,13 +46,13 @@ class FormContainer extends Component{
         );
       }
     
-      handleAge(e) {
+      handleAdult(e) {
         let value = e.target.value;
         this.setState(
           prevState => ({
             booking: {
               ...prevState.booking,
-              age: value
+              adult: value
             }
           }),
           () => console.log(this.state.booking)
@@ -66,34 +73,20 @@ class FormContainer extends Component{
         );
       }
     
-      handleTextArea(e) {
-        console.log("Inside handleTextArea");
-        let value = e.target.value;
-        this.setState(
-          prevState => ({
-            booking: {
-              ...prevState.booking,
-              about: value
-            }
-          }),
-          () => console.log(this.state.booking)
-        );
-      }
-    
       handleCheckBox(e) {
         const newSelection = e.target.value;
         let newSelectionArray;
     
-        if (this.state.booking.skills.indexOf(newSelection) > -1) {
-          newSelectionArray = this.state.booking.skills.filter(
+        if (this.state.booking.time.indexOf(newSelection) > -1) {
+          newSelectionArray = this.state.booking.time.filter(
             s => s !== newSelection
           );
         } else {
-          newSelectionArray = [...this.state.booking.skills, newSelection];
+          newSelectionArray = [...this.state.booking.time, newSelection];
         }
     
         this.setState(prevState => ({
-          booking: { ...prevState.booking, skills: newSelectionArray }
+          booking: { ...prevState.booking, time: newSelectionArray }
         }));
       }
     
@@ -122,7 +115,7 @@ class FormContainer extends Component{
             name: "",
             film: "",
             date: "",
-            time: [],
+            showing: [],
             adult: [],
             child: [],
             concession: [],
@@ -141,37 +134,46 @@ class FormContainer extends Component{
               placeholder={"Enter your name"}
               handleChange={this.handleInput}
             />{" "}
-            <Input
-              inputType={"number"}
-              name={"age"}
-              title={"Age"}
-              value={this.state.booking.age}
-              placeholder={"Enter your age"}
-              handleChange={this.handleAge}
-            />{" "}
+           
             <Select
-              title={"Gender"}
-              name={"gender"}
-              options={this.state.genderOptions}
-              value={this.state.booking.gender}
-              placeholder={"Select Gender"}
+              title={"Film"}
+              name={"film"}
+              options={this.state.filmOptions}
+              value={this.state.booking.film}
+              placeholder={"Select Film"}
               handleChange={this.handleInput}
             />{" "}
             <CheckBox
-              title={"Skills"}
-              name={"skills"}
-              options={this.state.skillOptions}
-              selectedOptions={this.state.booking.skills}
+              title={"Showing"}
+              name={"showing"}
+              options={this.state.showingOptions}
+              selectedOptions={this.state.booking.showing}
               handleChange={this.handleCheckBox}
             />{" "}
-            <TextArea
-              title={"About you."}
-              rows={10}
-              value={this.state.booking.about}
-              name={"currentPetInfo"}
-              handleChange={this.handleTextArea}
-              placeholder={"Describe your past experience and skills"}
-            />
+             <Input
+              inputType={"number"}
+              name={"adult"}
+              title={"Adult"}
+              value={this.state.booking.adult}
+              placeholder={"Number of Adult tickets"}
+              handleChange={this.handleAdult}
+            />{" "}
+             <Input
+              inputType={"number"}
+              name={"child"}
+              title={"Child"}
+              value={this.state.booking.child}
+              placeholder={"Number of Child tickets"}
+              handleChange={this.handleChild}
+            />{" "}
+             <Input
+              inputType={"number"}
+              name={"concession"}
+              title={"Concession"}
+              value={this.state.booking.concession}
+              placeholder={"Number of Concession tickets"}
+              handleChange={this.handleConcession}
+            />{" "}
             <Button
               action={this.handleFormSubmit}
               type={"primary"}
@@ -192,7 +194,6 @@ class FormContainer extends Component{
     const buttonStyle = {
       margin: "10px 10px 10px 10px"
     };
-    
+
     export default FormContainer;
     
-}
