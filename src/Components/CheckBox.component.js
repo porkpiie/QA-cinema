@@ -1,6 +1,7 @@
 import React from 'react';
 
 const CheckBox = props => {
+    console.log(props);
     return (
       <div className="form-group">
         <label for={props.name} className="form-label">
@@ -9,7 +10,7 @@ const CheckBox = props => {
         <div className="checkbox">
           {props.options.map(option => {
             return (
-              <label key={option} className="checkbox-inline">
+              <label key={option} className="checkbox-inline" style={{ padding : "10px"}}>
                 <input
                   id={props.name}
                   name={props.name}

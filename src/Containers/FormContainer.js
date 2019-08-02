@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Button from '../Components/Button.component';
 import CheckBox from '../Components/CheckBox.component';
 import Input from '../Components/Input.component';
+import Select from '../Components/Select.component';
 
 
 
@@ -14,15 +15,15 @@ class FormContainer extends Component{
                 name: "",
                 film: "",
                 date: "",
-                time: [],
-                adult: [],
-                child: [],
-                concession: [],
+                showing: [],
+                adult: "",
+                child: "",
+                concession: "",
 
             },
 
             filmOptions: ["PUT STUFF HERE"],
-            timeOptions: ["12:15", "15:00", "17:45", "19:30", "21:00"]
+            showingOptions: ["12:15", "15:00", "17:45", "19:30", "21:00"]
         };
         this.handleAdult = this.handleAdult.bind(this);
         this.handleChild = this.handleChild.bind(this);
@@ -58,6 +59,32 @@ class FormContainer extends Component{
           () => console.log(this.state.booking)
         );
       }
+
+      handleChild(e) {
+        let value = e.target.value;
+        this.setState(
+          prevState => ({
+            booking: {
+              ...prevState.booking,
+              child: value
+            }
+          }),
+          () => console.log(this.state.booking)
+        );
+      }
+
+      handleConcession(e) {
+        let value = e.target.value;
+        this.setState(
+          prevState => ({
+            booking: {
+              ...prevState.booking,
+              concession: value
+            }
+          }),
+          () => console.log(this.state.booking)
+        );
+      }
     
       handleInput(e) {
         let value = e.target.value;
@@ -77,16 +104,16 @@ class FormContainer extends Component{
         const newSelection = e.target.value;
         let newSelectionArray;
     
-        if (this.state.booking.time.indexOf(newSelection) > -1) {
-          newSelectionArray = this.state.booking.time.filter(
+        if (this.state.booking.showing.indexOf(newSelection) > -1) {
+          newSelectionArray = this.state.booking.showing.filter(
             s => s !== newSelection
           );
         } else {
-          newSelectionArray = [...this.state.booking.time, newSelection];
+          newSelectionArray = [...this.state.booking.showing, newSelection];
         }
     
         this.setState(prevState => ({
-          booking: { ...prevState.booking, time: newSelectionArray }
+          booking: { ...prevState.booking, showing: newSelectionArray }
         }));
       }
     
