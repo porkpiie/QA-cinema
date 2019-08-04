@@ -144,8 +144,8 @@ class Tiles extends Component {
                                                 <Card.Img style={{ width: '2rem', maxHeight: '30px' }} variant="top" src={movie.certimg} />
                                             </Card.Body>
                                         </Card>
-                                        <MDBMask style={{ width: '30vh', height: '45vh', fontSize: 15 }} overlay="black-strong">
-                                            <p className="white-text p-2 pt-10">DIRECTOR: {movie.director}<br />CAST{movie.cast}<br />RUNTIME: {movie.runtime}</p>
+                                        <MDBMask style={{ width: '30vh', height: '45vh', fontSize: 15, textAlign : 'left' }} overlay="black-strong">
+                                            <p className="white-text p-5 pt-10">DIRECTOR: {movie.director}<br /><br />CAST{movie.cast}<br /><br />RUNTIME: {movie.runtime}</p>
                                         </MDBMask>
                                     </a>
                                 </MDBView>
