@@ -12,13 +12,9 @@ import twelvea from "../Images/12a.png";
 export default class CarouselHome extends React.Component {
 
     render() {
-
-
         return (
             <div>
-
                 <div>
-
                     <Carousel>
                         <Carousel.Item>
                             <div className="carousel-img-wrapper">
@@ -31,10 +27,10 @@ export default class CarouselHome extends React.Component {
                             </div>
 
                             <Carousel.Caption>
-                                <h1 id="Carouselh1" style={{textAlign:"left", fontSize:40}}>THE LION KING</h1><br/>
-                                <img style={{ width: '1.5rem'}} align="left" src={pg} alt="p1" />
+                                <h1 id="Carouselh1" style={{ textAlign: "left", fontSize: 40 }}>THE LION KING</h1><br />
+                                <img style={{ width: '1.5rem' }} align="left" src={pg} alt="p1" />
                             </Carousel.Caption>
-                            
+
                         </Carousel.Item>
 
 
@@ -50,8 +46,8 @@ export default class CarouselHome extends React.Component {
                             </div>
 
                             <Carousel.Caption>
-                            <h1 id="Carouselh1"style={{textAlign:"left", fontSize:40}}>TOY STORY 4</h1><br/>
-                            <img style={{ width: '1.5rem'}} align="left" src={u} alt="p2" />
+                                <h1 id="Carouselh1" style={{ textAlign: "left", fontSize: 40 }}>TOY STORY 4</h1><br />
+                                <img style={{ width: '1.5rem' }} align="left" src={u} alt="p2" />
                             </Carousel.Caption>
                         </Carousel.Item>
                         <Carousel.Item>
@@ -65,17 +61,17 @@ export default class CarouselHome extends React.Component {
                             </div>
 
                             <Carousel.Caption>
-                                <h1 id="Carouselh1"style={{textAlign:"left", fontSize:40}}>SPIDER-MAN: FAR FROM HOME</h1><br/>
-                                <img style={{ width: '1.5rem'}} align="left" src={twelvea} alt="p3" />
+                                <h1 id="Carouselh1" style={{ textAlign: "left", fontSize: 40 }}>SPIDER-MAN: FAR FROM HOME</h1><br />
+                                <img style={{ width: '1.5rem' }} align="left" src={twelvea} alt="p3" />
                             </Carousel.Caption>
                         </Carousel.Item>
                     </Carousel>
                 </div>
             </div>
 
-            
 
-            
+
+
 
         );
     }

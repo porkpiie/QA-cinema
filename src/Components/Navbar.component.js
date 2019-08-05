@@ -35,7 +35,7 @@ export default class Navigation extends Component {
             <NavLink href="/WhatsOn">WHAT'S ON</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="/ComingUp">WHAT'S COMING UP</NavLink>
+            <NavLink href="/ComingUp">NEW RELEASES</NavLink>
           </NavItem>
           <NavItem>
             <NavLink href="/Booking">BOOK NOW</NavLink>

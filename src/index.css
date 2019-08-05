@@ -51,3 +51,9 @@ code {
   text-align: left;
   margin: 0 !important;
 }
+
+.company-booking {
+  margin-left: 10vh;
+  color: white;
+  text-align: left;
+}
