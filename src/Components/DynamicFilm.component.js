@@ -6,7 +6,7 @@ import TBDimage from '../Images/TBC.png';
 import Uimage from '../Images/U.png';
 import PGimage from '../Images/PG.png';
 import TWELVEimage from '../Images/12.png';
-import TWELVEAimage from '../Images/12A.png';
+import TWELVEAimage from '../Images/twelvea.png';
 import FIFTEENimage from '../Images/15.png';
 import EIGHTEENimage from '../Images/18.png';
 
@@ -48,6 +48,8 @@ class Film extends React.Component {
 					}
 				}
 				movie.director = directors;
+				this.setState({ update: "true" });
+				this.setState({ update: "false" });
 			})
 			.catch();
 		axios.get("https://api.themoviedb.org/3/movie/" + this.props.match.params.id + "/release_dates?api_key=" + APIkey)
@@ -73,6 +75,8 @@ class Film extends React.Component {
 					case ("18"): movie.certimg = EIGHTEENimage; break;
 					default: movie.certimg = TBDimage;
 				}
+				this.setState({ update: "true" });
+				this.setState({ update: "false" });
 			})
 			.catch();
 			axios.get("https://api.themoviedb.org/3/movie/" + this.props.match.params.id + "?api_key=" + APIkey + "&language=en-US")
