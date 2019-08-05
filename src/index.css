@@ -62,3 +62,10 @@ code {
   color: white;
   text-align: left;
 }
+
+.openingpage {
+  color: white; 
+  text-align: left;
+  font-family: Roboto;
+  text-transform: uppercase;
+}

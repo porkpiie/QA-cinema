@@ -71,6 +71,7 @@ hr {
 .nav .nav-item .nav-link:hover {
   color:#28CDE9;
   margin-top: 5px;
+  text-decoration: none  !important;
 }
 
 
