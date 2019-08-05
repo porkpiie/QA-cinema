@@ -48,6 +48,8 @@ class Film extends React.Component {
 					}
 				}
 				movie.director = directors;
+				this.setState({ update: "true" });
+				this.setState({ update: "false" });
 			})
 			.catch();
 		axios.get("https://api.themoviedb.org/3/movie/" + this.props.match.params.id + "/release_dates?api_key=" + APIkey)
@@ -73,6 +75,8 @@ class Film extends React.Component {
 					case ("18"): movie.certimg = EIGHTEENimage; break;
 					default: movie.certimg = TBDimage;
 				}
+				this.setState({ update: "true" });
+				this.setState({ update: "false" });
 			})
 			.catch();
 			axios.get("https://api.themoviedb.org/3/movie/" + this.props.match.params.id + "?api_key=" + APIkey + "&language=en-US")
