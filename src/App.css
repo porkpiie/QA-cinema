@@ -32,7 +32,6 @@ hr {
 
   min-width: 1400px;
   margin: 0;
-  font-size: 30px;
 }
 
 .App {
@@ -105,15 +104,6 @@ hr {
   padding-top: 5%;
  
 }
-
-hr {
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  height: 100px;
-  background-color:white;
-  opacity: 0.5;
-  }
 
 .alert-infoo{
 
