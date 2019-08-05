@@ -21,8 +21,9 @@ export default class Navigation extends Component {
   }
 
   searchClicked() {
-    console.log("Clicked!");
-    window.location = './Search';
+    sessionStorage.removeItem("searchTerm");
+    sessionStorage.setItem("searchTerm",document.getElementById("searchBox").value);
+    window.location = '../../Search';
   }
 
   render() {
@@ -65,7 +66,7 @@ export default class Navigation extends Component {
           </Dropdown>
           <Form inline className="ml-auto mr-3">
             <FormControl type="text" placeholder="Search Term" className="mr-sm-2" id="searchBox" />
-            <Button onclick="searchClicked()" type="button" color="info">SEARCH</Button>
+            <Button onClick={() => this.searchClicked()} type="button" color="info">SEARCH</Button>
           </Form>
         </Nav>
       </div>
