@@ -3,9 +3,10 @@ import React, { Component } from 'react';
 export default class AboutUs extends Component{
     render(){
         return(
-            <div style={{"background-color" : "black", "color" : "white"}}>
-            <h1>Testing About Us</h1>
-            <p>------------------------------------------------------------------------------------------</p>
+            <div>
+            <h1 className="Listingh1">About Ocean View</h1>
+            <hr/>
+            
                 <h2>Rich Clack</h2>
                 <h3>@Clacky</h3>
                 <p>"Once you've had Clack you never go back"</p>
