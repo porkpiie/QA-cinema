@@ -3,6 +3,8 @@ import Button from '../Components/Button.component';
 import CheckBox from '../Components/CheckBox.component';
 import Input from '../Components/Input.component';
 import Select from '../Components/Select.component';
+import SeatMap from '../Components/SeatMap.component';
+import '../Components/SeatMap.css';
 import axios from 'axios';
 
 let APIkey = "14ab2cbcc55cd83768a0abc0594eb1ab";
@@ -48,17 +50,17 @@ class FormContainer extends Component {
 			.then(response => {
 				let filmList = response.data.results.slice(0, 4);
 				let filmNames = [];
-				for (let film in filmList){
+				for (let film in filmList) {
 					film = filmList[film];
 					filmNames.push(film.title);
 				}
 
 				this.setState({
-                    filmOptions:filmNames
+					filmOptions: filmNames
 				})
 				console.log(this.state.filmOptions);
 			})
-			.catch();		
+			.catch();
 	}
 
 	handleFirstName(e) {
@@ -194,87 +196,90 @@ class FormContainer extends Component {
 
 	render() {
 		return (
-			<form className="container-fluid" onSubmit={this.handleFormSubmit}>
-				<Input
-					inputType={"text"}
-					title={"First Name"}
-					name={"firstName"}
-					value={this.state.booking.firstName}
-					placeholder={"Please enter your First Name"}
-					handleChange={this.handleInput}
-				/>{" "}
+			<div>
+				<form className="container-fluid" onSubmit={this.handleFormSubmit}>
+					<Input
+						inputType={"text"}
+						title={"First Name"}
+						name={"firstName"}
+						value={this.state.booking.firstName}
+						placeholder={"Please enter your First Name"}
+						handleChange={this.handleInput}
+					/>{" "}
 
-				<Input
-					inputType={"text"}
-					title={"Second Name"}
-					name={"secondName"}
-					value={this.state.booking.secondName}
-					placeholder={"Please enter your Second Name"}
-					handleChange={this.handleInput}
-				/>{" "}
+					<Input
+						inputType={"text"}
+						title={"Second Name"}
+						name={"secondName"}
+						value={this.state.booking.secondName}
+						placeholder={"Please enter your Second Name"}
+						handleChange={this.handleInput}
+					/>{" "}
 
-				<Input
-					inputType={"text"}
-					title={"Email"}
-					name={"email"}
-					value={this.state.booking.email}
-					placeholder={"you@email.com"}
-					handleChange={this.handleInput}
-				/>{" "}
+					<Input
+						inputType={"text"}
+						title={"Email"}
+						name={"email"}
+						value={this.state.booking.email}
+						placeholder={"you@email.com"}
+						handleChange={this.handleInput}
+					/>{" "}
 
 
-				<Select
-					title={"Film"}
-					name={"filmName"}
-					options={this.state.filmOptions}
-					value={this.state.booking.filmName}
-					placeholder={"Select Film"}
-					handleChange={this.handleInput}
-				/>{" "}
-				<CheckBox
-					title={"Showing"}
-					name={"filmTime"}
-					options={this.state.filmTimeOptions}
-					selectedOptions={this.state.booking.filmTime}
-					handleChange={this.handleInput}
-				/>{" "}
-				<Select
-					title={"Adult"}
-					name={"adultTickets"}
-					options={this.state.adultTicketsOptions}
-					value={this.state.booking.adultTickets}
-					placeholder={"Number of Adult Tickets"}
-					handleChange={this.handleInput}
-				/>{" "}
-				<Select
-					name={"childTickets"}
-					title={"Child"}
-					options={this.state.childTicketsOptions}
-					value={this.state.booking.childTickets}
-					placeholder={"Number of Child tickets"}
-					handleChange={this.handleInput}
-				/>{" "}
-				<Select
-					title={"Concession"}
-					name={"concessionTickets"}
-					options={this.state.concessionTicketsOptions}
-					value={this.state.booking.concessionTickets}
-					placeholder={"Number of Concession tickets"}
-					handleChange={this.handleInput}
-				/>{" "}
-				<Button
-					action={this.handleFormSubmit}
-					type={"primary"}
-					title={"Submit"}
-					style={buttonStyle}
-				/>{" "}
-				<Button
-					action={this.handleClearForm}
-					type={"secondary"}
-					title={"Clear"}
-					style={buttonStyle}
-				/>{" "}
-			</form>
+					<Select
+						title={"Film"}
+						name={"filmName"}
+						options={this.state.filmOptions}
+						value={this.state.booking.filmName}
+						placeholder={"Select Film"}
+						handleChange={this.handleInput}
+					/>{" "}
+					<CheckBox
+						title={"Showing"}
+						name={"filmTime"}
+						options={this.state.filmTimeOptions}
+						selectedOptions={this.state.booking.filmTime}
+						handleChange={this.handleInput}
+					/>{" "}
+					<Select
+						title={"Adult"}
+						name={"adultTickets"}
+						options={this.state.adultTicketsOptions}
+						value={this.state.booking.adultTickets}
+						placeholder={"Number of Adult Tickets"}
+						handleChange={this.handleInput}
+					/>{" "}
+					<Select
+						name={"childTickets"}
+						title={"Child"}
+						options={this.state.childTicketsOptions}
+						value={this.state.booking.childTickets}
+						placeholder={"Number of Child tickets"}
+						handleChange={this.handleInput}
+					/>{" "}
+					<Select
+						title={"Concession"}
+						name={"concessionTickets"}
+						options={this.state.concessionTicketsOptions}
+						value={this.state.booking.concessionTickets}
+						placeholder={"Number of Concession tickets"}
+						handleChange={this.handleInput}
+					/>{" "}
+					<SeatMap />
+					<Button
+						action={this.handleFormSubmit}
+						type={"primary"}
+						title={"Submit"}
+						style={buttonStyle}
+					/>{" "}
+					<Button
+						action={this.handleClearForm}
+						type={"secondary"}
+						title={"Clear"}
+						style={buttonStyle}
+					/>{" "}
+				</form>
+			</div>
 		);
 	}
 }
