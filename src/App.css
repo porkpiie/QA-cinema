@@ -94,7 +94,8 @@ hr {
   background-color: rgba(0,0,0,0.4);
   display: inline;
   padding: 5px;
-  border-radius: 25px
+  border-radius: 25px;
+  font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
   
 }
 
@@ -146,4 +147,9 @@ hr {
 .col-4 {
   color: white;
   padding-left: 100px;
+}
+
+.company-footer {
+  font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 400;
 }
