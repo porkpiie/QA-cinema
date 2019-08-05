@@ -25,11 +25,10 @@ import Film from './Pages/Film';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-      <Navigation/>
-      </header>
-      <div>
       <Router>
+        <header className="App-header">
+          <Navigation />
+        </header>
         <div>
           <Route path={["/", "/home"]} exact component={Home}/>
           <Route path="/WhatsOn" component={Listings}/>
@@ -45,10 +44,9 @@ function App() {
           <Route path="/ContactUs" component={ContactUs}/>
           <Route path="/DiscussionBoard" component={DiscussionBoard}/>
         </div>
+        <AppFooter />
       </Router>
-      </div>
-      <AppFooter/>
-      </div>
+    </div>
   );
 }
 

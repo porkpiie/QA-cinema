@@ -59,7 +59,7 @@ class DiscussionBoard extends Component {
 
         <div className="row">
           <div className="col-4  pt-4 border-right">
-            <h6>DISCUSSION BOARD FOR ALL THINGS FILMS</h6><br/>
+            <h6 style={{color : "black"}}>DISCUSSION BOARD FOR ALL THINGS FILMS</h6><br/>
             <CommentForm addComment={this.addComment} />
           </div>
           <div className="col-8  pt-3 bg-dark">

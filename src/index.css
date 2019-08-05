@@ -11,8 +11,8 @@ code {
 
 .carousel-img-wrapper {
   padding-top: 10px;
-  margin-bottom: 100px;
-  height: 600px;
+  margin-bottom: 0px;
+  height: 450px;
 }
 .carousel-img-wrapper img {
   width: 100%;
@@ -20,17 +20,19 @@ code {
   object-fit: cover;
 }
 
+
+
 .imggradient {
   height: 100%;
   width: 100%;
   position: absolute;
   pointer-events: none;
-  background: linear-gradient(rgba(0,130,170,0),rgb(0, 0, 0)), transparent;
+  background: linear-gradient(rgba(0,130,170,0),rgb(10, 10, 10)), transparent;
 
 }
 
 .carousel-caption {
-  padding-bottom: 80px !important;
+  padding-bottom: 60px !important;
 }
 
 #Carouselh1 {
@@ -49,6 +51,9 @@ code {
   margin: 0 !important;
 }
 
+.company-contact{
+  margin-left: 10vh;
+}
 .company-booking {
   margin-left: 10vh;
   color: white;
