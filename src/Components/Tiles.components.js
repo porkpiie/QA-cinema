@@ -33,7 +33,7 @@ class Tiles extends Component {
             requestMovies = "upcoming"
         }
         else { 
-            requestMovies = "now_showing"
+            requestMovies = "now_playing"
         }
 
         axios.get("https://api.themoviedb.org/3/movie/" + requestMovies + "?page=1&language=en-US&api_key=" + APIkey)

@@ -1,6 +1,5 @@
 import React from "react";
-import Card from 'react-bootstrap/Card';
-import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
+import { MDBCol, MDBContainer, MDBRow} from "mdbreact";
 import { withRouter } from 'react-router-dom';
 
 import TBDimage from '../Images/TBC.png';
@@ -118,14 +117,14 @@ class Film extends React.Component {
 			<div className="tiles pt-10">
 				<MDBContainer >
 					<MDBRow>
-						<img width="100%" height="350px" src={"https://image.tmdb.org/t/p/w1280" + this.state.movie.backdrop_path} />
+						<img width="100%" height="350px" src={"https://image.tmdb.org/t/p/w1280" + this.state.movie.backdrop_path} alt={"Banner for " + this.state.movie.title}/>
 					</MDBRow>
 					<MDBRow>
 						<MDBCol>
 							<h1 className="Listingh1">{this.state.movie.title}</h1>
 						</MDBCol>
 						<MDBCol>
-							<img width="60px" height="60px" src={this.state.movie.certimg} />
+							<img width="60px" height="60px" src={this.state.movie.certimg} alt={"Poster for " + this.state.movie.title} />
 						</MDBCol>
 					</MDBRow>
 					<MDBRow>
@@ -140,7 +139,7 @@ class Film extends React.Component {
 							<button style={{color:"#FFFFFF"}} className="btn" onClick={() => {window.location.replace('./../../' + this.props.match.params.origin)}}>Back To Film Listing</button>
 						</MDBCol>
 						<MDBCol>
-							<img src={"https://image.tmdb.org/t/p/w342" + this.state.movie.poster_path} />
+							<img src={"https://image.tmdb.org/t/p/w342" + this.state.movie.poster_path} alt={"Banner for " + this.state.movie.title} />
 						</MDBCol>
 					</MDBRow>
 				</MDBContainer>
