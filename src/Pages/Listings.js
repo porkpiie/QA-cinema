@@ -11,7 +11,7 @@ export default class Listings extends Component{
                 <Banner />
             </div>
 
-            <Container className="homecontainer">
+            <Container fluid className="homecontainer">
             <h1 className="Listingh1">NOW SHOWING</h1>
             <hr/>
             <Tiles/>

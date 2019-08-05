@@ -12,7 +12,7 @@ export default class Screens extends Component {
             <Banner />
             </div>
 
-            <Container className="homecontainer">
+            <Container fluid className="homecontainer">
             <h1 className="Listingh1">OUR SCREENS</h1>
             <hr />
             <CarouselScreen/>

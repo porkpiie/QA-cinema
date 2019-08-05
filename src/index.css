@@ -66,3 +66,9 @@ code {
   font-family: Roboto;
   text-transform: uppercase;
 }
+
+.discussionboard{
+
+  /* min-width: 1400px; */
+  background-color: rgb(37, 37, 37);
+}

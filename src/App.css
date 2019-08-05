@@ -30,9 +30,10 @@ hr {
   }
 .homecontainer{
 
-  min-width: 1400px;
-  margin: 0;
+  padding: 0 5rem !important;
 }
+
+
 
 .App {
   text-align: center;
@@ -68,12 +69,11 @@ hr {
   margin-top: 5px;
 }
 
-.nav .nav-item .nav-link:hover {
+.nav .nav-item .nav-link:hover .button {
   color:#28CDE9;
   margin-top: 5px;
   text-decoration: none  !important;
 }
-
 
 .nav-item {
   margin-top: 25px !important;
@@ -145,6 +145,11 @@ hr {
   object-fit: cover;
 }
 
+.getting-img-wrapper { 
+ margin-bottom: 20px;
+ height: 100px;
+ width: 100%
+}
 .col-4 {
   color: white;
   padding-left: 100px;

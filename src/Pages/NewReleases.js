@@ -10,7 +10,7 @@ export default class Listings extends Component{
             <div className="banner-img-wrapper">
                 <Banner />
             </div>
-            <Container className="homecontainer">
+            <Container fluid className="homecontainer">
             <h1 className="Listingh1">COMING SOON</h1>
             <hr/>
             <Tiles/>

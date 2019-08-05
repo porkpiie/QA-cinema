@@ -10,7 +10,7 @@ class OpeningTimes extends React.Component {
                 <Banner />
             </div>
 
-            <Container className="homecontainer">
+            <Container fluid className="homecontainer">
             <h1 className="Listingh1">OPENING TIMES</h1>
             <hr/>
             <p className = "openingpage" >Monday  	12:00 - 00:00</p>
