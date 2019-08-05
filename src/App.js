@@ -20,6 +20,7 @@ import AppFooter from './Components/Footer.component';
 import DiscussionBoard from './Pages/DiscussionBoard';
 import Film from './Pages/Film';
 import Search from './Pages/Search';
+import Payments from './Pages/Payments';
 
 
 
@@ -45,6 +46,7 @@ function App() {
           <Route path="/ContactUs" component={ContactUs}/>
           <Route path="/DiscussionBoard" component={DiscussionBoard}/>
           <Route path="/Search" component={Search}/>
+          <Route path="/Payment" component={Payments}/>
         </div>
         <AppFooter />
       </Router>
