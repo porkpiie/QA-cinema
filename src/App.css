@@ -1,7 +1,6 @@
 
 body {
   background-color: black;
-  
 }
 
 h1 {
@@ -33,6 +32,7 @@ hr {
 
   min-width: 1400px;
   margin: 0;
+  font-size: 30px;
 }
 
 .App {
@@ -106,19 +106,28 @@ hr {
  
 }
 
-  .alert-infoo{
-
-    color: #0c5460;
-    background-color: #28CDE9;
-    border-color: #28CDE9;
+hr {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100px;
+  background-color:white;
+  opacity: 0.5;
   }
 
-  .bg-company-blue{
+.alert-infoo{
 
-    color: #0c5460;
-    background-color: #28CDE9;
-    border-color: #28CDE9;
-  }
+  color: #0c5460;
+  background-color: #28CDE9;
+  border-color: #28CDE9;
+}
+
+.bg-company-blue{
+
+  color: #0c5460;
+  background-color: #28CDE9;
+  border-color: #28CDE9;
+}
 
 .classificationP1 {
   color: white;

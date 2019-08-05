@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Card from 'react-bootstrap/Card';
 import { MDBMask, MDBView, MDBContainer, MDBRow, MDBCol } from 'mdbreact';
+import { withRouter } from 'react-router-dom';
 
 import TBDimage from '../Images/TBC.png';
 import Uimage from '../Images/U.png';
@@ -13,7 +14,7 @@ import EIGHTEENimage from '../Images/18.png';
 import axios from 'axios';
 let APIkey = "14ab2cbcc55cd83768a0abc0594eb1ab";
 
-export default class Tiles extends Component {
+class Tiles extends Component {
 
     constructor() {
         super();
@@ -24,7 +25,18 @@ export default class Tiles extends Component {
     }
 
     componentDidMount() {
-        axios.get("https://api.themoviedb.org/3/movie/now_playing?page=1&language=en-US&api_key=" + APIkey)
+        let requestMovies = "";
+        if(this.props.match.url === "/WhatsOn"){
+            requestMovies = "now_playing"
+        }
+        else if(this.props.match.url === "/ComingUp"){
+            requestMovies = "upcoming"
+        }
+        else { 
+            requestMovies = "now_playing"
+        }
+
+        axios.get("https://api.themoviedb.org/3/movie/" + requestMovies + "?page=1&language=en-US&api_key=" + APIkey)
             .then(response => {
                 this.setState({
                     movies: response.data.results.slice(0, 4),
@@ -122,7 +134,7 @@ export default class Tiles extends Component {
                         {this.state.movies.map(movie => (
                             <MDBCol key={movie.id}>
                                 <MDBView hover>
-                                    <a href={"./Film/" + movie.id}>
+                                    <a href={"./Film" + this.props.match.url + "/" + movie.id}>
                                         <Card bg="dark" text="white" style={{ width: '30vh', maxHeight: '100rem' }}>
                                             <Card.Img variant="top" src={"https://image.tmdb.org/t/p/w500" + movie.poster_path} />
                                             <Card.Body className="p-2 pt-4">
@@ -146,3 +158,4 @@ export default class Tiles extends Component {
     }
 }
 
+export default withRouter(Tiles);

@@ -43,9 +43,7 @@ export default class Navigation extends Component {
           </NavItem>
 
           <NavItem>
-            <Link to="/ComingUp">
-            <NavLink>WHAT'S COMING UP</NavLink>
-            </Link>
+            <NavLink href="/ComingUp">NEW RELEASES</NavLink>
           </NavItem>
 
           <NavItem>

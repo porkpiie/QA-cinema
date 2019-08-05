@@ -30,21 +30,19 @@ function App() {
           <Navigation />
         </header>
         <div>
-          <div>
-            <Route path={["/", "/home"]} exact component={Home} />
-            <Route path="/WhatsOn" component={Listings} />
-            <Route path="/ComingUp" component={NewReleases} />
-            <Route path="/Booking" component={TicketBooking} />
-            <Route path="/Screens" component={Screens} />
-            <Route path="/AboutUs" component={AboutUs} />
-            <Route path="/Classifications" component={Classifications} />
-            <Route path="/GettingHere" component={Getting} />
-            <Route path="/ThingsToDo" component={PlacesToGo} />
-            <Route path="/OpeningTImes" component={OpeningTimes} />
-            <Route path="/ContactUs" component={ContactUs} />
-            <Route path="/DiscussionBoard" component={DiscussionBoard} />
-            <Route path="/Film/:id" component={Film} />
-          </div>
+          <Route path={["/", "/home"]} exact component={Home}/>
+          <Route path="/WhatsOn" component={Listings}/>
+          <Route path="/ComingUp" component={NewReleases}/>
+          <Route path="/Booking" component={TicketBooking}/>
+          <Route path="/Screens" component={Screens}/>
+          <Route path="/AboutUs" component={AboutUs}/>
+          <Route path="/Classifications" component={Classifications}/>
+          <Route path="/GettingHere" component={Getting}/>
+          <Route path="/ThingsToDo" component={PlacesToGo}/>
+          <Route path="/OpeningTimes" component={OpeningTimes}/>
+          <Route path="/Film/:origin/:id" component={Film}/>
+          <Route path="/ContactUs" component={ContactUs}/>
+          <Route path="/DiscussionBoard" component={DiscussionBoard}/>
         </div>
         <AppFooter />
       </Router>

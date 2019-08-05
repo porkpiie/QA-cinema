@@ -12,13 +12,9 @@ import twelvea from "../Images/12A.png";
 export default class CarouselHome extends React.Component {
 
     render() {
-
-
         return (
             <div>
-
                 <div>
-
                     <Carousel>
                         <Carousel.Item>
                             <div className="carousel-img-wrapper">
@@ -34,7 +30,7 @@ export default class CarouselHome extends React.Component {
                                 <h1 id="Carouselh1" style={{textAlign:"left", fontSize:40}}>THE LION KING</h1><br/>
                                 <img style={{ width: '2rem'}} align="left" src={pg} alt="p1" />
                             </Carousel.Caption>
-                            
+
                         </Carousel.Item>
 
 
@@ -73,9 +69,9 @@ export default class CarouselHome extends React.Component {
                 </div>
             </div>
 
-            
 
-            
+
+
 
         );
     }
