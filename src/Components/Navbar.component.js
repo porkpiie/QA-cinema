@@ -1,7 +1,10 @@
+
 import React, { Component } from 'react';
 import { Button, Nav, NavItem, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, Form, NavLink } from 'reactstrap';
 import { FormControl } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import logo from '../logo.png';
+import Container from 'react-bootstrap/Container'
 
 
 export default class Navigation extends Component {
@@ -22,24 +25,35 @@ export default class Navigation extends Component {
 
   render() {
     return (
-      <div>
+      <Container >
         <Nav className="fixed-top navbar-expand-xl navbar-dark bg-company-black">
           <a className="navbar-brand" href="/home" target="">
-            <img style={{ paddingLeft : "10vh", }} src={logo}  height="100" alt="whalepic" />
+            <img style={{ paddingLeft: "30%" }} src={logo} height="100" alt="whalepic" />
           </a>
           <NavItem>
-            <NavLink href="/home">HOME</NavLink>
+            <Link to="/home">
+              <NavLink>HOME</NavLink>
+            </Link>
           </NavItem>
 
           <NavItem>
-            <NavLink href="/WhatsOn">WHAT'S ON</NavLink>
+            <Link to="/WhatsOn">
+              <NavLink>WHAT'S ON</NavLink>
+            </Link>
           </NavItem>
+
           <NavItem>
-            <NavLink href="/ComingUp">WHAT'S COMING UP</NavLink>
+            <Link to="/ComingUp">
+            <NavLink>WHAT'S COMING UP</NavLink>
+            </Link>
           </NavItem>
+
           <NavItem>
-            <NavLink href="/Booking">BOOK NOW</NavLink>
+            <Link to="/Booking">
+            <NavLink>BOOK NOW</NavLink>
+            </Link>
           </NavItem>
+
           <Dropdown nav isOpen={this.state.dropdownOpen} toggle={this.toggle}>
             <DropdownToggle nav caret>
               MORE
@@ -60,10 +74,10 @@ export default class Navigation extends Component {
           </Dropdown>
           <Form inline className="ml-auto mr-3">
             <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-            <Button type="button" color="info">SEARCH</Button>
+            <Button type="button" color="info" style={{ paddingLeft: "0%" }}>SEARCH</Button>
           </Form>
         </Nav>
-      </div>
+      </Container>
     );
   }
 }

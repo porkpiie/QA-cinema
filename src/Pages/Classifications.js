@@ -6,73 +6,105 @@ import TwelveA from '../Images/12A.png';
 import Twelve from '../Images/12.png';
 import Fifteen from '../Images/15.png';
 import Eighteen from '../Images/18.png';
+import { Container } from "react-bootstrap";
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+import { Link } from 'react-router-dom';
+import Banner from '../Components/Banner.component';
 
-export default class Classifications extends Component{
-    render(){
-        return(
-            <div>
-            <div>
-                <div>
-            <img src={bbfc} className="bbfcban" alt="bbfcpic" />
-            </div>
-            <h1 className="Listingh1">Classifications</h1>
-            <hr/>
-            <p className="classificationP1">Classification is the process of giving age ratings and content advice to films
-             and other audiovisual content to help children and families choose what's right for them and avoid what's not.</p><br/>
-            <p className="classificationP1">Recommendations are made by our Compliance Officers based on the BBFC's pulished 
-            Guidelines. These are the result of extensive consultation with people right across the UK, research, 
-            and the BBFC's more than 100 years of experience. They reflect people's views on film, DVD, Blu-Ray, 
-            video on demand (VoD) regulation and regularly updated</p><br/>
-            </div>
+export default class Classifications extends Component {
+  render() {
+    return (
+
+      <div>
+        <div className="banner-img-wrapper">
+          <img src={bbfc} alt="bbfcpic" />
+        </div>
+
+        <Container className="homecontainer">
 
 
-            <div className="container">
-            <div className="row">
-              <div className="col-4">
-                  <a className="btn" href="https://bbfc.co.uk/what-classification/u" target="__blank">
-                <img src={U} alt="U" style={{ paddingBottom : "20px"}} /></a>
-                <p>SUITABLE FOR ALL</p>
-              </div>
-              <div className="col-4">
-              <a className="btn" href="https://bbfc.co.uk/what-classification/pg" target="__blank">
-              <img src={PG} alt="PG" style={{ paddingBottom : "20px"}} /></a>
-                <p>PARENTAL GUIDANCE</p>
-              </div>
-              <div className="col-4">
-              <a className="btn" href="https://bbfc.co.uk/what-classification/12a-and-12" target="__blank">
-              <img src={TwelveA} alt="12A" style={{ paddingBottom : "20px"}} /></a>
-                <p>CINEMA RELEASE FOR ALL 12 YEARS AND OVER</p>
-                
-              </div>           
-            </div><br />
-            <br />
-            <br />
-            <br />
-            <br />
+          <h1 className="Listingh1">Classifications</h1>
+          <hr />
 
-            <div className="container">
-            <div className="row">
-              <div className="col-4">
-              <a className="btn" href="https://bbfc.co.uk/what-classification/12a-and-12" target="__blank">
-                <img src={Twelve} alt="U" style={{ paddingBottom : "20px"}} /></a>
-                <p>CINEMA RELEASE FOR ALL 12 YEARS AND OVER</p>
-              </div>
-              <div className="col-4">
-              <a className="btn" href="https://bbfc.co.uk/what-classification/15" target="__blank">
-              <img src={Fifteen} alt="PG" style={{ paddingBottom : "20px"}} /></a>
-              <p>SUITABLE ONLY FOR 15 YEARS AND OVER</p>
-              </div>
-              <div className="col-4">
-              <a className="btn" href="https://bbfc.co.uk/what-classification/18" target="__blank">
-              <img src={Eighteen} alt="12A" style={{ paddingBottom : "20px"}} /></a>
-                <p>SUITABLE ONLY FOR ADULTS</p>
-              </div>           
-            </div>
-          </div>
-          </div>
+          <div>
+            <p style={{ color: "white", textAlign: "left", fontFamily: "Roboto" }}>Classification is the process of giving age ratings and content advice to films
+             and other audiovisual content to help children and families choose what's right for them and avoid what's not.</p><br />
+            <p style={{ color: "white", textAlign: "left", fontFamily: "Roboto" }}>Recommendations are made by our Compliance Officers based on the BBFC's pulished
+            Guidelines. These are the result of extensive consultation with people right across the UK, research,
+            and the BBFC's more than 100 years of experience. They reflect people's views on film, DVD, Blu-Ray,
+            video on demand (VoD) regulation and regularly updated</p><br />
           </div>
 
-            
-        )
-    }
+
+          <Row style={{ color: "white", textAlign: "left", marginLeft: "1px", marginRight: "1px" }}>
+            <Col xs md={4} className="pl-0" >
+              <a href="https://bbfc.co.uk/what-classification/u">
+                <img
+                  style={{ width: '5rem' }}
+                  src={U}
+                  className="btn"
+                />
+              </a>
+              <p className="my-4" style={{ fontSize: '12px' }}>SUITABLE FOR ALL</p>
+            </Col>
+            <Col xs md={4}>
+              <a href="https://bbfc.co.uk/what-classification/pg">
+                <img
+                  style={{ width: '5rem' }}
+                  src={PG}
+                  className="btn" />
+              </a>
+              <p className="my-4" style={{ fontSize: '12px' }}>PARENTAL GUIDANCE</p>
+            </Col>
+            <Col xs className="pr-0" md={4}>
+              <a href="https://bbfc.co.uk/what-classification/12a-and-12">
+                <img
+                  style={{ width: '5rem' }}
+                  src={TwelveA}
+                  className="btn" />
+              </a>
+              <p className="my-4" style={{ fontSize: '12px' }}>CINEMA RELEASE FOR ALL 12 YEARS AND OVER</p>
+            </Col>
+          </Row>
+
+          <Row style={{ color: "white", textAlign: "left", marginLeft: "1px", marginRight: "1px" }}>
+            <Col className="pl-0" xs md={4}>
+              <a href="https://bbfc.co.uk/what-classification/12a-and-12">
+                <img
+                  style={{ width: '5rem' }}
+                  src={Twelve}
+                  className="btn" />
+              </a>
+              <p className="my-4" style={{ fontSize: '12px' }}>CINEMA RELEASE FOR ALL 12 YEARS AND OVER</p>
+            </Col>
+            <Col xs className="pr-0" md={4}>
+              <a href="https://bbfc.co.uk/what-classification/15">
+                <img
+                  style={{ width: '5rem' }}
+                  src={Fifteen}
+                  className="btn" />
+              </a>
+              <p className="my-4" style={{ fontSize: '12px' }}>SUITABLE ONLY FOR 15 YEARS AND OVER</p>
+            </Col>
+
+            <Col xs className="pr-0" md={4}>
+              <a href="https://bbfc.co.uk/what-classification/18">
+                <img
+                  style={{ width: '5rem' }}
+                  src={Eighteen}
+                  className="btn" />
+              </a>
+              <p className="my-4" style={{ fontSize: '12px' }}>SUITABLE ONLY FOR ADULTS</p>
+            </Col>
+          </Row>
+
+        </Container>
+      </div>
+
+
+    );
+  }
 }
+
+
