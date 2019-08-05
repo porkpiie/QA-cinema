@@ -4,15 +4,16 @@ import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 export default class AppFooter extends Component {
   render(){
     return (
-      <MDBFooter color="blue-gradient pt-4 mt-4">
+      <MDBFooter color="blue-gradient pt-4 mt-4" className="company-footer">
         <MDBContainer className="text-center text-md-left">
           <MDBRow className="my-4">
             <MDBCol md="4" lg="4">
               <h5 className="text-uppercase mb-4 font-weight-bold">
-                QA FILMS
+                Ocean View
               </h5>
-              <p>
-                Something Something... darkside
+              <p className="text-uppercase font-weight-light">moonlit migration<br/>
+              giants swimming to shelter<br/>
+              warmer waters soon
               </p>
               <p>
                 __________________________________

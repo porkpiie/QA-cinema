@@ -26,11 +26,10 @@ import Search from './Pages/Search';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-      <Navigation/>
-      </header>
-      <div>
       <Router>
+        <header className="App-header">
+          <Navigation />
+        </header>
         <div>
           <Route path={["/", "/home"]} exact component={Home}/>
           <Route path="/WhatsOn" component={Listings}/>
@@ -41,16 +40,15 @@ function App() {
           <Route path="/Classifications" component={Classifications}/>
           <Route path="/GettingHere" component={Getting}/>
           <Route path="/ThingsToDo" component={PlacesToGo}/>
-          <Route path="/OpeningTImes" component={OpeningTimes}/>
+          <Route path="/OpeningTimes" component={OpeningTimes}/>
           <Route path="/Film/:origin/:id" component={Film}/>
           <Route path="/ContactUs" component={ContactUs}/>
           <Route path="/DiscussionBoard" component={DiscussionBoard}/>
           <Route path="/Search" component={Search}/>
         </div>
+        <AppFooter />
       </Router>
-      </div>
-      <AppFooter/>
-      </div>
+    </div>
   );
 }
 

@@ -54,15 +54,15 @@ class DiscussionBoard extends Component {
         <div>
             <h1 className="Listingh1">DISCUSSION BOARD</h1>
             <hr/>
-      <div className="App container bg-light shadow">
+      <div className="App container bg-dark shadow">
         
 
         <div className="row">
           <div className="col-4  pt-4 border-right">
-            <h6>DISCUSSION BOARD FOR ALL THINGS FILMS</h6><br/>
+            <h6 style={{color : "black"}}>DISCUSSION BOARD FOR ALL THINGS FILMS</h6><br/>
             <CommentForm addComment={this.addComment} />
           </div>
-          <div className="col-8  pt-3 bg-white">
+          <div className="col-8  pt-3 bg-dark">
             <CommentList
               loading={this.state.loading}
               comments={this.state.comments}
