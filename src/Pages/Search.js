@@ -15,8 +15,7 @@ export default class Film extends Component {
         this.state = {
             currentmovies: [],
             upcomingmovies: [],
-            matchingmovies: [],
-            update: []
+            matchingmovies: []
         };
     }
 
