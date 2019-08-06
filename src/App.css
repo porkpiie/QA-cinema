@@ -8,15 +8,15 @@ h1 {
   color: white;
   padding-bottom: 5px;
   padding-top: 10vh;
-  font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
-  font-weight: 400;
+  font-family: "Helvetica Neue","Segoe UI", "Frutiger", "Frutiger Linotype", "Dejavu Sans", Arial, sans-serif;
+  font-weight: 100;
   text-align: left;
   margin: 0 !important;
 }
 
 .Listingh1 {
-  font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
-  font-weight: 400;
+  font-family: "Helvetica Neue","Segoe UI", "Frutiger", "Frutiger Linotype", "Dejavu Sans", Arial, sans-serif;
+  font-weight: 100;
   font-size: 20px;
 }
 
@@ -30,9 +30,10 @@ hr {
   }
 .homecontainer{
 
-  min-width: 1400px;
-  margin: 0;
+  padding: 0 5rem !important;
 }
+
+
 
 .App {
   text-align: center;
@@ -53,7 +54,8 @@ hr {
   background-color:black ;
   align-content: center;
   justify-content: left;
-  font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Helvetica Neue","Segoe UI", "Frutiger", "Frutiger Linotype", "Dejavu Sans", Arial, sans-serif;
+  font-weight: 100;
 }
 
 .nav {
@@ -68,11 +70,11 @@ hr {
   margin-top: 5px;
 }
 
-.nav .nav-item .nav-link:hover {
+.nav .nav-item .nav-link:hover .button {
   color:#28CDE9;
   margin-top: 5px;
+  text-decoration: none  !important;
 }
-
 
 .nav-item {
   margin-top: 25px !important;
@@ -80,7 +82,7 @@ hr {
 }
 
 .linkAbout {
-  color: white;
+  color: rgb(255, 255, 255);
   display: inline;
   
 }
@@ -91,11 +93,13 @@ hr {
 
 .places1 {
   color: white;
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0, 0, 0, 0.551);
+  /* background-color: #00000082; */
   display: inline;
   padding: 5px;
-  border-radius: 25px;
-  font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+  /* border-radius: 25px; */
+  font-family: "Helvetica Neue","Segoe UI", "Frutiger", "Frutiger Linotype", "Dejavu Sans", Arial, sans-serif;
+  font-weight: 300;
   
 }
 
@@ -125,8 +129,8 @@ hr {
   padding-top: 3vh;
   padding-left: 10vh;
   padding-right: 10vh;
-  font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
-  font-weight: 400;
+  font-family: "Helvetica Neue","Segoe UI", "Frutiger", "Frutiger Linotype", "Dejavu Sans", Arial, sans-serif;
+  font-weight: 100;
   text-align: left;
 }
 
@@ -144,12 +148,17 @@ hr {
   object-fit: cover;
 }
 
+.getting-img-wrapper { 
+ margin-bottom: 20px;
+ height: 100px;
+ width: 100%
+}
 .col-4 {
   color: white;
   padding-left: 100px;
 }
 
 .company-footer {
-  font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
-  font-weight: 400;
+  font-family: "Helvetica Neue","Segoe UI", "Frutiger", "Frutiger Linotype", "Dejavu Sans", Arial, sans-serif;
+  font-weight: 100;
 }

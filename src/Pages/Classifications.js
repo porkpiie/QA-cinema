@@ -21,10 +21,10 @@ export default class Classifications extends Component {
           <img src={bbfc} alt="bbfcpic" />
         </div>
 
-        <Container className="homecontainer">
+        <Container fluid className="homecontainer">
 
 
-          <h1 className="Listingh1">Classifications</h1>
+          <h1 className="Listingh1">CLASSIFICATIONS</h1>
           <hr />
 
           <div>
@@ -100,6 +100,9 @@ export default class Classifications extends Component {
           </Row>
 
         </Container>
+        <br/>
+        <br/>
+        
       </div>
 
 
