@@ -39,7 +39,7 @@ export default class SearchBar extends React.Component {
                         <FontAwesomeIcon icon={faSearch} />
                     </a>
                     <div className="search-input">
-                        <input type="search" className="search-bar" placeholder="Search..." value={this.state.searchInput} onChange={this.handleSearchInputChange} />
+                        <input type="search" className="search-bar" placeholder="Search Term" value={this.state.searchInput} onChange={this.handleSearchInputChange} />
                     </div>
                 </div>
             </form>

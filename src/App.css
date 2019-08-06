@@ -20,6 +20,11 @@ h1 {
   font-size: 20px;
 }
 
+.btn.btn-primary {
+  background-color: #28CDE9 !important;
+  color: black !important;
+}
+
 hr {
   
   margin-left: auto;
@@ -71,9 +76,12 @@ hr {
 }
 
 .nav .nav-item .nav-link:hover .button {
-  color:#28CDE9;
   margin-top: 5px;
   text-decoration: none  !important;
+}
+.nav-item a:hover {
+  color:#28CDE9 !important;
+  
 }
 
 .nav-item {
