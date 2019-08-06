@@ -2,7 +2,7 @@ import React from "react";
 import { Parallax } from "react-parallax";
 // import Goddard from '../Images/Goddard.jpg';
 import Goddard from '../Images/Goddard2.jpg';
-import Karting from '../Images/Karting.jpg';
+import Karting from '../Images/karting.jpg';
 import HandW from '../Images/H&W.jpg';
 import Avebury from '../Images/Avebury.jpg';
 
@@ -38,7 +38,7 @@ const PlacesToGo = () => (
             </div>
       </div>
     </Parallax>
-    
+
     <Parallax bgImage={Goddard} strength={300}>
       <div style={{ height: 700 }}>
         <div className="places1" style={insideStyles}>
