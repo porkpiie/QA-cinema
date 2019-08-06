@@ -1,0 +1,9 @@
+.opening-times {
+    width: auto !important;
+}
+
+.opening-times td {
+    border: none !important;
+    padding: 0 !important;
+    padding-bottom: 20px !important;
+}

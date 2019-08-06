@@ -52,7 +52,7 @@ class ContactUs extends Component {
       <div>
       <Banner />
         <Container fluid className="homecontainer">
-            <h1 className="Listingh1">CONTACT US</h1>
+            <h1 className="Listingh1">DROP US A LINE</h1>
             <hr/>
       <div>
         
