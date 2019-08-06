@@ -18,10 +18,7 @@ export default class Classifications extends Component {
         <div className="banner-img-wrapper">
           <img src={bbfc} alt="bbfcpic" />
         </div>
-
         <Container fluid className="homecontainer">
-
-
           <h1 className="Listingh1">CLASSIFICATIONS</h1>
           <hr />
 
@@ -37,8 +34,8 @@ export default class Classifications extends Component {
 
           <Row style={{ color: "white", textAlign: "left", marginLeft: "1px", marginRight: "1px" }}>
             <Col xs md={4} className="pl-0" >
-              <a href="https://bbfc.co.uk/what-classification/u"  target="__blank">
-                <img style={{ width: '5rem' }} src={U} className="btn" alt="Universal"/>
+              <a href="https://bbfc.co.uk/what-classification/u" target="__blank">
+                <img style={{ width: '5rem' }} src={U} className="btn" alt="Universal" />
               </a>
               <p className="my-4" style={{ fontSize: '12px' }}>SUITABLE FOR ALL</p>
             </Col>
@@ -59,13 +56,13 @@ export default class Classifications extends Component {
           <Row style={{ color: "white", textAlign: "left", marginLeft: "1px", marginRight: "1px" }}>
             <Col className="pl-0" xs md={4}>
               <a href="https://bbfc.co.uk/what-classification/12a-and-12" target="__blank" >
-                <img style={{ width: '5rem' }} src={Twelve} className="btn" alt="Twelve A"  />
+                <img style={{ width: '5rem' }} src={Twelve} className="btn" alt="Twelve A" />
               </a>
               <p className="my-4" style={{ fontSize: '12px' }}>CINEMA RELEASE FOR ALL 12 YEARS AND OVER</p>
             </Col>
             <Col xs className="pr-0" md={4}>
               <a href="https://bbfc.co.uk/what-classification/15" target="__blank" >
-                <img style={{ width: '5rem' }} src={Fifteen} className="btn" alt="Fifteen"/>
+                <img style={{ width: '5rem' }} src={Fifteen} className="btn" alt="Fifteen" />
               </a>
               <p className="my-4" style={{ fontSize: '12px' }}>SUITABLE ONLY FOR 15 YEARS AND OVER</p>
             </Col>
@@ -77,14 +74,10 @@ export default class Classifications extends Component {
               <p className="my-4" style={{ fontSize: '12px' }}>SUITABLE ONLY FOR ADULTS</p>
             </Col>
           </Row>
-
         </Container>
-        <br/>
-        <br/>
-        
+        <br />
+        <br />
       </div>
-
-
     );
   }
 }
