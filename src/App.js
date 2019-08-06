@@ -21,6 +21,7 @@ import DiscussionBoard from './Pages/DiscussionBoard';
 import Film from './Pages/Film';
 import Search from './Pages/Search';
 import Payments from './Pages/Payments';
+import Seating from './Pages/SeatSelect';
 
 
 
@@ -47,6 +48,7 @@ function App() {
           <Route path="/DiscussionBoard" component={DiscussionBoard}/>
           <Route path="/Search" component={Search}/>
           <Route path="/Payment" component={Payments}/>
+          <Route path="/Seating" component={Seating}/>
         </div>
         <AppFooter />
       </Router>

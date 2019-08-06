@@ -3,8 +3,6 @@ import Button from '../Components/Button.component';
 import CheckBox from '../Components/CheckBox.component';
 import Input from '../Components/Input.component';
 import Select from '../Components/Select.component';
-import SeatMap from '../Components/SeatMap.component';
-import '../Components/SeatMap.css';
 import axios from 'axios';
 
 let APIkey = "14ab2cbcc55cd83768a0abc0594eb1ab";
@@ -162,6 +160,7 @@ class FormContainer extends Component {
 	handleFormSubmit(e) {
 		e.preventDefault();
 		let userData = this.state.booking;
+		console.log("Submitting Results...");
 
 		fetch("http://localhost:8080/qac/bookings", {
 			method: "POST",
@@ -173,6 +172,7 @@ class FormContainer extends Component {
 		}).then(response => {
 			response.json().then(data => {
 				console.log("Successful" + data);
+				window.location='./Seating';
 			});
 		});
 	}
@@ -265,7 +265,6 @@ class FormContainer extends Component {
 						placeholder={"Number of Concession tickets"}
 						handleChange={this.handleInput}
 					/>{" "}
-					<SeatMap />
 					<Button
 						action={this.handleFormSubmit}
 						type={"primary"}
