@@ -1,37 +1,30 @@
 
-/* body {
-  font-family: 'Arial', sans-serif;
-  font-size: 16px;
-  position: absolute;
-  left: 200px;
-} */
-
 /* border-box */
-/* .search-container *,
+ .search-container *,
 .search-container *:after,
 .search-container *:before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
-} */
+} 
 
 /* search bar focus */
-/* .search-container *:focus {
+.search-container *:focus {
   background: #fbfbfb;
   color: #333333;
   outline: 0;
-} */
+} 
 
 /* search bar container */
-/* .search-container {
+ .search-container {
   display: table;
   position: relative;
   width: 50px;
-} */
+} 
 
 /* search icon button */
-/* .search-icon-btn {
+.search-icon-btn {
   background-color: #28cde9;
   border: 1px solid #28cde9;
   display: table-cell;
@@ -41,41 +34,45 @@
   vertical-align: middle;
   width: 50px;
   z-index: 2;
-} */
+} 
 
 /* search bar input container */
-/* .search-input {
+ .search-input {
   position: absolute;
   right: 0;
   z-index: 1;
-} */
+  font-family: "Helvetica Neue","Segoe UI", "Frutiger", "Frutiger Linotype", "Dejavu Sans", Arial, sans-serif;
+  font-weight: 100;
+  font-size: 15px;
+} 
 
 /* search bar input */
-/* .search-input input.search-bar {
+ .search-input input.search-bar {
   border: 1px solid #cccccc;
   height: 50px;
   padding: 0px;
   width: 50px;
-} */
-/* .search-input input.search-bar:focus {
+} 
+
+ .search-input input.search-bar:focus {
   padding-left: 10px;
   padding-right: 60px;
   width: 200px;
-} */
+} 
 
 /* transition effect */
-/* .search-input input.search-bar,
+.search-input input.search-bar,
 .search-icon-btn {
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   -ms-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
-} */
+} 
 
 /* hover on search bar container */
-/* .search-container:hover > .search-input input.search-bar {
-  padding-left: 60px;
+ .search-container:hover > .search-input input.search-bar {
+  padding-left: 20px;
   padding-right: 20px;
   width: 200px;
-} */
+} 

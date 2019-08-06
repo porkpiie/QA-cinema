@@ -59,3 +59,16 @@ code {
   color: white;
   text-align: left;
 }
+
+.openingpage {
+  color: white; 
+  text-align: left;
+  font-family: Roboto;
+  text-transform: uppercase;
+}
+
+.discussionboard{
+
+  /* min-width: 1400px; */
+  background-color: rgb(37, 37, 37);
+}

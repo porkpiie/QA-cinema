@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import MapGL, { NavigationControl } from 'react-map-gl';
 
-const APIKey = 'pk.eyJ1IjoiZHNodXJtZXJuYnMiLCJhIjoiY2p5aW1nNnVhMDEwcTNobnhjaTMzbGk3NSJ9.lHVoAbX8GZlgYD9PuqvK8A';
+const APIKey = 'pk.eyJ1IjoiZ29uc3ZhMjYiLCJhIjoiY2p5eWpka2x4MDRoNTNucGJsMTJmZDU5NiJ9.p-7p5jc1RrHWfwcxsEM-Ag';
 
 const navStyle = {
     position: 'absolute',
@@ -21,7 +21,7 @@ export default class Map extends Component {
                 zoom: 15,
                 bearing: 0,
                 pitch: 0,
-                width: 400,
+                width: '100%',
                 height: 400,
             }
         }
@@ -31,11 +31,11 @@ export default class Map extends Component {
         const { viewport } = this.state;
         return (
             <div>              
-                <h1>GETTING HERE</h1>
+       
             <MapGL
                 {...viewport}
                 onViewportChange={(viewport) => this.setState({viewport})}
-                mapStyle="mapbox://styles/dshurmernbs/cjyrfjhlf0dbl1clb3c3kdrfx"
+                mapStyle="mapbox://styles/gonsva26/cjyyk5o9d3vj31crnmm37osjz"
                 mapboxApiAccessToken={APIKey}>
                 <div className="nav" style={navStyle}>
                     <NavigationControl />

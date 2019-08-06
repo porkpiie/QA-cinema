@@ -2,19 +2,42 @@
 import React, { Component } from 'react';
 import { Button, Nav, NavItem, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, Form, NavLink } from 'reactstrap';
 import { FormControl } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, NavLink as RouterNavLink, withRouter } from 'react-router-dom';
 import logo from '../logo.png';
-import Container from 'react-bootstrap/Container'
+import Container from 'react-bootstrap/Container';
+import './navbar.css';
+import SearchBar from './SearchBar.component';
 
 
-export default class Navigation extends Component {
+class Navigation extends Component {
   constructor(props) {
     super(props);
 
     this.toggle = this.toggle.bind(this);
     this.state = {
-      dropdownOpen: false
+      dropdownOpen: false,
+
+      links: [
+        {
+          label: 'Home',
+          path: '/home'
+        },
+        {
+          label: 'What\'s On',
+          path: '/WhatsOn'
+        },
+        {
+          label: 'NEW RELEASES',
+          path: '/ComingUp'
+        },
+        {
+          label: 'BOOK NOW',
+          path: '/Booking'
+        }
+      ]
     };
+
+    this.searchClicked = this.searchClicked.bind(this);
   }
 
   toggle() {
@@ -23,10 +46,8 @@ export default class Navigation extends Component {
     });
   }
 
-  searchClicked() {
-    sessionStorage.removeItem("searchTerm");
-    sessionStorage.setItem("searchTerm",document.getElementById("searchBox").value);
-    window.location = '../../Search';
+  searchClicked(searchInput) {
+    this.props.history.push(`/search/${searchInput}`);
   }
 
   render() {
@@ -36,27 +57,14 @@ export default class Navigation extends Component {
           <a className="navbar-brand" href="/home" target="">
             <img style={{ paddingLeft: "30%" }} src={logo} height="100" alt="whalepic" />
           </a>
-          <NavItem>
-            <Link to="/home">
-              <NavLink>HOME</NavLink>
-            </Link>
-          </NavItem>
 
-          <NavItem>
-            <Link to="/WhatsOn">
-              <NavLink>WHAT'S ON</NavLink>
-            </Link>
-          </NavItem>
-
-          <NavItem>
-            <NavLink href="/ComingUp">NEW RELEASES</NavLink>
-          </NavItem>
-
-          <NavItem>
-            <Link to="/Booking">
-            <NavLink>BOOK NOW</NavLink>
-            </Link>
-          </NavItem>
+          {this.state.links.map(l => (
+            <NavItem>
+              <Link to={l.path}>
+                <NavLink>{l.label.toLocaleUpperCase()}</NavLink>
+              </Link>
+            </NavItem>
+          ))}
 
           <Dropdown nav isOpen={this.state.dropdownOpen} toggle={this.toggle}>
             <DropdownToggle nav caret>
@@ -76,13 +84,18 @@ export default class Navigation extends Component {
               <DropdownItem href="/ThingsToDo" style={{ color: '#28CDE9', textDecoration: 'none' }}>THINGS TO DO</DropdownItem>
             </DropdownMenu>
           </Dropdown>
-          <Form inline className="ml-auto mr-3">
+          {/* <Form inline className="ml-auto mr-3">
             <FormControl type="text" placeholder="Search Term" className="mr-sm-2" id="searchBox" />
             <Button onClick={this.searchClicked} type="button" color="info" id="searchButton">SEARCH</Button>
 
-          </Form>
+          </Form> */}
+          <div style={{ paddingRight: "4%" }} className="my-auto ml-auto mr-3">
+            <SearchBar onSubmit={this.searchClicked} />
+          </div>
         </Nav>
       </Container>
     );
   }
 }
+
+export default withRouter(Navigation);

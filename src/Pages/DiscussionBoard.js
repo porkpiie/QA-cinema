@@ -1,11 +1,10 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.css";
-
-
-
 import CommentList from "../Components/DiscussionCommentList";
 import CommentForm from "../Components/DiscussionCommentForm";
 import { conditionalExpression } from "@babel/types";
+import { Container } from "react-bootstrap";
+import Banner from '../Components/Banner.component';
 
 class DiscussionBoard extends Component {
   constructor(props) {
@@ -52,25 +51,31 @@ class DiscussionBoard extends Component {
     
     return (
         <div>
-            <h1 className="Listingh1">DISCUSSION BOARD</h1>
-            <hr/>
-      <div className="App container bg-dark shadow">
-        
+        <div className="banner-img-wrapper">
+          <Banner/>
+        </div>
 
-        <div className="row">
-          <div className="col-4  pt-4 border-right">
-            <h6 style={{color : "black"}}>DISCUSSION BOARD FOR ALL THINGS FILMS</h6><br/>
-            <CommentForm addComment={this.addComment} />
-          </div>
-          <div className="col-8  pt-3 bg-dark">
-            <CommentList
+        <Container fluid className="homecontainer">
+        <h1 className="Listingh1">DISCUSSION BOARD</h1>
+        <hr/>
+        
+        
+        <div className="discussionboard">
+        <div className="row mx-0">
+        <div className="col-4  pt-4 border-right">
+        <h6 style={{textAlign : "left"}}>DISCUSSION BOARD FOR ALL THINGS FILMS</h6><br/>
+        <CommentForm addComment={this.addComment} />
+        </div>
+        <div className="col-8  pt-3">
+        <CommentList
               loading={this.state.loading}
               comments={this.state.comments}
             />
-          </div>
         </div>
-      </div>
-      </div>
+        </div>
+        </div>
+        </Container>
+        </div>
     );
   }
 }

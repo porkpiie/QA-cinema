@@ -51,10 +51,10 @@ class ContactUs extends Component {
     return (
       <div>
       <Banner />
-        <Container  className="homecontainer">
-            <h1 className="Listingh1">CONTACT US</h1>
+        <Container fluid className="homecontainer">
+            <h1 className="Listingh1">DROP US A LINE</h1>
             <hr/>
-      <div className="homecontainer">
+      <div>
         
 
         <div>

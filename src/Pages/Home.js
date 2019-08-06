@@ -13,7 +13,7 @@ export default class Home extends Component{
             <CarouselHome />
             </div>
 
-            <Container  className="homecontainer">
+            <Container fluid className="homecontainer">
             <h1 className="Listingh1">OCEAN VIEW CINEMA</h1>
             <hr/>
                 <HomeIcons/>
