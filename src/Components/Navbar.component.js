@@ -89,7 +89,7 @@ class Navigation extends Component {
             <Button onClick={this.searchClicked} type="button" color="info">SEARCH</Button>
 
           </Form> */}
-          <div className="my-auto ml-auto mr-3">
+          <div style={{ paddingRight: "4%" }} className="my-auto ml-auto mr-3">
             <SearchBar onSubmit={this.searchClicked} />
           </div>
         </Nav>
