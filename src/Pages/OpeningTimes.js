@@ -1,25 +1,31 @@
 import React from 'react';
-import Jumbotron from 'react-bootstrap/Jumbotron';
-import Container from 'react-bootstrap/Container';
+import { Container } from "react-bootstrap";
+import Banner from '../Components/Banner.component';
+
 class OpeningTimes extends React.Component {
     render() {
-        return <div>
-            <Jumbotron fluid style={{backgroundColor: "black"}}>
-                <Container style={{backgroundColor: "black", color: "white"}}>
-                    <h1>QA Films Opening Times</h1>
+        return(
+            <div>
+            <div className="banner-img-wrapper">
+                <Banner />
+            </div>
 
-                    <p>Monday  	12:00 - 00:00</p>
-                    <p>Tuesday  	12:00 - 00:00 </p>
-                    <p>Wednesday  	12:00 - 00:00</p>
-                    <p>Thursday  	12:00 - 00:00</p>
-                    <p>Friday  	12:00 - 00:00</p>
-                    <p>Saturday  	10:00 - 00:00</p>
-                    <p>Sunday  	10:00 - 00:00</p>
+            <Container fluid className="homecontainer">
+            <h1 className="Listingh1">OPENING TIMES</h1>
+            <hr/>
+            <p className = "openingpage" >Monday  	12:00 - 00:00</p>
+            <p className = "openingpage" >Tuesday  	12:00 - 00:00 </p>
+            <p className = "openingpage" >Wednesday  	12:00 - 00:00</p>
+            <p className = "openingpage" >Thursday  	12:00 - 00:00</p>
+            <p className = "openingpage" >Friday  	12:00 - 00:00</p>
+            <p className = "openingpage" >Saturday  	10:00 - 00:00</p>
+            <p className = "openingpage" >Sunday  	10:00 - 00:00</p>
 
-                    <h3>The Cinema is closed on Christmas Day</h3>
-                </Container>
-            </Jumbotron>
-        </div>
+            <p className = "openingpage" >The Cinema is closed on Christmas Day</p>
+            </Container>
+            </div>
+        
+        )
     }
 }
 export default OpeningTimes

@@ -2,9 +2,10 @@
 import React, { Component } from 'react';
 import { Button, Nav, NavItem, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, Form, NavLink } from 'reactstrap';
 import { FormControl } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, NavLink as RouterNavLink } from 'react-router-dom';
 import logo from '../logo.png';
-import Container from 'react-bootstrap/Container'
+import Container from 'react-bootstrap/Container';
+import './navbar.css';
 
 
 export default class Navigation extends Component {
@@ -13,7 +14,26 @@ export default class Navigation extends Component {
 
     this.toggle = this.toggle.bind(this);
     this.state = {
-      dropdownOpen: false
+      dropdownOpen: false,
+
+      links: [
+        {
+          label: 'Home',
+          path: '/home'
+        },
+        {
+          label: 'What\'s On',
+          path: '/WhatsOn'
+        },
+        {
+          label: 'NEW RELEASES',
+          path: '/ComingUp'
+        },
+        {
+          label: 'BOOK NOW',
+          path: '/Booking'
+        }
+      ]
     };
   }
 
@@ -36,27 +56,14 @@ export default class Navigation extends Component {
           <a className="navbar-brand" href="/home" target="">
             <img style={{ paddingLeft: "30%" }} src={logo} height="100" alt="whalepic" />
           </a>
-          <NavItem>
-            <Link to="/home">
-              <NavLink>HOME</NavLink>
-            </Link>
-          </NavItem>
 
-          <NavItem>
-            <Link to="/WhatsOn">
-              <NavLink>WHAT'S ON</NavLink>
-            </Link>
-          </NavItem>
-
-          <NavItem>
-            <NavLink href="/ComingUp">NEW RELEASES</NavLink>
-          </NavItem>
-
-          <NavItem>
-            <Link to="/Booking">
-            <NavLink>BOOK NOW</NavLink>
-            </Link>
-          </NavItem>
+          {this.state.links.map(l => (
+            <NavItem>
+              <Link to={l.path}>
+                <NavLink>{l.label.toLocaleUpperCase()}</NavLink>
+              </Link>
+            </NavItem>
+          ))}
 
           <Dropdown nav isOpen={this.state.dropdownOpen} toggle={this.toggle}>
             <DropdownToggle nav caret>
