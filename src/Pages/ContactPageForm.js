@@ -109,8 +109,7 @@ export default class ContactPageForm extends Component {
                     <Container >
                         <Row>
                             <Col xs="6" style = {{paddingLeft : "0"}}>
-                            <p style={{color : "white", textAlign : "left"}}> WE ARE ALWAYS STRIVING TO IMPROVE</p><br/>
-                            <p style={{color : "white", textAlign : "left"}}> PLEASE USE THE FORM BELOW TO CONTACT US</p><br/>
+                            <p style={{color : "white", textAlign : "left"}}> DROP US A LINE</p><br/>
                                 <div className="form-group">
                                     <input
                                         onChange={this.handleFieldChange}

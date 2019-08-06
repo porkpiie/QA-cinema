@@ -23,9 +23,9 @@ export default class Classifications extends Component {
           <hr />
 
           <div>
-            <p style={{ color: "white", textAlign: "left", fontFamily: "Roboto" }}>Classification is the process of giving age ratings and content advice to films
+            <p style={{ color: "white", textAlign: "left"}}>Classification is the process of giving age ratings and content advice to films
              and other audiovisual content to help children and families choose what's right for them and avoid what's not.</p><br />
-            <p style={{ color: "white", textAlign: "left", fontFamily: "Roboto" }}>Recommendations are made by our Compliance Officers based on the BBFC's pulished
+            <p style={{ color: "white", textAlign: "left"}}>Recommendations are made by our Compliance Officers based on the BBFC's pulished
             Guidelines. These are the result of extensive consultation with people right across the UK, research,
             and the BBFC's more than 100 years of experience. They reflect people's views on film, DVD, Blu-Ray,
             video on demand (VoD) regulation and regularly updated</p><br />

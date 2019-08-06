@@ -20,7 +20,8 @@ export default class Film extends Component {
     }
 
     componentWillMount() {
-        searchTerm = sessionStorage.getItem("searchTerm").toUpperCase();
+        searchTerm = (this.props.match.params.searchTerm || "").toLocaleUpperCase();
+        // searchTerm = sessionStorage.getItem("searchTerm").toUpperCase();
         console.log("Searching For: " + searchTerm);
 
         if (searchTerm !== "") {
