@@ -1,4 +1,4 @@
-  {
+{
   "name": "qacinemas",
   "version": "0.1.0",
   "private": true,
@@ -12,8 +12,10 @@
     "mapbox-gl": "^1.2.0",
     "mdbootstrap": "^4.8.7",
     "mdbreact": "^4.18.1",
+    "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-bootstrap": "^1.0.0-beta.10",
+    "react-datepicker": "^2.8.0",
     "react-dom": "^16.8.6",
     "react-map-gl": "^5.0.7",
     "react-parallax": "^2.2.0",
