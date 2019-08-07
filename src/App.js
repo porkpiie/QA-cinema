@@ -46,9 +46,9 @@ function App() {
           <Route path="/Film/:origin/:id" component={Film}/>
           <Route path="/ContactUs" component={ContactUs}/>
           <Route path="/DiscussionBoard" component={DiscussionBoard}/>
-          <Route path="/Search" component={Search}/>
           <Route path="/Payment" component={Payments}/>
           <Route path="/Seating" component={Seating}/>
+          <Route path="/Search/:searchTerm" component={Search}/>
         </div>
         <AppFooter />
       </Router>

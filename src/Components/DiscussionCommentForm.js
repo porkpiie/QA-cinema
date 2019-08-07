@@ -154,8 +154,8 @@ export default class CommentForm extends Component {
 
                     {this.renderError()}
 
-                    <div className="form-group">
-                        <button disabled={this.state.loading} className="btn btn-primary">
+                    <div style={{ textAlign: "left" }} className="form-group">
+                        <button disabled={this.state.loading} style={{margin: '0px'}} className="btn btn-primary">
                             Comment
             </button>
                     </div>
