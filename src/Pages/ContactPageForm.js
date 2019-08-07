@@ -167,9 +167,8 @@ export default class ContactPageForm extends Component {
                                 <p style={{ color: "white", textAlign: "left" }}>ADDRESS</p><br />
                                 <p style={{ color: "white", textAlign: "left" }}>Alexandra House<br />Whittingham Drive,<br />Swindon,<br />SN4 0QJ</p><br />
 
-                                <h6 style={{ color: "white", textAlign: "left" }}>Phone & Email</h6><br />
-                                <p style={{ color: "white", textAlign: "left" }}>Phone: 01793 819 000</p><br />
-                                <p style={{ color: "white", textAlign: "left" }}>Email: </p><br />
+                                <h6 style={{ color: "white", textAlign: "left" }}>Phone</h6><br />
+                                <p style={{ color: "white", textAlign: "left" }}>01793 819 000</p><br />
                             </Col>
                         </Row>
                     </Container>

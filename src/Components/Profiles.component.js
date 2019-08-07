@@ -6,6 +6,7 @@ import spMatt from '../Images/spMatt.jpg';
 import spMike from '../Images/spMike.jpg';
 import spDan from '../Images/spDan.png';
 import spRich from '../Images/spRich.jpg';
+import spVal from '../Images/spVal.jpg';
 
 const Profiles = (props) => {
     return (
@@ -63,7 +64,7 @@ const Profiles = (props) => {
                     </Card>
                     <Card id="aboutcard">
                         <a href="https://www.sp-studio.de/" target="__blank">
-                            <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180" alt="Card image cap" />
+                            <CardImg top width="100%" src={spVal} alt="Card image cap" />
                         </a>
                         <CardBody>
                             <CardTitle>Valentine Gonsalves</CardTitle>

@@ -19,7 +19,7 @@ export default class Getting extends Component {
                         <br />
                         <br />
                         <div className="d-flex">
-                            <div style={{ paddingLeft: "15" }}>
+                            <div style={{ paddingLeft: "15px", paddingRight : "40px"}}>
                                 <p style={{ color: "white", textAlign: "left"}}>ADDRESS</p>
                                 <p style={{ color: "white", textAlign: "left" }}>Alexandra House<br />Whittingham Drive,<br />Swindon,<br />SN4 0QJ</p><br />
                                 <p style={{ color: "white", textAlign: "left" }}>Phone: 01793 819 000</p>
@@ -30,11 +30,11 @@ export default class Getting extends Component {
                                 </div>
                             </div>
                            
-                            <div className="ml-auto position-relative" style={{textAlign : "left", color : "white"}}>
-                                <p> <i class="fas fa-train fa-2x" /> Only 15 minutes from Swindon Train Station</p><br/>
-                                <p> <i class="fas fa-bus fa-2x" /> Buses are limited, but will bring you to and from town centre with stops along the way. Find out more
+                            <div className="ml-auto position-relative" style={{textAlign : "left", color : "white", paddingRight : "40px"}}>
+                                <p> <i class="fas fa-train fa-2x" style={{paddingRight : "15px"}} /> Only 15 minutes from Swindon Train Station</p><br/>
+                                <p> <i class="fas fa-bus fa-2x" style={{paddingRight : "15px"}} /> Buses are limited, but will bring you to and from town centre with stops along the way. Find out more
                                 <a href="https://bustimes.org/services/82-swindon-wroughton-thorney-park" alt="stagecoach link" target="__blank" style={{ color: "#28CDE9" }}> here</a></p><br/>
-                                <p> <i class="fas fa-parking fa-2x" /> With 250 Free Parking spaces and CCTV park with confidence right at the venue</p><br/>
+                                <p> <i class="fas fa-parking fa-2x" style={{paddingRight : "15px"}} /> With 250 Free Parking spaces and CCTV park with confidence right at the venue</p><br/>
                             </div>
                             <div className="ml-auto position-relative" style={{height: '300px'}}>
 
