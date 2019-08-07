@@ -20,6 +20,8 @@ import AppFooter from './Components/Footer.component';
 import DiscussionBoard from './Pages/DiscussionBoard';
 import Film from './Pages/Film';
 import Search from './Pages/Search';
+import Payments from './Pages/Payments';
+import Seating from './Pages/SeatSelect';
 
 
 
@@ -44,6 +46,8 @@ function App() {
           <Route path="/Film/:origin/:id" component={Film}/>
           <Route path="/ContactUs" component={ContactUs}/>
           <Route path="/DiscussionBoard" component={DiscussionBoard}/>
+          <Route path="/Payment" component={Payments}/>
+          <Route path="/Seating" component={Seating}/>
           <Route path="/Search/:searchTerm" component={Search}/>
         </div>
         <AppFooter />
