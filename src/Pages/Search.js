@@ -39,7 +39,6 @@ export default class Film extends Component {
 
     performSearch(searchTerm) {
         searchTerm = (this.props.match.params.searchTerm || "").toLocaleUpperCase();
-        sessionStorage.setItem("SearchTerm",searchTerm);
         console.log("Searching For: " + searchTerm);
 
         if (searchTerm !== "") {
