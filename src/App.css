@@ -231,3 +231,25 @@ hr {
     margin: none !important;
     padding: 0 !important;
 }
+.bg-aboutcard {
+  background-color: black;
+  
+}
+
+#aboutcard {
+  background-color : #28CDE9;
+  color: white;
+  font-size: 20px
+}
+
+#aboutcontainer {
+  padding-left: 0%;
+  padding-right: 0%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#aboutText {
+  color: black;
+}
+

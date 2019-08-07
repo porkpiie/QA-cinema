@@ -141,8 +141,10 @@ class Film extends React.Component {
                             <button style={{margin: '0px'}} className="btn btn-primary" onClick={() => { window.location.replace('./../../' + this.props.match.params.origin) }}>
 							Back To Film Listing
                             </button>
-							<img  width="60px" height="60px" src={this.state.movie.certimg} alt={"cert icon for " + this.state.movie.title} />
-                            </div>
+							<button className="btn btn-primary" onClick={() => {window.location.replace('./../../Booking')}}>Book Now</button>
+                            <img  width="60px" height="60px" src={this.state.movie.certimg} alt={"cert icon for " + this.state.movie.title} />
+							
+							</div>
 						
 						</MDBCol>
 						<MDBCol style={{textAlign:"right"}}>

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 
 export default class AppFooter extends Component {
-  render(){
+  render() {
     return (
       <MDBFooter color="blue-gradient pt-4 mt-4" className="company-footer">
         <MDBContainer className="text-center text-md-left">
@@ -11,9 +11,9 @@ export default class AppFooter extends Component {
               <h5 className="text-uppercase mb-4 font-weight-bold">
                 Ocean View
               </h5>
-              <p className="text-uppercase font-weight-light">moonlit migration<br/>
-              giants swimming to shelter<br/>
-              warmer waters soon
+              <p className="text-uppercase font-weight-light">moonlit migration<br />
+                giants swimming to shelter<br />
+                warmer waters soon
               </p>
               <p>
                 __________________________________
@@ -30,7 +30,7 @@ export default class AppFooter extends Component {
                   <a href="/AboutUs">ABOUT US</a>
                 </p>
                 <p>
-                  <a href="#!">CONTACT US</a>
+                  <a href="/ContactUs">CONTACT US</a>
                 </p>
               </ul>
             </MDBCol>
