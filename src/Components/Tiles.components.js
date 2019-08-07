@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Card from 'react-bootstrap/Card';
 import { MDBMask, MDBView, MDBContainer, MDBRow, MDBCol } from 'mdbreact';
 import { withRouter } from 'react-router-dom';
+import { Container } from "react-bootstrap";
 
 import TBDimage from '../Images/TBC.png';
 import Uimage from '../Images/U.png';
@@ -128,23 +129,23 @@ class Tiles extends Component {
 
     render() {
         return (
-            <div className="tiles pt-10">
-                <MDBContainer style={{  marginLeft : "10vw", marginRight : "10vw"}} >
-                    <MDBRow>
+            
+                <div style={{paddingTop:"40px"}}>
+                    <MDBRow style={{paddingTop:"10px"}}>
                         {this.state.movies.map(movie => (
                             <MDBCol key={movie.id}>
                                 <MDBView hover>
                                     <a href={"./Film" + this.props.match.url + "/" + movie.id}>
-                                        <Card bg="dark" text="white" style={{ width: '15vw', maxHeight: '100rem' }}>
+                                        <Card bg="dark" text="white" style={{ maxHeight: '100rem' }}>
                                             <Card.Img variant="top" src={"https://image.tmdb.org/t/p/w500" + movie.poster_path} />
                                             <Card.Body className="p-2 pt-4">
-                                                <Card.Title style={{ textAlign: "left", fontSize: 10 }}>
+                                                <Card.Title style={{ textAlign: "left", fontSize: 15 }}>
                                                     {movie.title.toLocaleUpperCase()}
                                                 </Card.Title>
                                                 <Card.Img style={{ width: '2rem', maxHeight: '30px' }} variant="top" src={movie.certimg} />
                                             </Card.Body>
                                         </Card>
-                                        <MDBMask style={{ width: '15vw', height: '40vh', fontSize: 15, textAlign : 'left' }} overlay="black-strong">
+                                        <MDBMask style={{ width: '100%', fontSize: 15, textAlign : 'left' }} overlay="black-strong">
                                             <p className="white-text p-5 pt-10">DIRECTOR: {movie.director}<br /><br />CAST{movie.cast}<br /><br />RUNTIME: {movie.runtime}</p>
                                         </MDBMask>
                                     </a>
@@ -152,8 +153,8 @@ class Tiles extends Component {
                             </MDBCol>
                         ))}
                     </MDBRow>
-                </MDBContainer>
-            </div>
+                </div>
+            
         )
     }
 }
