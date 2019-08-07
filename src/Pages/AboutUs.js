@@ -19,6 +19,21 @@ export default class AboutUs extends Component {
                     <h1 className="Listingh1">PLEASE DON'T HESISTATE TO <Link to="/ContactUs" style={{ color: "#28CDE9" }}>GET IN TOUCH</Link></h1>
                     <hr />
                     <h1 className="Listingh1">OUR JOURNEY USING <a href="https://www.scrum.org/" target="__blank" style={{ color: "#28CDE9" }}>SCRUM</a></h1>
+                    <hr />
+                    <p id="Carouselp1">As a team we have used Scrum during this project.</p>
+                    <p id="Carouselp1">Every day we have had a stand up to see what everyone is working on & if they have any blockers to the tasks.</p>
+                    <p id="Carouselp1">We have assigned stories to our sprint each week and have been able to be flexible on our workload because of this.</p><br/>
+                    <h5 id="abouth5">Courage</h5>
+                    <p id="Carouselp1">The team members have taken a challenge and worked on tasks that they havent alyways been familiar with.</p><br/>
+                    <h5 id="abouth5">Focus</h5>
+                    <p id="Carouselp1">The sprint backlogs have all been worked towards by the team to accomplish everything on time.</p><br/>
+                    <h5 id="abouth5">Commitment</h5>
+                    <p id="Carouselp1">Everyone has done additional work towards the project at home.</p><br/>
+                    <h5 id="abouth5">Respect</h5>
+                    <p id="Carouselp1">All ideas & opinions have been listened too & valued.</p><br/>
+                    <h5 id="abouth5">Openness</h5>
+                    <p id="Carouselp1">The team have constantly communicated and used each others knowledge to help solve any issues.</p><br/>
+
                 </Container>
             </div>
         )

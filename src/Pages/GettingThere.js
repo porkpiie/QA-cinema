@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import Map from '../Components/Map.component'
 import Banner from '../Components/Banner.component';
 import { Container } from "react-bootstrap";
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
 import exterior from '../Images/exterior.jpg';
 
 export default class Getting extends Component {
