@@ -175,21 +175,7 @@ class FormContainer extends Component {
 	handleFormSubmit(e) {
 		e.preventDefault();
 		let userData = this.state.booking;
-		console.log("Submitting Results...");
 
-		/*fetch("http://localhost:8080/qac/bookings", {
-			method: "POST",
-			body: JSON.stringify(userData),
-			headers: {
-				Accept: "application/json",
-				"Content-Type": "application/json"
-			}
-		}).then(response => {
-			response.json().then(data => {
-				console.log("Successful" + data);
-				window.location='./Seating';
-			});
-		});*/
 		sessionStorage.removeItem("bookingData");
 		sessionStorage.setItem("bookingData",JSON.stringify(userData));
 		window.location='./Seating';
@@ -214,8 +200,8 @@ class FormContainer extends Component {
 
 	render() {
 		return (
-			<div>
-				<form className="container-fluid" onSubmit={this.handleFormSubmit}>
+			<div className = "col-6">
+				<form onSubmit={this.handleFormSubmit}>
 					<Input
 						inputType={"text"}
 						title={"First Name"}
@@ -307,21 +293,22 @@ class FormContainer extends Component {
 					<h2>Sub total = £{+this.state.booking.adultTickets * 10 +this.state.booking.childTickets * 5 +this.state.booking.concessionTickets * 7} </h2>
 
 					<Button
+						style={{margin: '0px'}} 
+						className="btn btn-primary"
 						action={this.handleFormSubmit}
 						type={"primary"}
 						title={"Submit"}
-						style={buttonStyle}
+						
 					/>{" "}
 					<Button
+					
+					className="btn btn-primary"
 						action={this.handleClearForm}
 						type={"secondary"}
 						title={"Clear"}
-						style={buttonStyle}
 					/>{" "}
 				</form>
-
-				
-
+				<br/> <br/>
 			</div>
 		);
 	}

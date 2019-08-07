@@ -11,10 +11,10 @@ export default class TicketBooking extends Component {
                     <Banner />
                 </div>
 
-                <Container className="homecontainer">
+                <Container fluid className="homecontainer">
                     <h1 className="Listingh1">BOOKING</h1>
                     <hr />
-                    <div className="col-md-6 company-booking">
+                    <div className="col-md-6" xs="6" style={{color : "white", textAlign : "left", paddingLeft : "0"}}>
                         <FormContainer />
                     </div>
                 </Container>

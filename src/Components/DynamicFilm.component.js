@@ -126,24 +126,31 @@ class Film extends React.Component {
 					<MDBRow>
 						<MDBCol className="col-8" style={{paddingTop:"5%"}} >
 							<h1 className="Listingh3">{this.state.movie.title}</h1>
-							<h1 className="Listingh2">{this.state.movie.overview}</h1>
-							<h1 className="Listingh2"><b>Release Date </b>: {this.state.movie.release_date}</h1>
-							<h1 className="Listingh2"><b>Runtime </b>: {this.state.movie.runtime}</h1>
-							<h1 className="Listingh2"><b>Cast</b> {this.state.movie.cast}</h1>
-							<h1 className="Listingh2"><b>Director </b>: {this.state.movie.director}</h1>
-							<br></br>
+							<h1 className="Listingh2">{this.state.movie.overview}</h1><br/>
+							<h1 className="Listingh4"><b>Release Date </b>: {this.state.movie.release_date}</h1><br/>
+							<h1 className="Listingh4"><b>Runtime </b>: {this.state.movie.runtime}</h1><br/>
+							<h1 className="Listingh4"><b>Cast</b> {this.state.movie.cast}</h1><br/>
+							<h1 className="Listingh4"><b>Director </b>: {this.state.movie.director}</h1>
+							<br/>
+							<br/>
+							<br/>
+							
 							{/* <button style={{ color: "#FFFFFF" }} className="btn" onClick={() => { window.location.replace('./../../' + this.props.match.params.origin) }}>Back To Film Listing</button> */}
 
-							<div  style={{ textAlign: "left" }}>
-                            <button className="btn btn-primary" onClick={() => { window.location.replace('./../../' + this.props.match.params.origin) }}>
+							<div  style={{ display:"flex", justifyContent:"space-between"}}>
+							<div>
+                            <button style={{margin: '0px'}} className="btn btn-primary" onClick={() => { this.props.history.goBack(); }}>
 							Back To Film Listing
                             </button>
 							<button className="btn btn-primary" onClick={() => {window.location.replace('./../../Booking')}}>Book Now</button>
-                            </div>
+							</div>
+						    <img  width="60px" height="60px" src={this.state.movie.certimg} alt={"cert icon for " + this.state.movie.title} />
+							
+							</div>
 						
 						</MDBCol>
 						<MDBCol style={{textAlign:"right"}}>
-							<img style={{paddingTop:"15%", paddingBottom:"15%"}} src={"https://image.tmdb.org/t/p/w342" + this.state.movie.poster_path} alt={"Poster for " + this.state.movie.title} />
+							<img style={{paddingTop:"18%", paddingBottom:"15%"}} src={"https://image.tmdb.org/t/p/w342" + this.state.movie.poster_path} alt={"Poster for " + this.state.movie.title} />
 							</MDBCol>
 					</MDBRow>
 				</div>
@@ -154,5 +161,4 @@ class Film extends React.Component {
 
 export default withRouter(Film);
 
-// <img width="60px" height="60px" src={this.state.movie.certimg} alt={"cert icon for " + this.state.movie.title} />
 						

@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import Card from 'react-bootstrap/Card';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { MDBMask, MDBView, MDBContainer, MDBRow, MDBCol } from 'mdbreact';
+import Container from 'react-bootstrap/Container'
 
 import axios from 'axios';
 let APIkey = "14ab2cbcc55cd83768a0abc0594eb1ab";
-let searchTerm = "";
+
 
 
 export default class Film extends Component {
@@ -13,57 +14,70 @@ export default class Film extends Component {
         super(props);
 
         this.state = {
-            currentmovies: [],
-            upcomingmovies: [],
-            matchingmovies: []
+            matchingmovies: [],
+            searchTerm: ''
         };
+
+        this.performSearch = this.performSearch.bind(this);
     }
 
-    componentWillMount() {
+    // shouldComponentUpdate(nextProps) {
+    //     console.log('TESTING SHIT', nextProps);
+
+    //     if(nextProps.match.params.searchTerm !== this.props.match.params.searchTerm) {
+    //         console.log('PROPS CHANGE!');
+    //     }
+
+    // }
+
+    componentDidUpdate() {
+        // Check for searchTerm change on update, search if different
+        if(this.props.match.params.searchTerm.toLocaleUpperCase() !== this.state.searchTerm.toLocaleUpperCase()) {
+            this.performSearch();
+        }
+    }
+
+    performSearch(searchTerm) {
         searchTerm = (this.props.match.params.searchTerm || "").toLocaleUpperCase();
-        // searchTerm = sessionStorage.getItem("searchTerm").toUpperCase();
         console.log("Searching For: " + searchTerm);
 
         if (searchTerm !== "") {
             axios.get("https://api.themoviedb.org/3/movie/now_playing?page=1&language=en-US&api_key=" + APIkey)
-                .then(response => {
-                    this.setState({
-                        currentmovies: response.data.results.slice(0, 4),
-                    })
-                    axios.get("https://api.themoviedb.org/3/movie/upcoming?page=1&language=en-US&api_key=" + APIkey)
-                        .then(response => {
-                            this.setState({
-                                upcomingmovies: response.data.results.slice(0, 4),
-                            })
+                .then(currResponse => {
+                    const currentmovies = currResponse.data.results.slice(0, 4);
+                    axios.get("https://api.themoviedb.org/3/discover/movie?api_key="+ APIkey + "&language=en-US&region=GB&sort_by=primary_release_date.asc&page=1&primary_release_date.gte=2019-08-07&primary_release_date.lte=2019-12-30")
+                        .then(upcomResponse => {
+                            const upcomingmovies = upcomResponse.data.results.slice(0, 4);
 
                             let matching = [];
                             let idChecked = [];
                             let counter = 0;
-                            for (let movie in this.state.currentmovies) {
-                                if (this.state.currentmovies[movie].title.toUpperCase().search(searchTerm) !== -1) {
-                                    matching.push(this.state.currentmovies[counter]);
+                            for (let movie in currentmovies) {
+                                if (currentmovies[movie].title.toUpperCase().search(searchTerm) !== -1) {
+                                    matching.push(currentmovies[counter]);
                                 }
-                                idChecked.push(this.state.currentmovies[counter].id);
+                                idChecked.push(currentmovies[counter].id);
                                 counter++;
                             }
                             counter = 0;
-                            for (let movie in this.state.upcomingmovies) {
+                            for (let movie in upcomingmovies) {
                                 let filmSeen = false;
                                 for (let seenID in idChecked) {
-                                    if (this.state.upcomingmovies[movie].id === idChecked[seenID]) {
+                                    if (upcomingmovies[movie].id === idChecked[seenID]) {
                                         filmSeen = true;
                                     }
                                 }
 
-                                if (this.state.upcomingmovies[movie].title.toUpperCase().search(searchTerm) !== -1 && filmSeen === false) {
-                                    matching.push(this.state.upcomingmovies[counter]);
+                                if (upcomingmovies[movie].title.toUpperCase().search(searchTerm) !== -1 && filmSeen === false) {
+                                    matching.push(upcomingmovies[counter]);
                                 }
-                                idChecked.push(this.state.currentmovies[counter].id);
+                                idChecked.push(currentmovies[counter].id);
                                 counter++;
                             }
                             this.setState({
                                 matchingmovies: matching,
-                            })
+                                searchTerm: searchTerm
+                            });
                         })
                         .catch();
                 })
@@ -71,25 +85,41 @@ export default class Film extends Component {
         }
     }
 
-    render() {
+    componentWillMount() {
+        this.performSearch(); // Auto search on page load
+    }
 
+    render() {
         if (this.state.matchingmovies.length === 0) {
             return (
                 <div>
-                <h1 style={{ padding:'100px', textAlign:'center'}}>Your Search Returned No Results</h1>
+                    <Container fluid className="homecontainer">
+            <h1 className="Listingh1">YOUR SEARCH RESULTS</h1>
+            <hr/>
+            </Container>
+            <br/><br/><br/><br/>
+                    <h1 className="Listingh6" >Your Search Returned No Results</h1>
+                    <br/><br/><br/><br/>
                 </div>
+                
             )
         }
         else {
             return (
-                <div className="tiles pt-10">
-                    <MDBContainer style={{ marginLeft: "10vh", marginRight: "10vh" }} >
+                <div>
+                    <Container fluid className="homecontainer">
+            <h1 className="Listingh1">YOUR SEARCH RESULTS</h1>
+            <hr/>
+            
+            <br/><br/>
+                    <div >
+                        
                         <MDBRow>
                             {console.log(this.state.currentmovies)}
                             {this.state.matchingmovies.map(movie => (
                                 <MDBCol key={movie.id}>
                                     <MDBView hover>
-                                        <a href={"./Film" + this.props.match.url + "/" + movie.id}>
+                                        <a href={"../Film/search/" + movie.id}>
                                             <Card bg="dark" text="white" style={{ width: '30vh', maxHeight: '100rem' }}>
                                                 <Card.Img variant="top" src={"https://image.tmdb.org/t/p/w500" + movie.poster_path} />
                                                 <Card.Body className="p-2 pt-4">
@@ -103,7 +133,9 @@ export default class Film extends Component {
                                 </MDBCol>
                             ))}
                         </MDBRow>
-                    </MDBContainer>
+                    </div>
+                    </Container>
+                    <br/><br/>
                 </div>
             )
         }
