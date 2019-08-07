@@ -200,7 +200,7 @@ class FormContainer extends Component {
 	render() {
 		return (
 			<div>
-				<form className="container-fluid" onSubmit={this.handleFormSubmit}>
+				<form onSubmit={this.handleFormSubmit}>
 					<Input
 						inputType={"text"}
 						title={"First Name"}
@@ -269,18 +269,22 @@ class FormContainer extends Component {
 						handleChange={this.handleInput}
 					/>{" "}
 					<Button
+						style={{margin: '0px'}} 
+						className="btn btn-primary"
 						action={this.handleFormSubmit}
 						type={"primary"}
 						title={"Submit"}
-						style={buttonStyle}
+						
 					/>{" "}
 					<Button
+					
+					className="btn btn-primary"
 						action={this.handleClearForm}
 						type={"secondary"}
 						title={"Clear"}
-						style={buttonStyle}
 					/>{" "}
 				</form>
+				<br/> <br/>
 			</div>
 		);
 	}

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Carousel from "react-bootstrap/Carousel";
-import screenDeluxe from "../Images/screenDeluxe.jpg";
+import screenDeluxe from "../Images/Everyman-cinema-3.jpg";
 import screenStandard from "../Images/screenStandard.jpg"
 
 export default class CarouselScreen2 extends Component {
@@ -25,10 +25,9 @@ export default class CarouselScreen2 extends Component {
                             </div>
 
                             <Carousel.Caption>
-                                <h1 id="Carouselh1" style={{textAlign:"left", fontSize:40}}>Our Standard Screen</h1><br/>
-                                <p id="Carouselp1">No Fuss.. No Frills.. Just great movie fun for all</p>
-                                <p id="Carouselp1">What are you waiting for?</p>
-                                
+                                <h1 className="Listingh5" >Our Standard Screen</h1><br />
+                                <h1 className="Listingh6">No Fuss.. No Frills.. Just great movie fun for all</h1>
+                                <h1 className="Listingh6">What are you waiting for?</h1> 
                             </Carousel.Caption>
                             
                         </Carousel.Item>
@@ -42,11 +41,6 @@ export default class CarouselScreen2 extends Component {
                                     alt="Third slide"
                                 />
                             </div>
-
-                            <Carousel.Caption>
-                            <h1 id="Carouselh1"style={{textAlign:"left", fontSize:40}}>Standard Seating Plan</h1><br/>
-                           
-                            </Carousel.Caption>
                         </Carousel.Item>
                        
                     </Carousel>
