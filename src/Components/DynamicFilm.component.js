@@ -134,21 +134,23 @@ class Film extends React.Component {
 							<br/>
 							<br/>
 							<br/>
-							<br/>
+							
 							{/* <button style={{ color: "#FFFFFF" }} className="btn" onClick={() => { window.location.replace('./../../' + this.props.match.params.origin) }}>Back To Film Listing</button> */}
 
 							<div  style={{ display:"flex", justifyContent:"space-between"}}>
+							<div>
                             <button style={{margin: '0px'}} className="btn btn-primary" onClick={() => { window.location.replace('./../../' + this.props.match.params.origin) }}>
 							Back To Film Listing
                             </button>
 							<button className="btn btn-primary" onClick={() => {window.location.replace('./../../Booking')}}>Book Now</button>
-                            <img  width="60px" height="60px" src={this.state.movie.certimg} alt={"cert icon for " + this.state.movie.title} />
+							</div>
+						    <img  width="60px" height="60px" src={this.state.movie.certimg} alt={"cert icon for " + this.state.movie.title} />
 							
 							</div>
 						
 						</MDBCol>
 						<MDBCol style={{textAlign:"right"}}>
-							<img style={{paddingTop:"15%", paddingBottom:"15%"}} src={"https://image.tmdb.org/t/p/w342" + this.state.movie.poster_path} alt={"Poster for " + this.state.movie.title} />
+							<img style={{paddingTop:"18%", paddingBottom:"15%"}} src={"https://image.tmdb.org/t/p/w342" + this.state.movie.poster_path} alt={"Poster for " + this.state.movie.title} />
 							</MDBCol>
 					</MDBRow>
 				</div>
