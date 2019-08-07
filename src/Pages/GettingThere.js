@@ -33,10 +33,10 @@ export default class Getting extends Component {
                             </div>
                            
                             <div className="ml-auto position-relative" style={{textAlign : "left", color : "white"}}>
-                                <p> <i class="fas fa-train fa-2x" /> Only 15 minutes from Swindon Train Station</p>
+                                <p> <i class="fas fa-train fa-2x" /> Only 15 minutes from Swindon Train Station</p><br/>
                                 <p> <i class="fas fa-bus fa-2x" /> Buses are limited, but will bring you to and from town centre with stops along the way. Find out more
-                                <a href="https://www.stagecoachbus.com" alt="stagecoach link" target="__blank" style={{ color: "#28CDE9" }}> here</a></p>
-                                <p> <i class="fas fa-parking fa-2x" /> With 250 Free Parking spaces and CCTV park with confidence right at the venue</p>
+                                <a href="https://bustimes.org/services/82-swindon-wroughton-thorney-park" alt="stagecoach link" target="__blank" style={{ color: "#28CDE9" }}> here</a></p><br/>
+                                <p> <i class="fas fa-parking fa-2x" /> With 250 Free Parking spaces and CCTV park with confidence right at the venue</p><br/>
                             </div>
                             <div className="ml-auto position-relative" style={{height: '300px'}}>
 

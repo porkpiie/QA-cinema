@@ -31,7 +31,7 @@ const PlacesToGo = () => (
             <a className="linkAbout" style={{fontSize : "50px"}} href="https://www.hall-woodhousewichelstowe.co.uk/" alt="hallandwoodhouse" rel="noopener noreferrer" target="_blank">Hall & Woodhouse</a>
             <br/>
             <br/>
-            <p style={{fontSize : "18px"}}>Hall & Woodhosue in Wichelstowe is a brand new pub from Dorset Brewers of the same name</p>
+            <p style={{fontSize : "18px"}}>Hall & Woodhouse in Wichelstowe is a brand new pub from Dorset Brewers of the same name</p>
             <p style={{fontSize : "18px"}}>As a busy venue, enjoy priority table reservations with an Ocean View Booking Reference!</p>
             <h5>Venue Info</h5>
             <p style={{fontSize : "18px"}}>01793 209207<br/>Peglars Way<br/>Swindon<br/>SN1 7DA</p>
