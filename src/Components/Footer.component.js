@@ -50,7 +50,7 @@ export default class AppFooter extends Component {
                 Follow us
               </h5>
               <div className="mt-2 ">
-                <a className="btn btn-link" href="https://facebook.com">
+                <a className="btn btn-link" href="https://facebook.com" target="__blank">
                   <i className="fab fa-facebook-f text-white" />
                 </a>
                 <a className="btn btn-link" href="https://twitter.com/filmsqa" target="__blank">
