@@ -56,7 +56,7 @@ export default class ContactPageForm extends Component {
 
         // persist the comments on server
         let { comment } = this.state;
-        fetch("http://localhost:8080/qac/contact", {
+        fetch("http://35.176.149.141:8080/qac/contact", {
             method: "post",
             body: JSON.stringify(comment),
             headers: { 'Content-Type': 'application/json' }

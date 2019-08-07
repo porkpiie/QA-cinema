@@ -23,7 +23,7 @@ class DiscussionBoard extends Component {
     this.setState({ loading: true });
 
     // get all the comments
-    fetch("http://localhost:8080/qac/comments")
+    fetch("http://35.176.149.141:8080/qac/comments")
       .then(res => res.json())
       .then(res => {
         this.setState({

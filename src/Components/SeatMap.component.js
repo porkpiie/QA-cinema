@@ -46,7 +46,7 @@ export default class SeatMap extends React.Component {
         }
         this.state.booking.filmName = filmName;
 
-        fetch("http://localhost:8080/qac/seats/" + this.state.booking.filmName + "/"
+        fetch("http://35.176.149.141:8080/qac/seats/" + this.state.booking.filmName + "/"
             + this.state.booking.filmTime + "/"
             + this.state.booking.filmDate, {
                 method: "GET",
