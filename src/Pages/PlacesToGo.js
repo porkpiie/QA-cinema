@@ -2,7 +2,7 @@ import React from "react";
 import { Parallax } from "react-parallax";
 // import Goddard from '../Images/Goddard.jpg';
 import Goddard from '../Images/Goddard2.jpg';
-import Karting from '../Images/karting.jpg';
+import Karting from '../Images/Karting.jpg';
 import HandW from '../Images/H&W.jpg';
 import Avebury from '../Images/Avebury.jpg';
 

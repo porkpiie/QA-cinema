@@ -6,7 +6,7 @@ import Container from 'react-bootstrap/Container'
 
 import axios from 'axios';
 let APIkey = "14ab2cbcc55cd83768a0abc0594eb1ab";
-let searchTerm = "";
+
 
 
 export default class Film extends Component {
@@ -37,10 +37,9 @@ export default class Film extends Component {
         }
     }
 
-
     performSearch(searchTerm) {
         searchTerm = (this.props.match.params.searchTerm || "").toLocaleUpperCase();
-
+        sessionStorage.setItem("SearchTerm",searchTerm);
         console.log("Searching For: " + searchTerm);
 
         if (searchTerm !== "") {
@@ -121,7 +120,7 @@ export default class Film extends Component {
                             {this.state.matchingmovies.map(movie => (
                                 <MDBCol key={movie.id}>
                                     <MDBView hover>
-                                        <a href={"./Film" + this.props.match.url + "/" + movie.id}>
+                                        <a href={"../Film/search/" + movie.id}>
                                             <Card bg="dark" text="white" style={{ width: '30vh', maxHeight: '100rem' }}>
                                                 <Card.Img variant="top" src={"https://image.tmdb.org/t/p/w500" + movie.poster_path} />
                                                 <Card.Body className="p-2 pt-4">
