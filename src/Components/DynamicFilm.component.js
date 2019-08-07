@@ -139,7 +139,7 @@ class Film extends React.Component {
 
 							<div  style={{ display:"flex", justifyContent:"space-between"}}>
 							<div>
-                            <button style={{margin: '0px'}} className="btn btn-primary" onClick={() => { window.location.replace('./../../' + this.props.match.params.origin) }}>
+                            <button style={{margin: '0px'}} className="btn btn-primary" onClick={() => { this.props.history.goBack(); }}>
 							Back To Film Listing
                             </button>
 							<button className="btn btn-primary" onClick={() => {window.location.replace('./../../Booking')}}>Book Now</button>

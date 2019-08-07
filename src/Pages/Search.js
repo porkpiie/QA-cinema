@@ -6,7 +6,7 @@ import Container from 'react-bootstrap/Container'
 
 import axios from 'axios';
 let APIkey = "14ab2cbcc55cd83768a0abc0594eb1ab";
-let searchTerm = "";
+
 
 
 export default class Film extends Component {
@@ -37,17 +37,15 @@ export default class Film extends Component {
         }
     }
 
-
     performSearch(searchTerm) {
         searchTerm = (this.props.match.params.searchTerm || "").toLocaleUpperCase();
-
         console.log("Searching For: " + searchTerm);
 
         if (searchTerm !== "") {
             axios.get("https://api.themoviedb.org/3/movie/now_playing?page=1&language=en-US&api_key=" + APIkey)
                 .then(currResponse => {
                     const currentmovies = currResponse.data.results.slice(0, 4);
-                    axios.get("https://api.themoviedb.org/3/movie/upcoming?page=1&language=en-US&api_key=" + APIkey)
+                    axios.get("https://api.themoviedb.org/3/discover/movie?api_key="+ APIkey + "&language=en-US&region=GB&sort_by=primary_release_date.asc&page=1&primary_release_date.gte=2019-08-07&primary_release_date.lte=2019-12-30")
                         .then(upcomResponse => {
                             const upcomingmovies = upcomResponse.data.results.slice(0, 4);
 
@@ -121,7 +119,7 @@ export default class Film extends Component {
                             {this.state.matchingmovies.map(movie => (
                                 <MDBCol key={movie.id}>
                                     <MDBView hover>
-                                        <a href={"./Film" + this.props.match.url + "/" + movie.id}>
+                                        <a href={"../Film/search/" + movie.id}>
                                             <Card bg="dark" text="white" style={{ width: '30vh', maxHeight: '100rem' }}>
                                                 <Card.Img variant="top" src={"https://image.tmdb.org/t/p/w500" + movie.poster_path} />
                                                 <Card.Body className="p-2 pt-4">
