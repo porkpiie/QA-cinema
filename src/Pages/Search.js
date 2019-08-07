@@ -45,7 +45,7 @@ export default class Film extends Component {
             axios.get("https://api.themoviedb.org/3/movie/now_playing?page=1&language=en-US&api_key=" + APIkey)
                 .then(currResponse => {
                     const currentmovies = currResponse.data.results.slice(0, 4);
-                    axios.get("https://api.themoviedb.org/3/movie/upcoming?page=1&language=en-US&api_key=" + APIkey)
+                    axios.get("https://api.themoviedb.org/3/discover/movie?api_key="+ APIkey + "&language=en-US&region=GB&sort_by=primary_release_date.asc&page=1&primary_release_date.gte=2019-08-07&primary_release_date.lte=2019-12-30")
                         .then(upcomResponse => {
                             const upcomingmovies = upcomResponse.data.results.slice(0, 4);
 
