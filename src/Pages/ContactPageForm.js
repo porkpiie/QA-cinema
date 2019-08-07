@@ -109,7 +109,7 @@ export default class ContactPageForm extends Component {
                     <Container >
                         <Row>
                             <Col xs="6" style = {{paddingLeft : "0"}}>
-                            {/* <p style={{color : "white", textAlign : "left"}}> DROP US A LINE</p><br/> */}
+                            <p style={{color : "white", textAlign : "left"}}> DROP US A LINE</p><br/>
                                 <div className="form-group">
                                     <input
                                         onChange={this.handleFieldChange}
@@ -163,7 +163,7 @@ export default class ContactPageForm extends Component {
                                 </button>
                                 </div>
                             </Col>
-                            <Col xs="6" style = {{paddingLeft : "100px"}}>
+                            <Col xs="4" style = {{paddingLeft : "100px"}}>
                                 <p style={{ color: "white", textAlign: "left" }}>ADDRESS</p><br />
                                 <p style={{ color: "white", textAlign: "left" }}>Alexandra House<br />Whittingham Drive,<br />Swindon,<br />SN4 0QJ</p><br />
 

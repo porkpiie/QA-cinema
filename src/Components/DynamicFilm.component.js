@@ -138,6 +138,7 @@ class Film extends React.Component {
                             <button className="btn btn-primary" onClick={() => { window.location.replace('./../../' + this.props.match.params.origin) }}>
 							Back To Film Listing
                             </button>
+							<button className="btn btn-primary" onClick={() => {window.location.replace('./../../Booking')}}>Book Now</button>
                             </div>
 						
 						</MDBCol>
