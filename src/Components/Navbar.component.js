@@ -86,7 +86,7 @@ class Navigation extends Component {
           </Dropdown>
           {/* <Form inline className="ml-auto mr-3">
             <FormControl type="text" placeholder="Search Term" className="mr-sm-2" id="searchBox" />
-            <Button onClick={this.searchClicked} type="button" color="info">SEARCH</Button>
+            <Button onClick={this.searchClicked} type="button" color="info" id="searchButton">SEARCH</Button>
 
           </Form> */}
           <div style={{ paddingRight: "4%" }} className="my-auto ml-auto mr-3">
