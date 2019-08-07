@@ -32,39 +32,44 @@ export default class SeatMap extends React.Component {
 
     componentWillMount() {
         this.state.booking = JSON.parse(sessionStorage.getItem("bookingData"));
-        this.state.booking.filmDate = "21-12-19";
+        if (this.state.booking !== null) {
+            this.state.booking.filmDate = "21-12-19";
 
-        let filmName = "";
-        for (let character in this.state.booking.filmName) {
-            character = this.state.booking.filmName[character];
-            if (character === " ") {
-                filmName += "_";
-            }
-            else {
-                filmName += character;
-            }
-        }
-        this.state.booking.filmName = filmName;
-
-        fetch("http://localhost:8080/qac/seats/" + this.state.booking.filmName + "/"
-            + this.state.booking.filmTime + "/"
-            + this.state.booking.filmDate, {
-                method: "GET",
-                headers: {
-                    Accept: "application/json",
-                    "Content-Type": "application/json"
+            let filmName = "";
+            for (let character in this.state.booking.filmName) {
+                character = this.state.booking.filmName[character];
+                if (character === " ") {
+                    filmName += "_";
                 }
-            }).then(response => {
-                response.text().then(data => {
-                    this.setState({
-                        seatUnavailable: data
-                    })
-                });
-            });
+                else {
+                    filmName += character;
+                }
+            }
+            this.state.booking.filmName = filmName;
 
-        this.state.seatsToSelect = parseInt(this.state.booking.adultTickets) +
-            parseInt(this.state.booking.childTickets) +
-            parseInt(this.state.booking.concessionTickets);
+            fetch("http://localhost:8080/qac/seats/" + this.state.booking.filmName + "/"
+                + this.state.booking.filmTime + "/"
+                + this.state.booking.filmDate, {
+                    method: "GET",
+                    headers: {
+                        Accept: "application/json",
+                        "Content-Type": "application/json"
+                    }
+                }).then(response => {
+                    response.text().then(data => {
+                        this.setState({
+                            seatUnavailable: data
+                        })
+                    });
+                });
+
+            this.state.seatsToSelect = parseInt(this.state.booking.adultTickets) +
+                parseInt(this.state.booking.childTickets) +
+                parseInt(this.state.booking.concessionTickets);
+        }
+        else {
+            window.location = './Booking';
+        }
     }
 
     onClickData(seat) {
