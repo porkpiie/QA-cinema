@@ -39,6 +39,41 @@ h1 {
 
 }
 
+.Listingh4{
+
+  font-family: "Helvetica Neue","Segoe UI", "Frutiger", "Frutiger Linotype", "Dejavu Sans", Arial, sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  padding-top: 0%;
+  color: rgb(167, 165, 165)
+
+}
+
+.Listingh5{
+
+  font-family: "Helvetica Neue","Segoe UI", "Frutiger", "Frutiger Linotype", "Dejavu Sans", Arial, sans-serif;
+  font-weight: 300;
+  font-size: 50px;
+  padding-top: 0%;
+}
+
+.Listingh6{
+
+  font-family: "Helvetica Neue","Segoe UI", "Frutiger", "Frutiger Linotype", "Dejavu Sans", Arial, sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  padding-top: 0%;
+}
+
+.Listingh6{
+
+  font-family: "Helvetica Neue","Segoe UI", "Frutiger", "Frutiger Linotype", "Dejavu Sans", Arial, sans-serif;
+  font-weight: 300;
+  font-size: 60px;
+  padding-top: 0%;
+  text-align: center;
+}
+
 .btn.btn-primary {
   background-color: #28CDE9 !important;
   color: black !important;
@@ -53,7 +88,7 @@ hr {
   opacity: 0.5;
   }
 
-  
+
 .homecontainer{
 
   padding: 0 5rem !important;
@@ -190,4 +225,9 @@ hr {
 .company-footer {
   font-family: "Helvetica Neue","Segoe UI", "Frutiger", "Frutiger Linotype", "Dejavu Sans", Arial, sans-serif;
   font-weight: 100;
+}
+
+.btn .button.btn{
+    margin: none !important;
+    padding: 0 !important;
 }
