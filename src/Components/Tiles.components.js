@@ -28,16 +28,16 @@ class Tiles extends Component {
     componentDidMount() {
         let requestMovies = "";
         if(this.props.match.url === "/WhatsOn"){
-            requestMovies = "now_playing"
+            requestMovies = "https://api.themoviedb.org/3/movie/now_playing?api_key=" + APIkey + "&language=en-US&page=1";
         }
         else if(this.props.match.url === "/ComingUp"){
-            requestMovies = "upcoming"
+            requestMovies = "https://api.themoviedb.org/3/discover/movie?api_key="+ APIkey + "&language=en-US&region=GB&sort_by=primary_release_date.asc&page=1&primary_release_date.gte=2019-08-07&primary_release_date.lte=2019-12-30";
         }
         else { 
-            requestMovies = "now_playing"
+            requestMovies = "https://api.themoviedb.org/3/movie/now_playing?api_key=" + APIkey + "&language=en-US&page=1";
         }
 
-        axios.get("https://api.themoviedb.org/3/movie/" + requestMovies + "?page=1&language=en-US&api_key=" + APIkey)
+        axios.get(requestMovies)
             .then(response => {
                 this.setState({
                     movies: response.data.results.slice(0, 4),

@@ -16,10 +16,13 @@ export default class Screens extends Component {
             <h1 className="Listingh1">OUR SCREENS</h1>
             <hr />
             <CarouselScreen/>
+            <br/>
             <CarouselScreen2/>
             </Container>
+            <br/>
+            <br/>
             </div>
-                
+            
         )
     }
 }

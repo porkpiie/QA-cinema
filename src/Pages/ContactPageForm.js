@@ -10,6 +10,7 @@ export default class ContactPageForm extends Component {
         this.state = {
             loading: false,
             error: "",
+            success: "",
 
             comment: {
                 name: "",
@@ -46,10 +47,10 @@ export default class ContactPageForm extends Component {
         // prevent default form submission
         e.preventDefault();
 
-        // if (!this.isFormValid()) {
-        //     this.setState({ error: "All fields are required." });
-        //     return;
-        // }
+        if (!this.isFormValid()) {
+            this.setState({ error: "All fields are required.", success: "" });
+            return;
+        }
 
         // loading status and clear error
         this.setState({ error: "", loading: true });
@@ -61,42 +62,48 @@ export default class ContactPageForm extends Component {
             body: JSON.stringify(comment),
             headers: { 'Content-Type': 'application/json' }
         })
-            .then(res => res.json())
-            .then(res => {
-                if (res.error) {
-                    this.setState({ loading: false, error: res.error });
-                } else {
-                    // add time return from api and push comment to parent state
-                    //   comment.time = res.time;
-                    console.log(comment);
-                    //this.props.addComment(comment);
+            // .then(res => res.json())
+            // .then(res => {
+            //     if (res.error) {
+            //         this.setState({ loading: false, error: res.error });
+            //     } else {
+            //         // add time return from api and push comment to parent state
+            //           // comment.time = res.time;
+            //         console.log(comment);
+                    this.props.addComment(comment);
 
                     // clear the message box
                     this.setState({
                         loading: false,
                         comment: { ...comment, message: "" }
                     });
-                    window.location.reload();
-                }
-            })
-            .catch(err => {
-                this.setState({
-                    error: "Something went wrong while submitting form.",
-                    loading: false
-                });
-            });
+                    this.setState({ success: "Thank you for your message" });
+            //     }
+            // })
+            // .catch(err => {
+            //     this.setState({
+            //         error: "Something went wrong while submitting form.",
+            //         loading: false
+            //     });
+            // });
     }
 
-    // /**
-    //  * Simple validation
-    //  */
-    // isFormValid() {
-    //     return this.state.comment.name !== "" && this.state.comment.message !== "";
-    // }
+    /**
+     * Simple validation
+     */
+    isFormValid() {
+        return this.state.comment.name !== "" && this.state.comment.email !== "" && this.state.comment.subject !== "" && this.state.comment.message !== "";
+    }
 
     renderError() {
         return this.state.error ? (
             <div className="alert alert-danger">{this.state.error}</div>
+        ) : null;
+    }
+
+    renderSuccess() {
+        return this.state.success ? (
+            <div className="alert alert-success">{this.state.success}</div>
         ) : null;
     }
 
@@ -156,6 +163,7 @@ export default class ContactPageForm extends Component {
                                 </div>
 
                                 {this.renderError()}
+                                {this.renderSuccess()}
 
                                 <div className="form-group" style={{ textAlign: "right" }}>
                                     <button disabled={this.state.loading} className="btn btn-primary">

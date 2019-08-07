@@ -160,21 +160,7 @@ class FormContainer extends Component {
 	handleFormSubmit(e) {
 		e.preventDefault();
 		let userData = this.state.booking;
-		console.log("Submitting Results...");
 
-		/*fetch("http://localhost:8080/qac/bookings", {
-			method: "POST",
-			body: JSON.stringify(userData),
-			headers: {
-				Accept: "application/json",
-				"Content-Type": "application/json"
-			}
-		}).then(response => {
-			response.json().then(data => {
-				console.log("Successful" + data);
-				window.location='./Seating';
-			});
-		});*/
 		sessionStorage.removeItem("bookingData");
 		sessionStorage.setItem("bookingData",JSON.stringify(userData));
 		window.location='./Seating';
