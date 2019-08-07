@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Carousel from "react-bootstrap/Carousel";
-import screenDeluxe from "../Images/Everyman-cinema-3.jpg";
-import deluxeSeating from "../Images/deluxeSeating.png";
+import screenDeluxe from "../Images/image.jpg";
+import screenDeluxe2 from "../Images/Oxted2.jpg";
 
 export default class CarouselScreen extends Component {
 
@@ -33,13 +33,19 @@ export default class CarouselScreen extends Component {
 
                         <Carousel.Item>
                             <div className="carousel-img-wrapper">
-                                <div className="imgbold" />
+                                <div className="imggradient" />
                                 <img
                                     className="d-block w-100"
-                                    src={deluxeSeating}
-                                    alt="Third slide"
+                                    src={screenDeluxe2}
+                                    alt="First slide"
                                 />
                             </div>
+
+                            <Carousel.Caption>
+                                <h1 className="Listingh5" >Our Deluxe Screen</h1><br />
+                                <h1 className="Listingh6">Enjoy your film in style with our luxury screen</h1>
+                                <h1 className="Listingh6">A comfortable night out for all</h1>
+                            </Carousel.Caption>
                         </Carousel.Item>
 
                     </Carousel>
