@@ -16,7 +16,7 @@ class FormContainer extends Component {
 				secondName: "",
 				filmName: "",
 				filmDate: "",
-				filmTime: "09/08/2019",
+				filmTime: "",
 				adultTickets: "0",
 				childTickets: "0",
 				concessionTickets: "0",
@@ -25,7 +25,7 @@ class FormContainer extends Component {
 			},
 
 			filmOptions: [],
-			filmDateOptions: ["09/08/2019", "10/08/2019", "11/08/2019", "12/08/2019", "13/08/2019"],
+			filmDateOptions: ["09-08-2019", "10-08-2019", "11-08-2019", "12-08-2019", "13-08-2019"],
 			filmTimeOptions: ["12:15", "15:00", "17:45", "19:30", "21:00"],
 			adultTicketsOptions: ["0", "1", "2", "3", "4 ", "5", "6"],
 			childTicketsOptions: ["0", "1", "2", "3", "4 ", "5", "6"],
@@ -200,7 +200,7 @@ class FormContainer extends Component {
 
 	render() {
 		return (
-			<div className = "col-6">
+			<div className = "col-8">
 				<form onSubmit={this.handleFormSubmit}>
 					<Input
 						inputType={"text"}

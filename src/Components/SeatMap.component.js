@@ -33,7 +33,7 @@ export default class SeatMap extends React.Component {
     componentWillMount() {
         this.state.booking = JSON.parse(sessionStorage.getItem("bookingData"));
         if (this.state.booking !== null) {
-            this.state.booking.filmDate = "21-12-19";
+            console.log(this.state.booking.filmDate);
 
             let filmName = "";
             for (let character in this.state.booking.filmName) {
