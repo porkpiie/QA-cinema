@@ -246,7 +246,7 @@ class FormContainer extends Component {
 					/>{" "}
 
 					<Select
-						title={"FilmDate"}
+						title={"Film Date"}
 						name={"filmDate"}
 						options={this.state.filmDateOptions}
 						value={this.state.booking.filmDate}
@@ -265,7 +265,7 @@ class FormContainer extends Component {
 					/>{" "}
 					
 					<Select
-						title={"Adult " + "Sub total = £" + (this.state.booking.adultTickets * 10)}
+						title={"Adult @ £10: " + "Sub total = £" + (this.state.booking.adultTickets * 10)}
 						name={"adultTickets"}
 						options={this.state.adultTicketsOptions}
 						value={this.state.booking.adultTickets}
@@ -273,7 +273,7 @@ class FormContainer extends Component {
 						
 					/>{" "}
 					<Select
-						title={"Child" + "Sub total = £" + (this.state.booking.childTickets * 5)}
+						title={"Child @ £5: " + "Sub total = £" + (this.state.booking.childTickets * 5)}
 						name={"childTickets"}
 						options={this.state.childTicketsOptions}
 						value={this.state.booking.childTickets}
@@ -281,7 +281,7 @@ class FormContainer extends Component {
 						
 					/>{" "}
 					<Select
-						title={"Concession" + "Sub total = £" + (this.state.booking.concessionTickets * 7)}
+						title={"Concession @ £7: " + "Sub total = £" + (this.state.booking.concessionTickets * 7)}
 						name={"concessionTickets"}
 						options={this.state.concessionTicketsOptions}
 						value={this.state.booking.concessionTickets}
