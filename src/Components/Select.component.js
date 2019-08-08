@@ -1,15 +1,23 @@
 import React from 'react';
 
 const Select = props => {
+
+    const groupClass = 'inline' in props ? 'form-group row' : 'form-group';
+    const labelClass = 'inline' in props ? 'form-label col-sm-4 col-form-label' : 'form-label';
+    const selectClass = 'inline' in props ? 'form-control col-sm-8' : 'form-control';
     return (
-      <div className="form-group">
-        <label for={props.name}> {props.title} </label>
+      <div className={groupClass}>
+      <label for={props.name} className={labelClass}>
+        {props.title}
+      </label>
         <select
+          className={selectClass}
           id={props.name}
           name={props.name}
           value={props.value}
           onChange={props.handleChange}
-          className="form-control"
+          placeholder={props.placeholder}
+          {...props}
         >
           <option value="" disabled>
             {props.placeholder}
@@ -22,8 +30,10 @@ const Select = props => {
             );
           })}
         </select>
-      </div>
+      </div>  
     );
   };
+
+
   
   export default Select;

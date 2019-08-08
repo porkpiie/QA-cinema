@@ -16,21 +16,23 @@ class FormContainer extends Component {
 				secondName: "",
 				filmName: "",
 				filmDate: "",
-				filmTime: "",
-				adultTickets: "",
-				childTickets: "",
-				concessionTickets: "",
+				filmTime: "09/08/2019",
+				adultTickets: "0",
+				childTickets: "0",
+				concessionTickets: "0",
 				email: "",
 
 			},
 
 			filmOptions: [],
+			filmDateOptions: ["09/08/2019", "10/08/2019", "11/08/2019", "12/08/2019", "13/08/2019"],
 			filmTimeOptions: ["12:15", "15:00", "17:45", "19:30", "21:00"],
 			adultTicketsOptions: ["0", "1", "2", "3", "4 ", "5", "6"],
 			childTicketsOptions: ["0", "1", "2", "3", "4 ", "5", "6"],
 			concessionTicketsOptions: ["0", "1", "2", "3", "4 ", "5", "6"]
 		};
 
+		this.handlefilmDate = this.handlefilmDate.bind(this);
 		this.handleadultTickets = this.handleadultTickets.bind(this);
 		this.handlechildTickets = this.handlechildTickets.bind(this);
 		this.handleconcessionTickets = this.handleconcessionTickets.bind(this);
@@ -81,6 +83,19 @@ class FormContainer extends Component {
 				booking: {
 					...prevState.booking,
 					secondName: value
+				}
+			}),
+			() => console.log(this.state.booking)
+		);
+	}
+
+	handlefilmDate(e) {
+		let value = e.target.value;
+		this.setState(
+			prevState => ({
+				booking: {
+					...prevState.booking,
+					filmDate: value
 				}
 			}),
 			() => console.log(this.state.booking)
@@ -185,7 +200,7 @@ class FormContainer extends Component {
 
 	render() {
 		return (
-			<div>
+			<div className = "col-6">
 				<form onSubmit={this.handleFormSubmit}>
 					<Input
 						inputType={"text"}
@@ -194,6 +209,8 @@ class FormContainer extends Component {
 						value={this.state.booking.firstName}
 						placeholder={"Please enter your First Name"}
 						handleChange={this.handleInput}
+						required = "required"
+						inline
 					/>{" "}
 
 					<Input
@@ -203,6 +220,7 @@ class FormContainer extends Component {
 						value={this.state.booking.secondName}
 						placeholder={"Please enter your Second Name"}
 						handleChange={this.handleInput}
+						inline
 					/>{" "}
 
 					<Input
@@ -210,8 +228,9 @@ class FormContainer extends Component {
 						title={"Email"}
 						name={"email"}
 						value={this.state.booking.email}
-						placeholder={"you@email.com"}
+						placeholder={"your@email.com"}
 						handleChange={this.handleInput}
+						inline
 					/>{" "}
 
 
@@ -222,38 +241,57 @@ class FormContainer extends Component {
 						value={this.state.booking.filmName}
 						placeholder={"Select Film"}
 						handleChange={this.handleInput}
+						inline
+
 					/>{" "}
+
+					<Select
+						title={"FilmDate"}
+						name={"filmDate"}
+						options={this.state.filmDateOptions}
+						value={this.state.booking.filmDate}
+						placeholder={"Select Date"}
+						handleChange={this.handleInput}
+						inline
+					/>{" "}
+
 					<CheckBox
 						title={"Showing"}
 						name={"filmTime"}
 						options={this.state.filmTimeOptions}
 						selectedOptions={this.state.booking.filmTime}
 						handleChange={this.handleInput}
+						inline
 					/>{" "}
+					
 					<Select
-						title={"Adult"}
+						title={"Adult " + "Sub total = £" + (this.state.booking.adultTickets * 10)}
 						name={"adultTickets"}
 						options={this.state.adultTicketsOptions}
 						value={this.state.booking.adultTickets}
-						placeholder={"Number of Adult Tickets"}
 						handleChange={this.handleInput}
+						
 					/>{" "}
 					<Select
+						title={"Child" + "Sub total = £" + (this.state.booking.childTickets * 5)}
 						name={"childTickets"}
-						title={"Child"}
 						options={this.state.childTicketsOptions}
 						value={this.state.booking.childTickets}
-						placeholder={"Number of Child tickets"}
 						handleChange={this.handleInput}
+						
 					/>{" "}
 					<Select
-						title={"Concession"}
+						title={"Concession" + "Sub total = £" + (this.state.booking.concessionTickets * 7)}
 						name={"concessionTickets"}
 						options={this.state.concessionTicketsOptions}
 						value={this.state.booking.concessionTickets}
-						placeholder={"Number of Concession tickets"}
 						handleChange={this.handleInput}
+						
 					/>{" "}
+
+				
+					<h2>Sub total = £{+this.state.booking.adultTickets * 10 +this.state.booking.childTickets * 5 +this.state.booking.concessionTickets * 7} </h2>
+
 					<Button
 						style={{margin: '0px'}} 
 						className="btn btn-primary"
