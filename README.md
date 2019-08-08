@@ -20,11 +20,6 @@ This installs all required dependencies via npm
 6. In QA-cinema --> cmd --> npm start
 This starts the app and runs in localhost:3000
 ```
-```
-8. In QA-cinema --> cmd --> npm start
-This starts the app and runs in localhost:3000 by default
-```
-
 
 ---
 
