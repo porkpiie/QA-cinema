@@ -1,3 +1,33 @@
+## Dependencies Required
+
+Please ensure the following are installed and where applicable routed to the PATH
+
+```
+1. Node.js https://nodejs.org/en/ (check with node --v) (add bin to PATH)
+
+2. Nodemon npm install -g nodemon (add bin to PATH)
+
+3. Mongodb . Follow installation guide for windows https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/ (change depending on Operating System) (add to path)
+
+4. Clone backend repository https://github.com/mmmlaphroaig/QA-cinema-backend and follow the documentation posted there to start the server.
+
+```
+```
+5. In QA-cinema --> cmd --> npm i
+This installs all required dependencies via npm
+```
+```
+6. In QA-cinema --> cmd --> npm start
+This starts the app and runs in localhost:3000
+```
+```
+8. In QA-cinema --> cmd --> npm start
+This starts the app and runs in localhost:3000 by default
+```
+
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
