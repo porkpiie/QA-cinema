@@ -28,7 +28,7 @@ export default class Classifications extends Component {
             <p style={{ color: "white", textAlign: "left"}}>Recommendations are made by our Compliance Officers based on the BBFC's pulished
             Guidelines. These are the result of extensive consultation with people right across the UK, research,
             and the BBFC's more than 100 years of experience. They reflect people's views on film, DVD, Blu-Ray,
-            video on demand (VoD) regulation and regularly updated</p><br />
+            video on demand (VoD) regulation and regularly updated. Click each icon for further information</p><br />
           </div>
 
 

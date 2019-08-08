@@ -1,5 +1,5 @@
 import React from "react";
-import { MDBCol, MDBContainer, MDBRow } from "mdbreact";
+import { MDBCol, MDBRow } from "mdbreact";
 import { withRouter } from 'react-router-dom';
 
 import TBDimage from '../Images/TBC.png';

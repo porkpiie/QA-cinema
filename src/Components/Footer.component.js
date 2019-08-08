@@ -50,7 +50,7 @@ export default class AppFooter extends Component {
                 Follow us
               </h5>
               <div className="mt-2 ">
-                <a className="btn btn-link" href="#!">
+                <a className="btn btn-link" href="https://facebook.com" target="__blank">
                   <i className="fab fa-facebook-f text-white" />
                 </a>
                 <a className="btn btn-link" href="https://twitter.com/filmsqa" target="__blank">
@@ -63,7 +63,7 @@ export default class AppFooter extends Component {
         </MDBContainer>
         <div className="footer-copyright text-center py-3">
           <MDBContainer fluid>
-            &copy; {new Date().getFullYear()} QA Films
+            &copy; {new Date().getFullYear()} OCEAN VIEW
           </MDBContainer>
         </div>
       </MDBFooter>

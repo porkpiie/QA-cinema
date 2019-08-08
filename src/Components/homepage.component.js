@@ -21,29 +21,29 @@ export default class HomeIcons extends React.Component {
             <Container fluid>
                 <Row style={{ color: "white", textAlign: "left" }}>
                     <Col xs className="pl-0">
-                        <p className="my-5" style={{ fontSize: '15px'}}>SELECT DATE & CINEMA</p>
-                        <img style={{ width: '3rem' }} src={icon1} alt="" />
-                        <p className="my-5" style={{ fontSize: '12px'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                        <p className="my-5" style={{ fontSize: '15px'}}>SELECT DATE & TIME</p>
+                        <img style={{ width: '3rem', height : '3rem' }} src={icon1} alt="" />
+                        <p className="my-5" style={{ fontSize: '12px'}}>Browse our site and find a time that suits you</p>
                     </Col>
                     <Col xs>
                     <p className="my-5" style={{ fontSize: '15px'}}>SELECT FILM</p>
-                        <img style={{ width: '3rem' }} src={icon2} alt="" />
-                        <p className="my-5" style={{ fontSize: '12px'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                        <img style={{ width: '3rem', height : '3rem'  }} src={icon2} alt="" />
+                        <p className="my-5" style={{ fontSize: '12px'}}>Decide which of our blockbusters you want to watch</p>
                     </Col>
                     <Col xs>
                     <p className="my-5" style={{ fontSize: '15px'}}>SELECT SEATS</p>
-                        <img style={{ width: '3rem' }} src={icon3} alt=""/>
-                        <p className="my-5" style={{ fontSize: '12px'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                        <img style={{ width: '3rem', height : '3rem'  }} src={icon3} alt=""/>
+                        <p className="my-5" style={{ fontSize: '12px'}}>Choose between our Standard or superb Deluxe seating</p>
                     </Col>
                     <Col xs>
                     <p className="my-5" style={{ fontSize: '15px'}}>PAYMENTS</p>
-                        <img style={{ width: '3rem' }} src={icon4} alt=""/>
-                        <p className="my-5" style={{ fontSize: '12px'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                        <img style={{ width: '3rem', height : '3rem'  }} src={icon4} alt=""/>
+                        <p className="my-5" style={{ fontSize: '12px'}}>We accept all major forms of payment, 10% off when using a Nationwide Debit or Credit Card</p>
                     </Col>
                     <Col xs className="pr-0">
                     <p className="my-5" style={{ fontSize: '15px'}}>ENJOY YOUR FILM</p>
-                        <img style={{ width: '3rem' }} src={icon5} alt="" />
-                        <p className="my-5" style={{ fontSize: '12px'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                        <img style={{ width: '3rem', height : '3rem'  }} src={icon5} alt="" />
+                        <p className="my-5" style={{ fontSize: '12px'}}>We hope you have a Whale of a time</p>
                     </Col>
                 </Row>
             </Container>
